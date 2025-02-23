@@ -2,6 +2,7 @@
 - **Zsh Configuration**: Includes aliases, plugins, and themes (Powerlevel10k).
 - **Terminal Enhancements**: Improved `ls` (using `eza`), `cat` (using `bat`), and navigation (`zoxide`).
 - **VS Code Configuration**: Minimal VS Code setup with various utilities and custom CSS & JS + Keybindings using Hyperkey
+- **Scripts**: Some useful scripts I use on the daily
 
 ## Tools Used
 - [Oh My Zsh](https://ohmyz.sh/)

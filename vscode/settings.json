@@ -69,7 +69,7 @@
 	"explorer.confirmDelete": false,					//delete confirmation disables
 	//"explorer.decorations.badges": false,				//disable change/error indicators in file explorer
 	"projectManager.git.baseFolders": [
-		"/Users/sarraf/Library/Application Support/Code/User",
+		"/Users/sarraf/.dotfiles",
 		"/Users/sarraf/Coding/Personal",
 		//"/Users/sarraf/Coding/EECS280",
 		//"/Users/sarraf/Coding/EECS281",
