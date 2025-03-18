@@ -37,7 +37,6 @@
 	//!Workbench Settings
 	"window.titleBarStyle": "custom",
 	"workbench.colorTheme": "Catppuccin Mocha",
-	"workbench.iconTheme": "symbols",
 	"workbench.productIconTheme": "material-product-icons", //Put sidebar on the right
 	"window.commandCenter": false, 						//hide the top bar
 	"workbench.layoutControl.enabled": false, 			//hide the other top bar
@@ -358,4 +357,5 @@
 		]
 	},
 	"workbench.sideBar.location": "right",
+	"workbench.iconTheme": "symbols",
 }

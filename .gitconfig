@@ -5,3 +5,5 @@
 	required = true
 [alias]
 	ac = commit -am
+[user]
+	email = 61262059+SARRAF-5757@users.noreply.github.com

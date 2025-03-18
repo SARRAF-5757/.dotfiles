@@ -113,7 +113,7 @@
     backdrop-filter: blur(3px) !important;
     border-radius: 20px !important;
     border: none !important;
-    border-color: #1e1e2e00;
+    border-color: #1e1e2e00 !important;
 }
 
 /*! Project Title Top bar */

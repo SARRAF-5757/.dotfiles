@@ -106,5 +106,14 @@
     {
         "key": "cmd+b",
         "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "shift+cmd+p",
+        "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+        "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+        "key": "shift+cmd+p",
+        "command": "workbench.view.extension.project-manager"
     }
 ]
