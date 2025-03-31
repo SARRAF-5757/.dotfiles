@@ -1,15 +1,17 @@
+tap "grishka/grishka"
 tap "homebrew/bundle"
+tap "mhaeuser/mhaeuser"
 tap "smudge/smudge"
 tap "teamookla/speedtest"
 tap "zackelia/formulae"
 # Command-line interface for SQLite
 brew "sqlite"
-# C/C++ and Java libraries for Unicode and globalization
-brew "icu4c@76"
 # Simple system information tool written in Python
 brew "archey4"
 # Spell checker with better logic than ispell
 brew "aspell"
+# C/C++ and Java libraries for Unicode and globalization
+brew "icu4c@76"
 # Gnome disk usage analyzer
 brew "baobab"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -96,8 +98,14 @@ brew "zackelia/formulae/bclm"
 cask "android-platform-tools"
 # Multi-track audio editor and recorder
 cask "audacity"
+# Control the platform power state of your Apple Silicon device
+cask "battery-toolkit"
+# Desktop password and login vault
+cask "bitwarden"
 # Run Stable Diffusion locally
 cask "diffusionbee"
+# Window peeking utility app
+cask "dockdoor"
 # App to build and share containerised applications and microservices
 cask "docker"
 # Status monitoring
@@ -108,18 +116,36 @@ cask "intellidock"
 cask "iterm2"
 # Customise mouse behavior
 cask "linearmouse"
-# Utility to extend trackpad functionality
-cask "middleclick"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
+# Spreadsheet software
+cask "microsoft-excel"
+# Presentation software
+cask "microsoft-powerpoint"
+# Word processor
+cask "microsoft-word"
+# Tool to control external monitor brightness & volume
+cask "monitorcontrol"
+# Unofficial Google Nearby Share app
+cask "neardrop"
 # Simple application that will prevent iTunes or Apple Music from launching
 cask "notunes"
 # Team communication and collaboration software
 cask "slack"
 # System monitor for the menu bar
 cask "stats"
+# Unpacks archive files
+cask "the-unarchiver"
+# To-do & task list manager
+cask "ticktick"
 # Open-source code editor
 cask "visual-studio-code"
 # Rust-based terminal
 cask "warp"
+# Native desktop client for WhatsApp
+cask "whatsapp"
+# Gecko based web browser
+cask "zen-browser"
 mas "Battery Monitor", id: 836505650
 mas "Bitwarden", id: 1352778147
 mas "Command X", id: 6448461551
@@ -142,13 +168,15 @@ vscode "alefragnani.bookmarks"
 vscode "alefragnani.project-manager"
 vscode "alexcvzz.vscode-sqlite"
 vscode "be5invis.vscode-custom-css"
+vscode "brandonkirbyson.vscode-animations"
 vscode "catppuccin.catppuccin-vsc"
 vscode "catppuccin.catppuccin-vsc-icons"
 vscode "dbaeumer.vscode-eslint"
 vscode "eamodio.gitlens"
 vscode "enkia.tokyo-night"
-vscode "equinusocio.vsc-material-theme-icons"
 vscode "esbenp.prettier-vscode"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "hars.cppsnippets"
 vscode "hnw.vscode-auto-open-markdown-preview"
 vscode "illixion.vscode-vibrancy-continued"

@@ -37,7 +37,7 @@
 	//!Workbench Settings
 	"window.titleBarStyle": "custom",
 	"workbench.colorTheme": "Catppuccin Mocha",
-	"workbench.productIconTheme": "material-product-icons", //Put sidebar on the right
+	"workbench.productIconTheme": "fluent-icons", //Put sidebar on the right
 	"window.commandCenter": false, 						//hide the top bar
 	"workbench.layoutControl.enabled": false, 			//hide the other top bar
 	"workbench.statusBar.visible": false, 				//hide bottom statusbar
@@ -49,9 +49,7 @@
 	"workbench.startupEditor": "none",					//prevent welcome or any editor from launching
 	"scm.diffDecorations": "none", 						//disable git's added/deleted/modified colorsw
 	"workbench.tree.indent": 20,						//file explorer indentation
-	"workbench.colorCustomizations": {
-		"terminal.background": "#00000000",
-	},
+	"workbench.colorCustomizations": {},
 	
 	//!Terminal Settings
 	"terminal.integrated.fontFamily": "MesloLGS NF",
@@ -108,11 +106,17 @@
 		"files.trimFinalNewlines": true,
 		"files.insertFinalNewline": true
 	},
+
+	//!Python Settings
+	"[python]": {
+		"editor.rulers": [79]
+	},
 	
 	//!Custom CSS for VS Code
 	"vscode_custom_css.imports": [
 		"file:///Users/sarraf/Library/Application Support/Code/User/custom-vscode.css",
-		"file:///Users/sarraf/Library/Application Support/Code/User/vscode-blur-script.js"
+		"file:///Users/sarraf/Library/Application Support/Code/User/vscode-blur-script.js",
+		"file:///Users/sarraf/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
 	],
 	
 	//!GitLens
@@ -222,28 +226,28 @@
 	"cSpell.userWords": ["EECS"],
 	
 	//!Sync between profiles
-	"workbench.settings.applyToAllProfiles": ["workbench.colorCustomizations",
-											"workbench.colorTheme", 
-											"workbench.iconTheme", 
-											"workbench.productIconTheme", 
-											"editor.fontFamily", 
-											"editor.fontSize", 
-											"editor.fontLigatures", 
-											"editor.cursorSmoothCaretAnimation", 
-											"window.titleBarStyle", 
-											"editor.rulers", 
-											"editor.wordWrapColumn", 
-											"editor.minimap.autohide", 
-											"editor.minimap.renderCharacters", 
-											"workbench.tree.renderIndentGuides", 
-											"workbench.tree.enableStickyScroll"
-										],
+	"workbench.settings.applyToAllProfiles": [
+		"workbench.colorTheme",
+		"workbench.iconTheme",
+		"workbench.productIconTheme",
+		"editor.fontFamily",
+		"editor.fontSize",
+		"editor.fontLigatures",
+		"editor.cursorSmoothCaretAnimation",
+		"window.titleBarStyle",
+		"editor.rulers",
+		"editor.wordWrapColumn",
+		"editor.minimap.autohide",
+		"editor.minimap.renderCharacters",
+		"workbench.tree.renderIndentGuides",
+		"workbench.tree.enableStickyScroll"
+	],
 	//!Miscellanies
 	"extensions.experimental.affinity": {				//performance improvement (?)
 	"asvetliakov.vscode-neovim": 1
 	},
 	"security.workspace.trust.untrustedFiles": "open",
-	"vscode_vibrancy.opacity": 1,						//vibrancy theme
+	"vscode_vibrancy.opacity": 0,						//vibrancy theme
 	"editor.tokenColorCustomizations": {
 		//to disable italics
 		"textMateRules": [
@@ -357,5 +361,6 @@
 		]
 	},
 	"workbench.sideBar.location": "right",
-	"workbench.iconTheme": "symbols",
+	"workbench.iconTheme": "catppuccin-mocha",
+	"terminal.integrated.gpuAcceleration": "auto",
 }
