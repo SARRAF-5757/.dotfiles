@@ -33,6 +33,7 @@
 	"editor.occurrencesHighlight": "off",				//stop highlighting every instance of the symbol under cursor
 	"editor.renderLineHighlight": "none",				//stop highlighting the cursor line
 	"editor.accessibilitySupport": "off",				//annoying screen reader popup
+	"editor.hover.delay": 900,							//stops tooltips from poppubg up without intention while coding
 	
 	//!Workbench Settings
 	"window.titleBarStyle": "custom",
