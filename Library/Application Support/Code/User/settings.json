@@ -50,7 +50,9 @@
 	"workbench.startupEditor": "none",					//prevent welcome or any editor from launching
 	"scm.diffDecorations": "none", 						//disable git's added/deleted/modified colorsw
 	"workbench.tree.indent": 20,						//file explorer indentation
-	"workbench.colorCustomizations": {},
+	"workbench.colorCustomizations": {
+		"terminal.background": "#00000000"
+	},
 	
 	//!Terminal Settings
 	"terminal.integrated.fontFamily": "MesloLGS NF",
@@ -363,5 +365,5 @@
 	},
 	"workbench.sideBar.location": "right",
 	"workbench.iconTheme": "catppuccin-mocha",
-	"terminal.integrated.gpuAcceleration": "auto",
+	"terminal.integrated.gpuAcceleration": "off",
 }

@@ -1,0 +1,14 @@
+# System Files
+.DS_Store
+/.git
+/.gitignore
+/.gitmodules
+/.gitconfig
+/README.*
+
+
+# Custom Files (should be used from .dotfiles directly)
+/Scripts
+Brewfile
+Raycast.rayconfig
+

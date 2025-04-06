@@ -94,28 +94,48 @@ brew "smudge/smudge/nightlight"
 brew "teamookla/speedtest/speedtest"
 # macOS command-line utility to limit max battery charge
 brew "zackelia/formulae/bclm"
+# Transfer files from and to an Android smartphone
+cask "android-file-transfer"
 # Android SDK component
 cask "android-platform-tools"
+# Electronics prototyping platform
+cask "arduino-ide"
 # Multi-track audio editor and recorder
 cask "audacity"
+# 3D model slicing software for 3D printers, maintained by Bambu Lab
+cask "bambu-studio"
 # Control the platform power state of your Apple Silicon device
 cask "battery-toolkit"
 # Desktop password and login vault
 cask "bitwarden"
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
 # Run Stable Diffusion locally
 cask "diffusionbee"
+# Voice and text chat software
+cask "discord"
 # Window peeking utility app
 cask "dockdoor"
 # App to build and share containerised applications and microservices
 cask "docker"
 # Status monitoring
 cask "eul"
+# Graphically shows disk usage within a file system
+cask "grandperspective"
+# Free and open-source media player
+cask "iina"
 # Hides the Dock when it is overlapped by a window
 cask "intellidock"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Utility that shows the latest app updates
+cask "latest"
 # Customise mouse behavior
 cask "linearmouse"
+# Software for Logitech devices
+cask "logi-options+"
+# Adaptive brightness for external displays
+cask "lunar"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
 # Spreadsheet software
@@ -128,8 +148,16 @@ cask "microsoft-word"
 cask "monitorcontrol"
 # Unofficial Google Nearby Share app
 cask "neardrop"
+# App to write, plan, collaborate, and get organised
+cask "notion"
 # Simple application that will prevent iTunes or Apple Music from launching
 cask "notunes"
+# Customise and maintain app icons
+cask "pictogram"
+# Block your own access to distracting websites
+cask "selfcontrol"
+# Web browser
+cask "sigmaos"
 # Team communication and collaboration software
 cask "slack"
 # System monitor for the menu bar
@@ -138,6 +166,8 @@ cask "stats"
 cask "the-unarchiver"
 # To-do & task list manager
 cask "ticktick"
+# Virtual machines UI using QEMU
+cask "utm"
 # Open-source code editor
 cask "visual-studio-code"
 # Rust-based terminal
@@ -146,22 +176,15 @@ cask "warp"
 cask "whatsapp"
 # Gecko based web browser
 cask "zen-browser"
+# Video communication and virtual meeting platform
+cask "zoom"
 mas "Battery Monitor", id: 836505650
-mas "Bitwarden", id: 1352778147
 mas "Command X", id: 6448461551
 mas "darker", id: 1637413102
-mas "Hologram Desktop", id: 1529001798
 mas "Memory Diag", id: 748212890
-mas "Microsoft Excel", id: 462058435
-mas "Microsoft PowerPoint", id: 462062816
-mas "Microsoft Word", id: 462054704
 mas "Notability", id: 360593530
 mas "PhotoScape X", id: 929507092
 mas "QuickShade", id: 931571202
-mas "Spark Desktop", id: 6445813049
-mas "The Unarchiver", id: 425424353
-mas "TickTick", id: 966085870
-mas "WhatsApp", id: 310633997
 mas "Xcode", id: 497799835
 vscode "aaron-bond.better-comments"
 vscode "alefragnani.bookmarks"
