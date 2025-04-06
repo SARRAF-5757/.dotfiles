@@ -1,0 +1,28 @@
+---
+background: "#0e0a0d"
+accent: "#701719"
+foreground: "#ffffff"
+background_image:
+  path: /Users/sarraf/.warp/themes/Metal Ring/Metal Ring.jpg
+  opacity: 30
+details: darker
+terminal_colors:
+  normal:
+    black: "#616161"
+    red: "#d21404"
+    green: "#b90e0a"
+    yellow: "#900d09"
+    blue: "#9897a9"
+    magenta: "#ff0000"
+    cyan: "#787276"
+    white: "#f1f1f1"
+  bright:
+    black: "#8e8e8e"
+    red: "#d21404"
+    green: "#b90e0a"
+    yellow: "#bc644b"
+    blue: "#9897a9"
+    magenta: "#ffb1fe"
+    cyan: "#787276"
+    white: "#feffff"
+name: Metal Ring

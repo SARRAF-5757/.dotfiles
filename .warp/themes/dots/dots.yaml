@@ -1,0 +1,30 @@
+---
+background: "#262d3d"
+accent:
+  left: "#00ffff"
+  right: "#2082aa"
+foreground: "#ffffff"
+background_image:
+  path: /Users/sarraf/.warp/themes/dots/dots.png
+  opacity: 30
+details: darker
+terminal_colors:
+  normal:
+    black: "#616161"
+    red: "#ff8272"
+    green: "#00ffff"
+    yellow: "#2082aa"
+    blue: "#a5d5fe"
+    magenta: "#7df9ff"
+    cyan: "#d0d1fe"
+    white: "#f1f1f1"
+  bright:
+    black: "#8e8e8e"
+    red: "#ffc4bd"
+    green: "#00ffff"
+    yellow: "#2082aa"
+    blue: "#c1e3fe"
+    magenta: "#ffb1fe"
+    cyan: "#e5e6fe"
+    white: "#feffff"
+name: "dots"

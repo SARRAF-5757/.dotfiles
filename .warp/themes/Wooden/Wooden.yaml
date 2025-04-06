@@ -1,0 +1,28 @@
+---
+background: "#241211"
+accent: "#CD7f32"
+foreground: "#ffffff"
+background_image:
+  path: /Users/sarraf/.warp/themes/Wooden/Wooden.jpg
+  opacity: 30
+details: darker
+terminal_colors:
+  normal:
+    black: "#616161"
+    red: "#A52A2A"
+    green: "#CD7F32"
+    yellow: "#fefdc2"
+    blue: "#C3B091"
+    magenta: "#CD7F32"
+    cyan: "#d2b48c"
+    white: "#f1f1f1"
+  bright:
+    black: "#8e8e8e"
+    red: "#A52a2a"
+    green: "#DAA06D"
+    yellow: "#fefdd5"
+    blue: "#c3b091"
+    magenta: "#CD7F32"
+    cyan: "#d2b48c"
+    white: "#feffff"
+name: Wooden

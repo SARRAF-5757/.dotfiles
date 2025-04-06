@@ -1,0 +1,28 @@
+---
+background: "#010101"
+accent: "#dcd6cf"
+foreground: "#ffffff"
+background_image:
+  path: /Users/sarraf/.warp/themes/Mortal Kombat Scorpion Wallpaper/Mortal Kombat Scorpion Wallpaper.jpg
+  opacity: 30
+details: darker
+terminal_colors:
+  normal:
+    black: "#616161"
+    red: "#ee620d"
+    green: "#fadc35"
+    yellow: "#cc7722"
+    blue: "#800808"
+    magenta: "#c02d09"
+    cyan: "#990000"
+    white: "#c5c6d0"
+  bright:
+    black: "#8e8e8e"
+    red: "#ee620d"
+    green: "#fadc35"
+    yellow: "#cc7722"
+    blue: "#800808"
+    magenta: "#c02d09"
+    cyan: "#990000"
+    white: "#c5c6d0"
+name: Mortal Kombat Scorpion Wallpaper
