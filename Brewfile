@@ -10,12 +10,12 @@ brew "sqlite"
 brew "archey4"
 # Spell checker with better logic than ispell
 brew "aspell"
-# C/C++ and Java libraries for Unicode and globalization
-brew "icu4c@76"
 # Gnome disk usage analyzer
 brew "baobab"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# C/C++ and Java libraries for Unicode and globalization
+brew "icu4c@76"
 # Platform built on V8 to build network applications
 brew "node"
 # Secure and free password manager for all of your devices
@@ -76,6 +76,10 @@ brew "scrcpy"
 brew "screen"
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
+# Code-search similar to ack
+brew "the_silver_searcher"
 # Programmatically correct mistyped console commands
 brew "thefuck"
 # Watch files and take action when they change
@@ -178,14 +182,6 @@ cask "whatsapp"
 cask "zen-browser"
 # Video communication and virtual meeting platform
 cask "zoom"
-mas "Battery Monitor", id: 836505650
-mas "Command X", id: 6448461551
-mas "darker", id: 1637413102
-mas "Memory Diag", id: 748212890
-mas "Notability", id: 360593530
-mas "PhotoScape X", id: 929507092
-mas "QuickShade", id: 931571202
-mas "Xcode", id: 497799835
 vscode "aaron-bond.better-comments"
 vscode "alefragnani.bookmarks"
 vscode "alefragnani.project-manager"
@@ -227,6 +223,7 @@ vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.vscode-serial-monitor"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "oderwat.indent-rainbow"
+vscode "openai.chatgpt"
 vscode "pkief.material-icon-theme"
 vscode "pkief.material-product-icons"
 vscode "sdras.night-owl"
