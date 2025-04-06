@@ -182,6 +182,16 @@ cask "whatsapp"
 cask "zen-browser"
 # Video communication and virtual meeting platform
 cask "zoom"
+mas "Bitwarden", id: 1352778147
+mas "Command X", id: 6448461551
+mas "darker", id: 1637413102
+mas "Hologram Desktop", id: 1529001798
+mas "Memory Diag", id: 748212890
+mas "Notability", id: 360593530
+mas "PhotoScape X", id: 929507092
+mas "QuickShade", id: 931571202
+mas "Spark Desktop", id: 6445813049
+mas "Xcode", id: 497799835
 vscode "aaron-bond.better-comments"
 vscode "alefragnani.bookmarks"
 vscode "alefragnani.project-manager"
