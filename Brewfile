@@ -98,6 +98,8 @@ brew "smudge/smudge/nightlight"
 brew "teamookla/speedtest/speedtest"
 # macOS command-line utility to limit max battery charge
 brew "zackelia/formulae/bclm"
+# Enable Windows-like alt-tab
+cask "alt-tab"
 # Transfer files from and to an Android smartphone
 cask "android-file-transfer"
 # Android SDK component
@@ -112,6 +114,10 @@ cask "bambu-studio"
 cask "battery-toolkit"
 # Desktop password and login vault
 cask "bitwarden"
+# 3D creation suite
+cask "blender"
+# Send any size file between devices
+cask "blip"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
 # Run Stable Diffusion locally
@@ -124,10 +130,14 @@ cask "dockdoor"
 cask "docker"
 # Status monitoring
 cask "eul"
+# Desktop client for GitHub repositories
+cask "github"
 # Graphically shows disk usage within a file system
 cask "grandperspective"
 # Free and open-source media player
 cask "iina"
+# Tool to optimise images to a smaller size
+cask "imageoptim"
 # Hides the Dock when it is overlapped by a window
 cask "intellidock"
 # Terminal emulator as alternative to Apple's Terminal app
@@ -140,6 +150,8 @@ cask "linearmouse"
 cask "logi-options+"
 # Adaptive brightness for external displays
 cask "lunar"
+# UI replacement for volume, brightness and now playing controls
+cask "mediamate"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
 # Spreadsheet software
@@ -156,8 +168,12 @@ cask "neardrop"
 cask "notion"
 # Simple application that will prevent iTunes or Apple Music from launching
 cask "notunes"
+# Verify system files structure, run miscellaneous maintenance and more
+cask "onyx"
 # Customise and maintain app icons
 cask "pictogram"
+# Emoji picker optimised for blind people
+cask "rocket"
 # Block your own access to distracting websites
 cask "selfcontrol"
 # Web browser
@@ -166,6 +182,8 @@ cask "sigmaos"
 cask "slack"
 # System monitor for the menu bar
 cask "stats"
+# Desktop client for Telegram messenger
+cask "telegram-desktop"
 # Unpacks archive files
 cask "the-unarchiver"
 # To-do & task list manager
@@ -178,6 +196,8 @@ cask "visual-studio-code"
 cask "warp"
 # Native desktop client for WhatsApp
 cask "whatsapp"
+# Wine wrapper built with SwiftUI
+cask "whisky"
 # Gecko based web browser
 cask "zen-browser"
 # Video communication and virtual meeting platform
