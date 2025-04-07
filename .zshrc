@@ -118,7 +118,7 @@ export PATH="$PATH:/Users/sarraf/.lmstudio/bin"
 
 
 # Aliases
-alias tree='eza -T --total-size'
+alias tree='eza -T --total-size --no-quotes --icons=always --color=always'
 alias ls='eza --width 70 --no-quotes --icons=always --color=always -a'
 alias lls='eza -l --icons=always --total-size --git --no-user --no-permissions --no-time'
 alias cat='bat'
