@@ -4,7 +4,7 @@
             "complex_modifications": {
                 "rules": [
                     {
-                        "description": "Change caps lock to hyper key",
+                        "description": "Change caps lock hold to hyper key & tap to F12",
                         "manipulators": [
                             {
                                 "from": {
@@ -17,12 +17,19 @@
                                         "modifiers": ["left_command", "left_control", "left_option"]
                                     }
                                 ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "f12",
+                                        "modifiers": ["fn"]
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
-                        "description": "akimbo cmd to F12",
+                        "description": "Akimbo cmd to F12",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {

@@ -115,5 +115,13 @@
     {
         "key": "shift+cmd+p",
         "command": "workbench.view.extension.project-manager"
+    },
+    {
+        "key": "cmd+-",
+        "command": "editor.action.fontZoomOut"
+    },
+    {
+        "key": "cmd+=",
+        "command": "editor.action.fontZoomIn"
     }
 ]
