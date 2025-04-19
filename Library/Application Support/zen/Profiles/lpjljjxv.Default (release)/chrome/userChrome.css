@@ -1,10 +1,10 @@
-/*! Hidden buttons */
+/*! Hidden buttons !*/
 /* #nav-bar-overflow-button, */
 #zen-current-workspace-indicator {
 	display: none;
 }
 
-/*! reduce the separaters width */
+/*! reduce the separaters width !*/
 #vertical-pinned-tabs-container-separator,
 #tabbrowser-arrowscrollbox-periphery:before,
 #TabsToolbar-customization-target:after,
@@ -12,7 +12,7 @@
 	width: 30% !important;
 }
 
-/* Modify new tab entry */
+/*! Modify new tab entry !*/
 [label="Super Speedy Dial"] {
 	.tab-label-container:after {
 		content: "Home" !important;
@@ -29,29 +29,18 @@
 	}
 }
 
-/*! url bar cleanup */
-#page-action-buttons,
-#identity-permission-box {
-	display: none !important;
-}
-
-/*! hidden sidebar buttons */
+/*! hidden sidebar buttons !*/
 #zen-sidebar-icons-wrapper,
 #home-button {
-	opacity: 0;
+	/* opacity: 0;
 	transition: opacity 0.5s ease-in-out !important;
 
 	&:hover {
 		opacity: 1 !important;
-	}
+	} */
 }
 
-/*! Fix find in page */
-findbar * {
-	opacity: 1 !important;
-}
-
-/*! Animations */
+/*! Animations !*/
 /* Loading tab animation */
 tab[busy] {
 	scale: 0.95 !important;
@@ -60,32 +49,30 @@ tab[busy] {
 	}
 }
 
-/*! empty tab image */
+/*! empty tab image !*/
 #browser:has([zen-empty-tab="true"][selected="true"]) .browserStack {
-	/* zen logo	*/
-	/* background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3c/Zen_Browser_logo_%28red_circles%29.svg") !important;
-
+	background-image: url("https://github.com/SARRAF-5757/.dotfiles/blob/dots/Library/Application%20Support/zen/Profiles/lpjljjxv.Default%20(release)/chrome/newtabText.png?raw=true") !important;
 	background-position: center !important;
 	background-repeat: no-repeat !important;
-	background-size: 50px !important;
+	background-size: 250px !important;
 	filter: saturate(0);
 	/* 	  background-size: cover !important; */
-} */
+}
 
-/*! hide compact sidebar when no tabs open */
+/*! hide compact sidebar when no tabs open !*/
 #zen-main-app-wrapper[zen-compact-mode="true"]:not(:has(#urlbar[open][zen-floating-urlbar="true"])) #browser:has([zen-empty-tab="true"][selected="true"]) #navigator-toolbox,
 #zen-main-app-wrapper[zen-compact-mode="true"] #browser:has([zen-empty-tab="true"][selected="true"]) #urlbar:not([open]) {
 	opacity: 0 !important;
 }
 
-/*! dark theme for image */
+/*! dark theme for image !*/
 html:not([lwt-sidebar="dark"]) {
 	#browser:has([zen-empty-tab="true"][selected="true"]) .browserStack browser {
 		filter: invert(1) saturate(0);
 	}
 }
 
-/*! custom extension icons */
+/*! custom extension icons !*/
 /* stylebot */
 [label="Stylebot"] image {
 	list-style-image: url("https://cdn3.iconfinder.com/data/icons/feather-5/24/command-128.png") !important;
@@ -106,7 +93,7 @@ html:not([lwt-sidebar="dark"]) {
 	list-style-image: url("https://cdn1.iconfinder.com/data/icons/essentials-pack/96/unlock_open_password_lock_key-512.png") !important;
 }
 
-/*! dark theme */
+/* dark theme */
 [devtoolstheme="dark"] {
 	[label="Dark Reader"],
 	[label="Stylebot"],
@@ -118,7 +105,7 @@ html:not([lwt-sidebar="dark"]) {
 	}
 }
 
-/*! sidebar mods */
+/*! sidebar mods !*/
 #sidebar-box,
 #bookmarksPanel.sidebar-panel,
 #sidebar-header,
@@ -156,7 +143,7 @@ html,
 	}
 }
 
-/*! no border split view handle fix */
+/*! no border split view handle fix !*/
 .zen-view-splitter-header {
 	transition: margin 0.3s ease-in-out;
 	&:hover {
@@ -165,12 +152,12 @@ html,
 	}
 }
 
-/*!  transparent url bar  */
-/* #urlbar[open][zen-floating-urlbar="true"] {
+/*!  transparent url bar  !*/
+#urlbar[open][zen-floating-urlbar="true"] {
 	#urlbar-background {
 		background-color: light-dark(color-mix(in srgb, #fdfdfd 50%, transparent), color-mix(in srgb, #0e0e0e 50%, transparent)) !important;
 	}
-} */
+}
 
 /*! context menu */
 #tabContextMenu,
@@ -288,7 +275,7 @@ tab-group .tabbrowser-tab::before {
 	scale: 1.1 !important;
 }
 
-/*! ctrl tab is back */
+/*! ctrl tab is back !*/
 #ctrlTab-previews {
 	border-radius: 2em !important;
 	margin-bottom: 2em !important;
@@ -316,7 +303,7 @@ tab-group .tabbrowser-tab::before {
 	}
 }
 
-/*! ctrl tab visuals and animations */
+/* ctrl tab visuals and animations */
 #ctrlTab-panel {
 	background-color: transparent !important;
 	--panel-background: transparent !important;
@@ -328,7 +315,7 @@ body:has(#ctrlTab-panel[hasbeenopened="true"] .ctrlTab-preview:not([hidden="true
 	filter: blur(10px) !important;
 }
 
-/*! transparent glance */
+/*! transparent glance !*/
 .zen-glance-background > vbox {
 	mask-image: linear-gradient(to right, black 0%, black 4%, transparent 7%, transparent 93.5%, black 96%, black 100%);
 	mask-repeat: no-repeat;
@@ -345,18 +332,18 @@ body:has(#ctrlTab-panel[hasbeenopened="true"] .ctrlTab-preview:not([hidden="true
 /* ------------------------------------------------------------------ */
 /* media player mods */
 /* #zen-media-controls-toolbar{
-  display: block !important;
-  opacity: 0 !important;
-  scale: 0.5 !important;
-  margin-bottom: 15px !important;
-  transition: all 0.5s ease-in-out 10s !important;
+	display: block !important;
+	opacity: 0 !important;
+	scale: 0.5 !important;
+	margin-bottom: 15px !important;
+	transition: all 0.5s ease-in-out 10s !important;
 } */
 
 /* always open media player when playing */
 /* #zen-media-controls-toolbar.playing{
-  opacity: 1 !important;
-  scale: 1 !important;
-  transition: all 0.5s ease-in-out 0.3s !important;
+	opacity: 1 !important;
+	scale: 1 !important;
+	transition: all 0.5s ease-in-out 0.3s !important;
 } */
 
 /* media player expanded layout */
@@ -440,17 +427,17 @@ body:has(#ctrlTab-panel[hasbeenopened="true"] .ctrlTab-preview:not([hidden="true
 		transform: scale(0.9) translateZ(0);
 		filter: blur(15px);
 		/* background: linear-gradient(
-      to left,
-      #ff5770,
-      #e4428d,
-      #c42da8,
-      #9e16c3,
-      #6501de,
-      #9e16c3,
-      #c42da8,
-      #e4428d,
-      #ff5770
-    ); */
+			to left,
+			#ff5770,
+			#e4428d,
+			#c42da8,
+			#9e16c3,
+			#6501de,
+			#9e16c3,
+			#c42da8,
+			#e4428d,
+			#ff5770
+		); */
 		background: linear-gradient(135deg, color-mix(in srgb, var(--zen-primary-color) 10%, black), var(--zen-primary-color), color-mix(in srgb, var(--zen-primary-color) 25%, white), var(--zen-primary-color), light-dark(#fffd, #000d), light-dark(#fffd, #000d), var(--zen-primary-color), color-mix(in srgb, var(--zen-primary-color) 50%, white), color-mix(in srgb, var(--zen-primary-color) 25%, white), var(--zen-primary-color), color-mix(in srgb, var(--zen-primary-color) 25%, black), light-dark(#fffd, #000d), color-mix(in srgb, var(--zen-primary-color) 10%, black), light-dark(#fffd, #000d), color-mix(in srgb, var(--zen-primary-color) 75%, black), color-mix(in srgb, var(--zen-primary-color) 50%, black), color-mix(in srgb, var(--zen-primary-color) 25%, black), color-mix(in srgb, var(--zen-primary-color) 10%, black), light-dark(#fffd, #000d));
 
 		background-size: 200% 200%;
