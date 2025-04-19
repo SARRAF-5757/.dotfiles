@@ -1,0 +1,90 @@
+{
+  "actions" : [
+    {
+      "key" : "e",
+      "label" : "",
+      "type" : "application",
+      "value" : "/Applications/Warp.app"
+    },
+    {
+      "key" : "v",
+      "label" : "",
+      "type" : "application",
+      "value" : "/Applications/VS Code.app"
+    },
+    {
+      "key" : "f",
+      "label" : "Browser",
+      "type" : "application",
+      "value" : "/Applications/Zen.app"
+    },
+    {
+      "key" : "m",
+      "label" : "emails",
+      "type" : "application",
+      "value" : "/Applications/Spark Desktop.app"
+    },
+    {
+      "key" : "c",
+      "label" : "",
+      "type" : "application",
+      "value" : "/Applications/ChatGPT.app"
+    },
+    {
+      "key" : "t",
+      "label" : "",
+      "type" : "application",
+      "value" : "/System/Applications/Messages.app"
+    },
+    {
+      "key" : "d",
+      "label" : "",
+      "type" : "application",
+      "value" : "/Applications/Discord.app"
+    },
+    {
+      "key" : "g",
+      "label" : "",
+      "type" : "application",
+      "value" : "/Applications/GitHub Desktop.app"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "c",
+          "label" : "Center Window",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/center"
+        },
+        {
+          "key" : "m",
+          "label" : "Maximize Window",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/maximize"
+        },
+        {
+          "key" : "n",
+          "label" : "Night Shift",
+          "type" : "url",
+          "value" : "raycast://extensions/devmoath/night-light/toggle-night-shift"
+        }
+      ],
+      "key" : "r",
+      "label" : "Raycast",
+      "type" : "group"
+    },
+    {
+      "key" : "n",
+      "label" : "",
+      "type" : "application",
+      "value" : "/Applications/Notion.app"
+    },
+    {
+      "key" : "s",
+      "label" : "",
+      "type" : "application",
+      "value" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
+    }
+  ],
+  "type" : "group"
+}
