@@ -40,10 +40,16 @@ brew "curl"
 brew "eza"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
+# Command-line downloader for image-hosting site galleries and collections
+brew "gallery-dl"
 # GitHub command-line tool
 brew "gh"
+# Highest-quality GIF encoder based on pngquant
+brew "gifski"
 # Distributed revision control system
 brew "git"
+# Git extension for versioning large files
+brew "git-lfs"
 # Text-based UI library
 brew "ncurses"
 # Improved top (interactive process viewer)
@@ -74,6 +80,8 @@ brew "ripgrep"
 brew "scrcpy"
 # Terminal multiplexer with VT100/ANSI terminal emulation
 brew "screen"
+# 7-Zip is a file archiver with a high compression ratio
+brew "sevenzip"
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
@@ -128,6 +136,8 @@ cask "discord"
 cask "dockdoor"
 # App to build and share containerised applications and microservices
 cask "docker"
+# Advanced Dock preferences
+cask "dockey"
 # Status monitoring
 cask "eul"
 # Desktop client for GitHub repositories
@@ -142,8 +152,14 @@ cask "imageoptim"
 cask "intellidock"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# Menu bar manager
+cask "jordanbaird-ice"
+# Keyboard customiser
+cask "karabiner-elements"
 # Utility that shows the latest app updates
 cask "latest"
+# Application launcher
+cask "leader-key"
 # Customise mouse behavior
 cask "linearmouse"
 # Software for Logitech devices
@@ -205,7 +221,6 @@ cask "zoom"
 mas "Command X", id: 6448461551
 mas "darker", id: 1637413102
 mas "Displaperture", id: 1543920362
-mas "Hologram Desktop", id: 1529001798
 mas "Memory Diag", id: 748212890
 mas "Notability", id: 360593530
 mas "PhotoScape X", id: 929507092
@@ -226,12 +241,9 @@ vscode "enkia.tokyo-night"
 vscode "esbenp.prettier-vscode"
 vscode "github.copilot"
 vscode "github.copilot-chat"
-vscode "hars.cppsnippets"
-vscode "hnw.vscode-auto-open-markdown-preview"
 vscode "illixion.vscode-vibrancy-continued"
 vscode "jdinhlife.gruvbox"
 vscode "jeff-hykin.better-cpp-syntax"
-vscode "leonardssh.vscord"
 vscode "llvm-vs-code-extensions.vscode-clangd"
 vscode "mechatroner.rainbow-csv"
 vscode "miguelsolorio.fluent-icons"
