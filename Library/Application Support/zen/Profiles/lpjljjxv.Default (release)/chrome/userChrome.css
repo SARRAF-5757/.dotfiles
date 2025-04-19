@@ -1,10 +1,10 @@
-/* Hidden buttons */
+/*! Hidden buttons */
 /* #nav-bar-overflow-button, */
 #zen-current-workspace-indicator {
 	display: none;
 }
 
-/* reduce the separaters width */
+/*! reduce the separaters width */
 #vertical-pinned-tabs-container-separator,
 #tabbrowser-arrowscrollbox-periphery:before,
 #TabsToolbar-customization-target:after,
@@ -29,13 +29,13 @@
 	}
 }
 
-/* url bar cleanup */
+/*! url bar cleanup */
 #page-action-buttons,
 #identity-permission-box {
 	display: none !important;
 }
 
-/* hidden sidebar buttons */
+/*! hidden sidebar buttons */
 #zen-sidebar-icons-wrapper,
 #home-button {
 	opacity: 0;
@@ -46,21 +46,12 @@
 	}
 }
 
-/* extension (zen) button scale for macos */
-#unified-extensions-button {
-	margin-left: 0.25em !important;
-	image {
-		border-radius: 100px !important;
-		scale: 1.4;
-	}
-}
-
-/* Fix find in page */
+/*! Fix find in page */
 findbar * {
 	opacity: 1 !important;
 }
 
-/* Animations */
+/*! Animations */
 /* Loading tab animation */
 tab[busy] {
 	scale: 0.95 !important;
@@ -69,34 +60,32 @@ tab[busy] {
 	}
 }
 
-/* empty tab image */
+/*! empty tab image */
 #browser:has([zen-empty-tab="true"][selected="true"]) .browserStack {
-	/* 	background-image: url("https://github.com/sameerasw/my-internet/blob/main/cmd-t.png?raw=true") !important; */
-
 	/* zen logo	*/
-	background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3c/Zen_Browser_logo_%28red_circles%29.svg") !important;
+	/* background-image: url("https://upload.wikimedia.org/wikipedia/commons/3/3c/Zen_Browser_logo_%28red_circles%29.svg") !important;
 
 	background-position: center !important;
 	background-repeat: no-repeat !important;
 	background-size: 50px !important;
 	filter: saturate(0);
 	/* 	  background-size: cover !important; */
-}
+} */
 
-/* hide compact sidebar when no tabs open */
+/*! hide compact sidebar when no tabs open */
 #zen-main-app-wrapper[zen-compact-mode="true"]:not(:has(#urlbar[open][zen-floating-urlbar="true"])) #browser:has([zen-empty-tab="true"][selected="true"]) #navigator-toolbox,
 #zen-main-app-wrapper[zen-compact-mode="true"] #browser:has([zen-empty-tab="true"][selected="true"]) #urlbar:not([open]) {
 	opacity: 0 !important;
 }
 
-/* dark theme for image */
+/*! dark theme for image */
 html:not([lwt-sidebar="dark"]) {
 	#browser:has([zen-empty-tab="true"][selected="true"]) .browserStack browser {
 		filter: invert(1) saturate(0);
 	}
 }
 
-/* custom extension icons */
+/*! custom extension icons */
 /* stylebot */
 [label="Stylebot"] image {
 	list-style-image: url("https://cdn3.iconfinder.com/data/icons/feather-5/24/command-128.png") !important;
@@ -112,18 +101,24 @@ html:not([lwt-sidebar="dark"]) {
 	list-style-image: url("https://cdn3.iconfinder.com/data/icons/feather-5/24/command-128.png") !important;
 }
 
-/* dark theme */
+/* Bitwarden */
+[label="Bitwarden"] image {
+	list-style-image: url("https://cdn1.iconfinder.com/data/icons/essentials-pack/96/unlock_open_password_lock_key-512.png") !important;
+}
+
+/*! dark theme */
 [devtoolstheme="dark"] {
 	[label="Dark Reader"],
 	[label="Stylebot"],
-	[label="Zen Internet"] {
+	[label="Zen Internet"],
+	[label="Bitwarden"] {
 		image {
 			filter: invert(1);
 		}
 	}
 }
 
-/* sidebar mods */
+/*! sidebar mods */
 #sidebar-box,
 #bookmarksPanel.sidebar-panel,
 #sidebar-header,
@@ -161,7 +156,7 @@ html,
 	}
 }
 
-/* no border split view handle fix */
+/*! no border split view handle fix */
 .zen-view-splitter-header {
 	transition: margin 0.3s ease-in-out;
 	&:hover {
@@ -170,14 +165,14 @@ html,
 	}
 }
 
-/*  transparent url bar  */
-#urlbar[open][zen-floating-urlbar="true"] {
+/*!  transparent url bar  */
+/* #urlbar[open][zen-floating-urlbar="true"] {
 	#urlbar-background {
 		background-color: light-dark(color-mix(in srgb, #fdfdfd 50%, transparent), color-mix(in srgb, #0e0e0e 50%, transparent)) !important;
 	}
-}
+} */
 
-/* context menu */
+/*! context menu */
 #tabContextMenu,
 #contentAreaContextMenu,
 #toolbar-context-menu {
@@ -228,7 +223,7 @@ html,
 	}
 }
 
-/* Tab group label styling */
+/*! Tab group label styling */
 .tab-group-label,
 tab-group .tab-group-label {
 	width: 100% !important;
@@ -293,7 +288,7 @@ tab-group .tabbrowser-tab::before {
 	scale: 1.1 !important;
 }
 
-/* ctrl tab is back */
+/*! ctrl tab is back */
 #ctrlTab-previews {
 	border-radius: 2em !important;
 	margin-bottom: 2em !important;
@@ -321,7 +316,7 @@ tab-group .tabbrowser-tab::before {
 	}
 }
 
-/* ctrl tab visuals and animations */
+/*! ctrl tab visuals and animations */
 #ctrlTab-panel {
 	background-color: transparent !important;
 	--panel-background: transparent !important;
@@ -333,12 +328,38 @@ body:has(#ctrlTab-panel[hasbeenopened="true"] .ctrlTab-preview:not([hidden="true
 	filter: blur(10px) !important;
 }
 
-/* always open media player */
-#zen-media-controls-toolbar {
-	display: block !important;
-	opacity: 1 !important;
+/*! transparent glance */
+.zen-glance-background > vbox {
+	mask-image: linear-gradient(to right, black 0%, black 4%, transparent 7%, transparent 93.5%, black 96%, black 100%);
+	mask-repeat: no-repeat;
+	mask-size: 100% 100%;
 }
 
+.zen-glance-overlay > vbox {
+	background-color: light-dark(#fff7, #0007) !important;
+	margin-top: 0.5% !important;
+	margin-bottom: 0.5% !important;
+	height: 98% !important;
+}
+
+/* ------------------------------------------------------------------ */
+/* media player mods */
+/* #zen-media-controls-toolbar{
+  display: block !important;
+  opacity: 0 !important;
+  scale: 0.5 !important;
+  margin-bottom: 15px !important;
+  transition: all 0.5s ease-in-out 10s !important;
+} */
+
+/* always open media player when playing */
+/* #zen-media-controls-toolbar.playing{
+  opacity: 1 !important;
+  scale: 1 !important;
+  transition: all 0.5s ease-in-out 0.3s !important;
+} */
+
+/* media player expanded layout */
 #zen-media-controls-toolbar {
 	& .show-on-hover {
 		max-height: unset !important;
@@ -352,40 +373,43 @@ body:has(#ctrlTab-panel[hasbeenopened="true"] .ctrlTab-preview:not([hidden="true
 
 #zen-media-buttons-hbox > toolbarbutton {
 	opacity: 0 !important;
-	/*   background-image: url("") */
 	transition: all 0.3s ease-in-out !important;
+
 	&:hover {
 		opacity: 1 !important;
 	}
-}
-
-/* transparent glance */
-.zen-glance-background > vbox {
-	/*   filter: blur(20px) !important; */
-	/*   opacity: 0.05 !important; */
-
-	mask-image: linear-gradient(to right, black 0%, black 4%, transparent 7%, transparent 93.5%, black 96%, black 100%);
-	mask-repeat: no-repeat;
-	mask-size: 100% 100%;
-}
-
-.zen-glance-overlay > vbox {
-	background-color: light-dark(#fff7, #0007) !important;
-	margin-top: 0.5% !important;
-	margin-bottom: 0.5% !important;
-	height: 98% !important;
 }
 
 #zen-media-controls-toolbar {
 	#zen-media-controls-hbox {
 		order: 0 !important;
 		height: 0 !important;
-		opacity: 0 !important;
+		overflow: hidden !important;
 	}
 
-	&:hover #zen-media-controls-hbox {
-		height: fit-content !important;
-		opacity: 1 !important;
+	#zen-media-progress-hbox label {
+		scale: 0 !important;
+		transition: scale 0.3s ease-in-out !important;
+	}
+
+	#zen-media-progress-bar {
+		margin: 0 !important;
+		scale: 1.4 !important;
+		transition: all 0.3s ease-in-out !important;
+	}
+
+	&:hover {
+		#zen-media-controls-hbox {
+			height: fit-content !important;
+			opacity: 1 !important;
+		}
+		#zen-media-progress-hbox label {
+			scale: 1 !important;
+		}
+		#zen-media-progress-bar {
+			margin: 1em !important;
+			scale: 1 !important;
+		}
 	}
 }
 
@@ -393,14 +417,10 @@ body:has(#ctrlTab-panel[hasbeenopened="true"] .ctrlTab-preview:not([hidden="true
 	order: 1 !important;
 }
 
-#zen-media-controls-toolbar toolbaritem {
-	background-color: light-dark(#fff3, #0003) !important;
-	transition: all 0.5s ease !important;
-}
-
+/*! media controls glow */
 #zen-media-controls-toolbar.playing {
 	toolbaritem {
-		background-color: light-dark(#fffc, #000c) !important;
+		background-color: light-dark(#fffd, #000d) !important;
 	}
 
 	padding: 16px 24px;
@@ -419,9 +439,22 @@ body:has(#ctrlTab-panel[hasbeenopened="true"] .ctrlTab-preview:not([hidden="true
 		width: 100%;
 		transform: scale(0.9) translateZ(0);
 		filter: blur(15px);
-		background: linear-gradient(to left, #ff5770, #e4428d, #c42da8, #9e16c3, #6501de, #9e16c3, #c42da8, #e4428d, #ff5770);
+		/* background: linear-gradient(
+      to left,
+      #ff5770,
+      #e4428d,
+      #c42da8,
+      #9e16c3,
+      #6501de,
+      #9e16c3,
+      #c42da8,
+      #e4428d,
+      #ff5770
+    ); */
+		background: linear-gradient(135deg, color-mix(in srgb, var(--zen-primary-color) 10%, black), var(--zen-primary-color), color-mix(in srgb, var(--zen-primary-color) 25%, white), var(--zen-primary-color), light-dark(#fffd, #000d), light-dark(#fffd, #000d), var(--zen-primary-color), color-mix(in srgb, var(--zen-primary-color) 50%, white), color-mix(in srgb, var(--zen-primary-color) 25%, white), var(--zen-primary-color), color-mix(in srgb, var(--zen-primary-color) 25%, black), light-dark(#fffd, #000d), color-mix(in srgb, var(--zen-primary-color) 10%, black), light-dark(#fffd, #000d), color-mix(in srgb, var(--zen-primary-color) 75%, black), color-mix(in srgb, var(--zen-primary-color) 50%, black), color-mix(in srgb, var(--zen-primary-color) 25%, black), color-mix(in srgb, var(--zen-primary-color) 10%, black), light-dark(#fffd, #000d));
+
 		background-size: 200% 200%;
-		animation: animateGlow 3s ease-in-out infinite;
+		animation: animateGlow 5s cubic-bezier(0.1, 0.7, 0.5, 0.1) infinite;
 	}
 }
 
@@ -434,60 +467,45 @@ body:has(#ctrlTab-panel[hasbeenopened="true"] .ctrlTab-preview:not([hidden="true
 	}
 }
 
-/* urlbar glow */
-/* #urlbar[open][zen-floating-urlbar="true"] {
-#urlbar-background{
-    background-color:  #000 !important;
-  padding: 16px 24px;
-  position: relative;
-  border-radius: 8px;
-  box-shadow: 0 0 0 1px rgba(0,0,0,.01);
+/*! compact mode player */
+#zen-main-app-wrapper[zen-compact-mode="true"]:not(:has(toolbox[zen-user-show=""])) #zen-media-controls-toolbar {
+	&.playing #zen-media-focus-button {
+		position: fixed !important;
+		left: 180px !important;
+		bottom: 0 !important;
+		opacity: 1 !important;
+		z-index: 100000000 !important;
+	}
 
-  &::after {
-    position: absolute;
-    content: "";
-    top: 5px;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    height: 100%;
-    width: 100%;
-    transform: scale(1) translateZ(0);
-    filter: blur(25px);
-    background: linear-gradient(
-      to left,
-      #ff5770,
-      #e4428d,
-      #c42da8,
-      #9e16c3,
-      #6501de,
-      #9e16c3,
-      #c42da8,
-      #e4428d,
-      #ff5770
-    );
-    background-size: 200% 200%;
-    animation: animateGlow 3s ease-in-out infinite;
-  }
-}
-} */
+	position: fixed !important;
+	transform: translateX(-120%) !important;
+	left: 0 !important;
+	bottom: 0 !important;
+	margin: 5px 5px !important;
+	z-index: 1000 !important;
+	width: 150px !important;
+	height: 50px !important;
 
-/* no gaps */
-hbox.browserSidebarContainer,
-#zen-tabbox-wrapper {
-	margin: 0 !important;
+	&:hover {
+		transform: translateX(0) !important;
+
+		#zen-media-focus-button {
+			position: initial !important;
+			left: initial !important;
+			bottom: initial !important;
+			opacity: initial !important;
+			z-index: initial !important;
+		}
+	}
 }
 
-/* no window controls - macOS */
+#zen-main-app-wrapper[zen-compact-mode="true"] #navigator-toolbox {
+	opacity: 1 !important;
+}
+
+/*! no window controls - macOS */
 #zen-sidebar-top-buttons {
 	.titlebar-buttonbox-container {
 		display: none !important;
 	}
-}
-
-/* ----- remove the below on Windows to keep window controls, I don't use them on macOS ----- */
-
-/* remove top border and window controls */
-#zen-appcontent-navbar-container {
-	display: none !important;
 }
