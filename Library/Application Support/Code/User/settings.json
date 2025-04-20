@@ -37,7 +37,7 @@
 	
 	//!Workbench Settings
 	"window.titleBarStyle": "custom",
-	"workbench.colorTheme": "One Dark Pro Darker",
+	"workbench.colorTheme": "One Dark Pro Night Flat",
 	"workbench.productIconTheme": "fluent-icons", //Put sidebar on the right
 	"window.commandCenter": false, 						//hide the top bar
 	"workbench.layoutControl.enabled": false, 			//hide the other top bar

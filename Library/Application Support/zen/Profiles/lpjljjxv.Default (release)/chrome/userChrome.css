@@ -1,47 +1,4 @@
-/*! Hidden buttons !*/
-/* #nav-bar-overflow-button, */
-#zen-current-workspace-indicator {
-	display: none;
-}
-
-/*! reduce the separaters width !*/
-#vertical-pinned-tabs-container-separator,
-#tabbrowser-arrowscrollbox-periphery:before,
-#TabsToolbar-customization-target:after,
-.vertical-pinned-tabs-container-separator {
-	width: 30% !important;
-}
-
-/*! Modify new tab entry !*/
-[label="Super Speedy Dial"] {
-	.tab-label-container:after {
-		content: "Home" !important;
-	}
-
-	label {
-		display: none !important;
-	}
-
-	.tab-icon-image {
-		content: url("chrome://branding/content/icon32.png") !important;
-		border-radius: 100px !important;
-		mix-blend-mode: difference !important;
-	}
-}
-
-/*! hidden sidebar buttons !*/
-#zen-sidebar-icons-wrapper,
-#home-button {
-	/* opacity: 0;
-	transition: opacity 0.5s ease-in-out !important;
-
-	&:hover {
-		opacity: 1 !important;
-	} */
-}
-
-/*! Animations !*/
-/* Loading tab animation */
+/*! Loading Tab Animations !*/
 tab[busy] {
 	scale: 0.95 !important;
 	.tab-background {
@@ -49,30 +6,17 @@ tab[busy] {
 	}
 }
 
-/*! empty tab image !*/
+/*! Empty Tab Image !*/
 #browser:has([zen-empty-tab="true"][selected="true"]) .browserStack {
 	background-image: url("https://github.com/SARRAF-5757/.dotfiles/blob/dots/Library/Application%20Support/zen/Profiles/lpjljjxv.Default%20(release)/chrome/newtabText.png?raw=true") !important;
 	background-position: center !important;
 	background-repeat: no-repeat !important;
-	background-size: 250px !important;
+	background-size: 20% !important;
 	filter: saturate(0);
-	/* 	  background-size: cover !important; */
+	/* background-size: cover !important; */  /* Use when using opaque full images */
 }
 
-/*! hide compact sidebar when no tabs open !*/
-#zen-main-app-wrapper[zen-compact-mode="true"]:not(:has(#urlbar[open][zen-floating-urlbar="true"])) #browser:has([zen-empty-tab="true"][selected="true"]) #navigator-toolbox,
-#zen-main-app-wrapper[zen-compact-mode="true"] #browser:has([zen-empty-tab="true"][selected="true"]) #urlbar:not([open]) {
-	opacity: 0 !important;
-}
-
-/*! dark theme for image !*/
-html:not([lwt-sidebar="dark"]) {
-	#browser:has([zen-empty-tab="true"][selected="true"]) .browserStack browser {
-		filter: invert(1) saturate(0);
-	}
-}
-
-/*! custom extension icons !*/
+/*! Custom Extension Icons !*/
 /* stylebot */
 [label="Stylebot"] image {
 	list-style-image: url("https://cdn3.iconfinder.com/data/icons/feather-5/24/command-128.png") !important;
@@ -90,7 +34,7 @@ html:not([lwt-sidebar="dark"]) {
 
 /* Bitwarden */
 [label="Bitwarden"] image {
-	list-style-image: url("https://cdn1.iconfinder.com/data/icons/essentials-pack/96/unlock_open_password_lock_key-512.png") !important;
+	list-style-image: url("https://cdn4.iconfinder.com/data/icons/basic-ui-2-line/32/key-password-main-keys-privilege-256.png") !important;
 }
 
 /* dark theme */
@@ -105,177 +49,7 @@ html:not([lwt-sidebar="dark"]) {
 	}
 }
 
-/*! sidebar mods !*/
-#sidebar-box,
-#bookmarksPanel.sidebar-panel,
-#sidebar-header,
-#history-panel,
-html,
-#header {
-	background-color: transparent !important;
-	border: none !important;
-	box-shadow: none !important;
-	/*   width: 250px !important; */
-}
-
-/* body > browser:nth-child(2)[disableglobalhistory="true"], */
-#sidebar {
-	border-radius: 1em !important;
-	overflow: hidden !important;
-	margin: 0 14px 14px 0 !important;
-}
-
-#header:has(select[data-l10n-id="genai-header-provider-menu"]) {
-	display: none !important;
-}
-
-#sidebar-header {
-	/*   display: none; */
-	transition: all 0.3s ease-in-out !important;
-	top: 0px !important;
-	position: relative !important;
-	height: 0 !important;
-	opacity: 0.01 !important;
-	&:hover {
-		top: 0px !important;
-		height: 40px !important;
-		opacity: 1 !important;
-	}
-}
-
-/*! no border split view handle fix !*/
-.zen-view-splitter-header {
-	transition: margin 0.3s ease-in-out;
-	&:hover {
-		/*     transform: translateY(12px) !important; */
-		margin-top: 15px !important;
-	}
-}
-
-/*!  transparent url bar  !*/
-#urlbar[open][zen-floating-urlbar="true"] {
-	#urlbar-background {
-		background-color: light-dark(color-mix(in srgb, #fdfdfd 50%, transparent), color-mix(in srgb, #0e0e0e 50%, transparent)) !important;
-	}
-}
-
-/*! context menu */
-#tabContextMenu,
-#contentAreaContextMenu,
-#toolbar-context-menu {
-	slot::before {
-		height: 50px !important;
-		width: 50px !important;
-		background-color: red !important;
-	}
-	#context_zen-add-essential,
-	#context_unpinTab,
-	#context_pinTab,
-	#context_bookmarkTab,
-	#context_moveTabOptions,
-	#context_sendTabToDevice,
-	#context_reopenInContainer,
-	#context_selectAllTabs,
-	#context_closeDuplicateTabs,
-	#context_closeTabOptions,
-	#context_undoCloseTab,
-	menuseparator,
-	#context-back,
-	#context-forward,
-	#context-reload,
-	#context-bookmarkpage,
-	#context-savepage,
-	#context-sendpagetodevice,
-	#context-selectall,
-	#context-viewsource,
-	#context-print-selection,
-	#context-viewpartialsource-selection,
-	#context-bookmarklink,
-	#context-savelink,
-	#context-openlinkinusercontext-menu,
-	#context-openlink,
-	#context-sendlinktodevice,
-	#context-searchselect-private,
-	#_52bda3fd-dc48-4b3d-a7b9-58af57879f1e_-menuitem-_stylebot-contextmenu,
-	#addon_darkreader_org-menuitem-_DarkReader-top,
-	#adguardadblocker_adguard_com-menuitem-391,
-	#toolbar-context-reloadSelectedTab,
-	#zen-context-menu-compact-mode,
-	#toolbar-context-selectAllTabs,
-	#toolbar-context-bookmarkSelectedTab,
-	#toolbar-context-undoCloseTab,
-	#toolbar-context-openANewTab,
-	#context_openANewTab {
-		display: none !important;
-	}
-}
-
-/*! Tab group label styling */
-.tab-group-label,
-tab-group .tab-group-label {
-	width: 100% !important;
-	border: none !important;
-	border-radius: 1em !important;
-	outline: none !important;
-	margin-right: 0 !important;
-	text-align: left !important;
-	padding-left: 10px !important;
-	background: color-mix(in srgb, var(--tab-group-color) 20%, transparent) !important;
-	color: color-mix(in srgb, var(--tab-group-color) 70%, #fff) !important;
-	scale: 1 !important;
-	transition: all 0.2s ease-in-out !important;
-}
-tab-group .tab-group-label:hover {
-	padding-left: 15px !important;
-	background: color-mix(in srgb, var(--tab-group-color) 50%, transparent) !important;
-	color: color-mix(in srgb, var(--tab-group-color) 30%, #fff) !important;
-}
-tab-group .tab-group-label:active {
-	scale: 0.9 !important;
-}
-tab-group:not([collapsed]) .tab-group-label {
-	border: 1.5px dashed color-mix(in srgb, var(--tab-group-color) 50%, transparent) !important;
-}
-
-/* Label container margins */
-.tab-group-label-container {
-	margin-top: 3px !important;
-	margin-bottom: 0 !important;
-}
-tab-group[collapsed] .tab-group-label-container {
-	margin-bottom: 3px !important;
-}
-
-/* Hide label container's after pseudo */
-.tab-group-label-container::after {
-	display: none !important;
-}
-
-/* Tab stack styles */
-.tab-stack,
-tab-group .tab-stack {
-	transition: all 0.3s ease-in-out !important;
-	border-radius: 1.2em !important;
-	background: color-mix(in srgb, var(--tab-group-color) 20%, transparent) !important;
-	margin-block: 2px !important;
-}
-.tab-stack:hover,
-tab-group .tab-stack:hover {
-	background: color-mix(in srgb, var(--tab-group-color) 50%, transparent) !important;
-}
-
-/* Hide tab indicator */
-tab-group .tabbrowser-tab::before {
-	display: none !important;
-}
-
-/* Scale effect when tab bar is not expanded */
-#tabbrowser-tabs:not([expanded]) tab,
-#tabbrowser-tabs:not([expanded]) tab-group {
-	scale: 1.1 !important;
-}
-
-/*! ctrl tab is back !*/
+/*! Ctrl-Tab Tweaks !*/
 #ctrlTab-previews {
 	border-radius: 2em !important;
 	margin-bottom: 2em !important;
@@ -315,7 +89,7 @@ body:has(#ctrlTab-panel[hasbeenopened="true"] .ctrlTab-preview:not([hidden="true
 	filter: blur(10px) !important;
 }
 
-/*! transparent glance !*/
+/*! Transparent Glance !*/
 .zen-glance-background > vbox {
 	mask-image: linear-gradient(to right, black 0%, black 4%, transparent 7%, transparent 93.5%, black 96%, black 100%);
 	mask-repeat: no-repeat;
@@ -329,170 +103,75 @@ body:has(#ctrlTab-panel[hasbeenopened="true"] .ctrlTab-preview:not([hidden="true
 	height: 98% !important;
 }
 
-/* ------------------------------------------------------------------ */
-/* media player mods */
-/* #zen-media-controls-toolbar{
-	display: block !important;
-	opacity: 0 !important;
-	scale: 0.5 !important;
-	margin-bottom: 15px !important;
-	transition: all 0.5s ease-in-out 10s !important;
-} */
-
-/* always open media player when playing */
-/* #zen-media-controls-toolbar.playing{
-	opacity: 1 !important;
-	scale: 1 !important;
-	transition: all 0.5s ease-in-out 0.3s !important;
-} */
-
-/* media player expanded layout */
-#zen-media-controls-toolbar {
-	& .show-on-hover {
-		max-height: unset !important;
-		opacity: 1 !important;
-		transform: translateY(0) !important;
-		padding-right: 6px;
-		pointer-events: none;
-		transition: max-height 0.2s ease, opacity 0.2s ease, transform 0.2s ease, padding 0.2s ease;
-	}
-}
-
-#zen-media-buttons-hbox > toolbarbutton {
-	opacity: 0 !important;
-	transition: all 0.3s ease-in-out !important;
-
-	&:hover {
-		opacity: 1 !important;
-	}
-}
-
-#zen-media-controls-toolbar {
-	#zen-media-controls-hbox {
-		order: 0 !important;
-		height: 0 !important;
-		overflow: hidden !important;
-	}
-
-	#zen-media-progress-hbox label {
-		scale: 0 !important;
-		transition: scale 0.3s ease-in-out !important;
-	}
-
-	#zen-media-progress-bar {
-		margin: 0 !important;
-		scale: 1.4 !important;
-		transition: all 0.3s ease-in-out !important;
-	}
-
-	&:hover {
-		#zen-media-controls-hbox {
-			height: fit-content !important;
-			opacity: 1 !important;
+/*! Better Colored Essentials */
+#zen-essentials-container .tabbrowser-tab {
+	@media (-moz-bool-pref: "zen.theme.essentials-favicon-bg") {
+		&[visuallyselected] .tab-background {
+			&::after {
+				left: -50% !important;
+				top: -50% !important;
+				width: 200% !important;
+				height: 200% !important;
+				filter: blur (20px) !important;
+			}
+			&::before {
+				mask-image: none !important;
+				background-color: light-dark(color-mix(in srgb, #ffffff 65%, transparent), color-mix(in srgb, #000000 55%, transparent)) !important;
+			}
 		}
-		#zen-media-progress-hbox label {
-			scale: 1 !important;
-		}
-		#zen-media-progress-bar {
-			margin: 1em !important;
-			scale: 1 !important;
+		&[visuallyselected]:hover .tab-background::before {
+			background-color: light-dark(color-mix(in srgb, #ffffff 55%, transparent), color-mix(in srgb, #000000 65%, transparent)) !important;
 		}
 	}
 }
 
-#zen-media-main-vbox > vbox {
-	order: 1 !important;
+/*! BETTER CUSTOMIZE TOOLBAR !*/
+#customization-container {
+	position: absolute;
+	z-index: 1;
+	bottom: 10px;
+	right: 10px;
+	height: 80%;
+	width: 70%;
+	border-radius: 12px;
+
+	padding: 10px;
+	background: light-dark(rgba(255, 255, 255, 0.32), rgba(0, 0, 0, 0.3)) !important;
 }
 
-/*! media controls glow */
-#zen-media-controls-toolbar.playing {
-	toolbaritem {
-		background-color: light-dark(#fffd, #000d) !important;
+@media (-moz-bool-pref: "zen.tabs.vertical.right-side") {
+	#customization-container {
+		left: 10px;
 	}
+	#customization-container #customization-content-container {
+		flex-direction: row-reverse;
+	}
+}
 
-	padding: 16px 24px;
-	position: relative;
+#customization-container #customization-panel-container {
+	padding: 10px !important;
+}
+
+#customization-container #customization-panelWrapper {
+	--panel-arrow-offset: 0px;
+}
+
+#customization-container .panel-arrowbox {
+	display: none !important;
+}
+
+#customization-container .panel-arrowcontent {
+	height: 100% !important;
+	background: light-dark(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.4)) !important;
+	border: none !important;
+	margin: 0px !important;
 	border-radius: 8px;
-	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.01);
-
-	&::after {
-		position: absolute;
-		content: "";
-		top: 5px;
-		left: 0;
-		right: 0;
-		z-index: -1;
-		height: 100%;
-		width: 100%;
-		transform: scale(0.9) translateZ(0);
-		filter: blur(15px);
-		/* background: linear-gradient(
-			to left,
-			#ff5770,
-			#e4428d,
-			#c42da8,
-			#9e16c3,
-			#6501de,
-			#9e16c3,
-			#c42da8,
-			#e4428d,
-			#ff5770
-		); */
-		background: linear-gradient(135deg, color-mix(in srgb, var(--zen-primary-color) 10%, black), var(--zen-primary-color), color-mix(in srgb, var(--zen-primary-color) 25%, white), var(--zen-primary-color), light-dark(#fffd, #000d), light-dark(#fffd, #000d), var(--zen-primary-color), color-mix(in srgb, var(--zen-primary-color) 50%, white), color-mix(in srgb, var(--zen-primary-color) 25%, white), var(--zen-primary-color), color-mix(in srgb, var(--zen-primary-color) 25%, black), light-dark(#fffd, #000d), color-mix(in srgb, var(--zen-primary-color) 10%, black), light-dark(#fffd, #000d), color-mix(in srgb, var(--zen-primary-color) 75%, black), color-mix(in srgb, var(--zen-primary-color) 50%, black), color-mix(in srgb, var(--zen-primary-color) 25%, black), color-mix(in srgb, var(--zen-primary-color) 10%, black), light-dark(#fffd, #000d));
-
-		background-size: 200% 200%;
-		animation: animateGlow 5s cubic-bezier(0.1, 0.7, 0.5, 0.1) infinite;
-	}
 }
 
-@keyframes animateGlow {
-	0% {
-		background-position: 0% 20%;
-	}
-	100% {
-		background-position: 200% 20%;
-	}
-}
-
-/*! compact mode player */
-#zen-main-app-wrapper[zen-compact-mode="true"]:not(:has(toolbox[zen-user-show=""])) #zen-media-controls-toolbar {
-	&.playing #zen-media-focus-button {
-		position: fixed !important;
-		left: 180px !important;
-		bottom: 0 !important;
-		opacity: 1 !important;
-		z-index: 100000000 !important;
-	}
-
-	position: fixed !important;
-	transform: translateX(-120%) !important;
-	left: 0 !important;
-	bottom: 0 !important;
-	margin: 5px 5px !important;
-	z-index: 1000 !important;
-	width: 150px !important;
-	height: 50px !important;
-
-	&:hover {
-		transform: translateX(0) !important;
-
-		#zen-media-focus-button {
-			position: initial !important;
-			left: initial !important;
-			bottom: initial !important;
-			opacity: initial !important;
-			z-index: initial !important;
-		}
-	}
-}
-
-#zen-main-app-wrapper[zen-compact-mode="true"] #navigator-toolbox {
-	opacity: 1 !important;
-}
-
-/*! no window controls - macOS */
-#zen-sidebar-top-buttons {
-	.titlebar-buttonbox-container {
-		display: none !important;
+/* Check when the width is low */
+@media (max-width: 700px) {
+	/* Adjust the threshold as needed */
+	#customization-container {
+		border: 2px solid red; /* Temporary visual indicator */
 	}
 }
