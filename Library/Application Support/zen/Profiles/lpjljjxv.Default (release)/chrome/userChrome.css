@@ -13,13 +13,13 @@ tab[busy] {
 	background-repeat: no-repeat !important;
 	background-size: 20% !important;
 	filter: saturate(0);
-	/* background-size: cover !important; */  /* Use when using opaque full images */
+	/* background-size: cover !important; */	/* Use when using opaque full images */
 }
 
 /*! Custom Extension Icons !*/
-/* stylebot */
-[label="Stylebot"] image {
-	list-style-image: url("https://cdn3.iconfinder.com/data/icons/feather-5/24/command-128.png") !important;
+/* reload button */
+#reload-button > image {
+	opacity: 0 !important;
 }
 
 /* dark reader */
@@ -27,7 +27,7 @@ tab[busy] {
 	list-style-image: url("https://cdn3.iconfinder.com/data/icons/feather-5/24/moon-512.png") !important;
 }
 
-/* dark reader */
+/* zen internet */
 [label="Zen Internet"] image {
 	list-style-image: url("https://cdn3.iconfinder.com/data/icons/feather-5/24/command-128.png") !important;
 }
@@ -40,7 +40,6 @@ tab[busy] {
 /* dark theme */
 [devtoolstheme="dark"] {
 	[label="Dark Reader"],
-	[label="Stylebot"],
 	[label="Zen Internet"],
 	[label="Bitwarden"] {
 		image {
