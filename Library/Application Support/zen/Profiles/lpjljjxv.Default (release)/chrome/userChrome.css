@@ -1,10 +1,4 @@
-/*! Loading Tab Animations !*/
-tab[busy] {
-	scale: 0.95 !important;
-	.tab-background {
-		opacity: 0.3 !important;
-	}
-}
+/* @import "natsumi/natsumi.css"; */
 
 /*! Empty Tab Image !*/
 #browser:has([zen-empty-tab="true"][selected="true"]) .browserStack {
@@ -124,7 +118,7 @@ body:has(#ctrlTab-panel[hasbeenopened="true"] .ctrlTab-preview:not([hidden="true
 	}
 }
 
-/*! BETTER CUSTOMIZE TOOLBAR !*/
+/*! Better Customize Toolbar !*/
 #customization-container {
 	position: absolute;
 	z-index: 1;
