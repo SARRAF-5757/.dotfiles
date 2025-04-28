@@ -2,13 +2,11 @@
   "actions" : [
     {
       "key" : "e",
-      "label" : "",
       "type" : "application",
       "value" : "/Applications/Warp.app"
     },
     {
       "key" : "v",
-      "label" : "",
       "type" : "application",
       "value" : "/Applications/VS Code.app"
     },
@@ -26,25 +24,21 @@
     },
     {
       "key" : "c",
-      "label" : "",
       "type" : "application",
       "value" : "/Applications/ChatGPT.app"
     },
     {
       "key" : "t",
-      "label" : "",
       "type" : "application",
       "value" : "/System/Applications/Messages.app"
     },
     {
       "key" : "d",
-      "label" : "",
       "type" : "application",
       "value" : "/Applications/Discord.app"
     },
     {
       "key" : "g",
-      "label" : "",
       "type" : "application",
       "value" : "/Applications/GitHub Desktop.app"
     },
@@ -67,6 +61,11 @@
           "label" : "Night Shift",
           "type" : "url",
           "value" : "raycast://extensions/devmoath/night-light/toggle-night-shift"
+        },
+        {
+          "key" : "w",
+          "type" : "url",
+          "value" : "raycast://script-commands/center-window"
         }
       ],
       "key" : "r",
@@ -75,15 +74,18 @@
     },
     {
       "key" : "n",
-      "label" : "",
       "type" : "application",
       "value" : "/Applications/Notion.app"
     },
     {
       "key" : "s",
-      "label" : "",
       "type" : "application",
       "value" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
+    },
+    {
+      "key" : "b",
+      "type" : "application",
+      "value" : "/Applications/Blip.app"
     }
   ],
   "type" : "group"
