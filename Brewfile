@@ -10,8 +10,8 @@ brew "sqlite"
 brew "archey4"
 # Spell checker with better logic than ispell
 brew "aspell"
-# Gnome disk usage analyzer
-brew "baobab"
+# Code searching, linting, rewriting
+brew "ast-grep"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # C/C++ and Java libraries for Unicode and globalization
@@ -38,42 +38,38 @@ brew "cowsay"
 brew "curl"
 # Modern, maintained replacement for ls
 brew "eza"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
-# Command-line downloader for image-hosting site galleries and collections
-brew "gallery-dl"
-# GitHub command-line tool
-brew "gh"
-# Highest-quality GIF encoder based on pngquant
-brew "gifski"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # Distributed revision control system
 brew "git"
 # Git extension for versioning large files
 brew "git-lfs"
-# Text-based UI library
-brew "ncurses"
-# Improved top (interactive process viewer)
-brew "htop"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Install and debug iPhone apps from the command-line
 brew "ios-deploy"
-# Next-gen compiler infrastructure
-brew "llvm"
+# Simple terminal UI for git commands
+brew "lazygit"
 # Rainbows and unicorns in your console!
 brew "lolcat"
+# Package manager for the Lua programming language
+brew "luarocks"
 # Mac App Store command-line interface
 brew "mas"
+# Text-based UI library
+brew "ncurses"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Space Invaders in the terminal
 brew "ninvaders"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Display and control your Android device
@@ -86,8 +82,6 @@ brew "sevenzip"
 brew "sl"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
-# Code-search similar to ack
-brew "the_silver_searcher"
 # Programmatically correct mistyped console commands
 brew "thefuck"
 # Watch files and take action when they change
@@ -104,8 +98,6 @@ brew "zsh"
 brew "smudge/smudge/nightlight"
 # Ookla Speedtest
 brew "teamookla/speedtest/speedtest"
-# macOS command-line utility to limit max battery charge
-brew "zackelia/formulae/bclm"
 # Enable Windows-like alt-tab
 cask "alt-tab"
 # Transfer files from and to an Android smartphone
@@ -138,8 +130,11 @@ cask "dockdoor"
 cask "docker"
 # Advanced Dock preferences
 cask "dockey"
-# Status monitoring
-cask "eul"
+cask "font-iosevka-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
+cask "font-meslo-for-powerlevel10k"
+cask "font-monaspace-nerd-font"
+cask "font-open-dyslexic-nerd-font"
 # Desktop client for GitHub repositories
 cask "github"
 # Graphically shows disk usage within a file system
@@ -156,6 +151,8 @@ cask "iterm2"
 cask "jordanbaird-ice"
 # Keyboard customiser
 cask "karabiner-elements"
+# File archiver
+cask "keka"
 # Utility that shows the latest app updates
 cask "latest"
 # Application launcher
@@ -176,8 +173,6 @@ cask "microsoft-excel"
 cask "microsoft-powerpoint"
 # Word processor
 cask "microsoft-word"
-# Tool to control external monitor brightness & volume
-cask "monitorcontrol"
 # Unofficial Google Nearby Share app
 cask "neardrop"
 # App to write, plan, collaborate, and get organised
@@ -188,20 +183,14 @@ cask "notunes"
 cask "onyx"
 # Customise and maintain app icons
 cask "pictogram"
-# Emoji picker optimised for blind people
-cask "rocket"
 # Block your own access to distracting websites
 cask "selfcontrol"
 # Web browser
 cask "sigmaos"
 # Team communication and collaboration software
 cask "slack"
-# System monitor for the menu bar
-cask "stats"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
-# Unpacks archive files
-cask "the-unarchiver"
 # To-do & task list manager
 cask "ticktick"
 # Virtual machines UI using QEMU
@@ -221,6 +210,7 @@ cask "zoom"
 mas "Command X", id: 6448461551
 mas "darker", id: 1637413102
 mas "Displaperture", id: 1543920362
+mas "Dockitty", id: 6743999434
 mas "Memory Diag", id: 748212890
 mas "Notability", id: 360593530
 mas "PhotoScape X", id: 929507092
@@ -277,4 +267,5 @@ vscode "vadimcn.vscode-lldb"
 vscode "violetbp.lc2k"
 vscode "xaver.clang-format"
 vscode "xshrim.txt-syntax"
+vscode "yinfei.luahelper"
 vscode "zhuangtongfa.material-theme"

@@ -37,7 +37,7 @@
 	[label="Zen Internet"],
 	[label="Bitwarden"] {
 		image {
-			filter: invert(1);
+			filter: brightness(0) invert(0) !important;
 		}
 	}
 }

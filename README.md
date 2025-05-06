@@ -5,7 +5,6 @@
 4. Install from Brewfile '''brew bundle --file=~/.dotfiles/Brewfile'''
 5. Run '''stow .'''
 
-
 ## Stuff included
 - **Zsh Configuration**: Includes aliases, plugins, and themes (Powerlevel10k).
 - **Terminal Enhancements**: Improved `ls` (using `eza`), `cat` (using `bat`), and navigation (`zoxide`).
