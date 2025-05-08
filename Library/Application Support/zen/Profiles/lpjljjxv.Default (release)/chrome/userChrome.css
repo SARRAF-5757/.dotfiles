@@ -18,29 +18,29 @@
 
 /* dark reader */
 [label="Dark Reader"] image {
-	list-style-image: url("https://cdn3.iconfinder.com/data/icons/feather-5/24/moon-512.png") !important;
+	list-style-image: url("https://github.com/SARRAF-5757/.dotfiles/blob/dots/Library/Application%20Support/zen/Profiles/lpjljjxv.Default%20(release)/chrome/images/dark-reader.png?raw=true") !important;
 }
 
 /* zen internet */
 [label="Zen Internet"] image {
-	list-style-image: url("https://cdn3.iconfinder.com/data/icons/feather-5/24/command-128.png") !important;
+	list-style-image: url("https://github.com/SARRAF-5757/.dotfiles/blob/dots/Library/Application%20Support/zen/Profiles/lpjljjxv.Default%20(release)/chrome/images/transparent-zen.png?raw=true") !important;
 }
 
 /* Bitwarden */
 [label="Bitwarden"] image {
-	list-style-image: url("https://cdn4.iconfinder.com/data/icons/basic-ui-2-line/32/key-password-main-keys-privilege-256.png") !important;
+	list-style-image: url("https://github.com/SARRAF-5757/.dotfiles/blob/dots/Library/Application%20Support/zen/Profiles/lpjljjxv.Default%20(release)/chrome/images/bitwarden.png?raw=true") !important;
 }
 
 /* dark theme */
-[devtoolstheme="dark"] {
+/* [devtoolstheme="dark"] {
 	[label="Dark Reader"],
 	[label="Zen Internet"],
 	[label="Bitwarden"] {
 		image {
-			filter: brightness(0) invert(0) !important;
+			filter: invert(0) !important;
 		}
 	}
-}
+} */
 
 /*! Ctrl-Tab Tweaks !*/
 #ctrlTab-previews {
