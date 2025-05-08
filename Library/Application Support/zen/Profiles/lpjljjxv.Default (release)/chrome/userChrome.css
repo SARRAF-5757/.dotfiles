@@ -2,7 +2,7 @@
 
 /*! Empty Tab Image !*/
 #browser:has([zen-empty-tab="true"][selected="true"]) .browserStack {
-	background-image: url("https://github.com/SARRAF-5757/.dotfiles/blob/dots/Library/Application%20Support/zen/Profiles/lpjljjxv.Default%20(release)/chrome/newtabText.png?raw=true") !important;
+	background-image: url("https://github.com/SARRAF-5757/.dotfiles/blob/dots/Library/Application%20Support/zen/Profiles/lpjljjxv.Default%20(release)/chrome/images/newtabText.png?raw=true") !important;
 	background-position: center !important;
 	background-repeat: no-repeat !important;
 	background-size: 20% !important;
