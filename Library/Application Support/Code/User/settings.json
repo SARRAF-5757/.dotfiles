@@ -366,4 +366,7 @@
 	"workbench.sideBar.location": "right",
 	"workbench.iconTheme": "catppuccin-mocha",
 	"terminal.integrated.gpuAcceleration": "off",
+	"[verilog]": {
+		"editor.defaultFormatter": "mshr-h.veriloghdl"
+	},
 }

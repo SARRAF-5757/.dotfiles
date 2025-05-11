@@ -32,7 +32,7 @@
 }
 
 /* dark theme */
-/* [devtoolstheme="dark"] {
+[devtoolstheme="light"] {
 	[label="Dark Reader"],
 	[label="Zen Internet"],
 	[label="Bitwarden"] {
@@ -40,7 +40,7 @@
 			filter: invert(0) !important;
 		}
 	}
-} */
+}
 
 /*! Ctrl-Tab Tweaks !*/
 #ctrlTab-previews {
