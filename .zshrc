@@ -124,3 +124,4 @@ alias lls='eza -l --icons=always --total-size --git --no-user --no-permissions -
 alias cat='bat'
 alias cd='z'
 alias gits='git status'
+alias gitr='git remote show origin'

@@ -3,12 +3,11 @@
 	
 	//!Editor Settings
 	"editor.fontSize": 14,
-	"editor.fontFamily": "JetbrainsMono Nerd Font Mono",
-	//"editor.fontFamily": "ComicShannsMono Nerd Font",
-	//"editor.fontFamily": "Monaspace Radon",
-	//"editor.fontFamily": "Iosevka Nerd Font",
+	"editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+	//"editor.fontFamily": "MonaspiceRn Nerd Font Mono",
+	//"editor.fontFamily": "Iosevka Nerd Font Mono",
 	"editor.fontVariations": true,
-	"editor.inlineSuggest.fontFamily": "Monaspace Krypton",
+	"editor.inlineSuggest.fontFamily": "MonaspiceKr Nerd Font Mono",
 	"editor.fontLigatures": true,
 	//"editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'liga'", //for Monaspace
 	
@@ -16,6 +15,9 @@
 	"editor.formatOnPaste": false,
 	"editor.tabSize": 4,
 	"[javascriptreact]": {
+		"editor.tabSize": 2
+	},
+	"[typescriptreact]": {
 		"editor.tabSize": 2
 	},
 	"editor.wordWrapColumn": 90,
@@ -27,17 +29,18 @@
 	//"editor.minimap.autohide": true,
 	//"editor.minimap.renderCharacters": false,
 	"editor.guides.bracketPairs": "active",				//enable current bracket highlighting
-	"editor.multiCursorModifier": "alt",				//modifier key
+	"editor.multiCursorModifier": "alt",                 //modifier key
 	"editor.inlineSuggest.suppressSuggestions": true,	//suggestions are hidden until hover
 	"editor.selectionHighlight": false,					//stop highlighting every instance of selected word
 	"editor.occurrencesHighlight": "off",				//stop highlighting every instance of the symbol under cursor
 	"editor.renderLineHighlight": "none",				//stop highlighting the cursor line
 	"editor.accessibilitySupport": "off",				//annoying screen reader popup
 	"editor.hover.delay": 900,							//stops tooltips from poppubg up without intention while coding
+	"editor.detectIndentation": false,                  //disables auto-detection of indentation based on file contents
 	
 	//!Workbench Settings
 	"window.titleBarStyle": "custom",
-	"workbench.colorTheme": "One Dark Pro Night Flat",
+	"workbench.colorTheme": "One Dark Pro Darker",
 	"workbench.productIconTheme": "fluent-icons", //Put sidebar on the right
 	"window.commandCenter": false, 						//hide the top bar
 	"workbench.layoutControl.enabled": false, 			//hide the other top bar
@@ -50,6 +53,8 @@
 	"workbench.startupEditor": "none",					//prevent welcome or any editor from launching
 	"scm.diffDecorations": "none", 						//disable git's added/deleted/modified colorsw
 	"workbench.tree.indent": 20,						//file explorer indentation
+	"workbench.sideBar.location": "right",				//sidebar at the right
+	"workbench.iconTheme": "catppuccin-mocha",			//file icons
 	"workbench.colorCustomizations": {
 		"terminal.background": "#00000000"
 	},
@@ -61,6 +66,7 @@
 	"terminal.integrated.fontSize": 12,
 	"terminal.external.osxExec": "Warp.app",
 	"terminal.integrated.shell.osx": "zsh",
+	"terminal.integrated.gpuAcceleration": "off",
 	
 	//!File Handling
 	"files.autoSave": "afterDelay",
@@ -110,6 +116,11 @@
 		"files.insertFinalNewline": true
 	},
 
+	//!Verilog settings [EECS270]
+	"[verilog]": {
+		"editor.defaultFormatter": "mshr-h.veriloghdl"
+	},
+
 	//!Python Settings
 	"[python]": {
 		"editor.rulers": [79]
@@ -124,13 +135,13 @@
 	
 	//!GitLens
 	"gitlens.currentLine.fontSize": 10,
-	"gitlens.currentLine.fontFamily": "Monaspace Krypton",
+	"gitlens.currentLine.fontFamily": "MonaspiceKr Nerd Font Mono",
 	"gitlens.plusFeatures.enabled": false,
 	"gitlens.hovers.enabled": false,
 	"gitlens.codeLens.enabled": false,
 	
 	//!Prettier
-	"prettier.useTabs": true,
+	"prettier.useTabs": false,
 	"prettier.experimentalTernaries": true,
 	"prettier.printWidth": 1000, //so that code doesn't wrap arround annoyingly
 	
@@ -362,11 +373,5 @@
 				}
 			}
 		]
-	},
-	"workbench.sideBar.location": "right",
-	"workbench.iconTheme": "catppuccin-mocha",
-	"terminal.integrated.gpuAcceleration": "off",
-	"[verilog]": {
-		"editor.defaultFormatter": "mshr-h.veriloghdl"
 	},
 }
