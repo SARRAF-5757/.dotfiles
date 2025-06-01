@@ -2,11 +2,13 @@
   "actions" : [
     {
       "key" : "e",
+      "label" : "Terminal",
       "type" : "application",
       "value" : "/Applications/Warp.app"
     },
     {
-      "key" : "v",
+      "key" : "d",
+      "label" : "Code",
       "type" : "application",
       "value" : "/Applications/VS Code.app"
     },
@@ -17,25 +19,14 @@
       "value" : "/Applications/Zen.app"
     },
     {
-      "key" : "m",
-      "label" : "emails",
-      "type" : "application",
-      "value" : "/Applications/Spark Desktop.app"
-    },
-    {
       "key" : "c",
       "type" : "application",
       "value" : "/Applications/ChatGPT.app"
     },
     {
-      "key" : "t",
+      "key" : "m",
       "type" : "application",
       "value" : "/System/Applications/Messages.app"
-    },
-    {
-      "key" : "d",
-      "type" : "application",
-      "value" : "/Applications/Discord.app"
     },
     {
       "key" : "g",
@@ -86,6 +77,11 @@
       "key" : "b",
       "type" : "application",
       "value" : "/Applications/Blip.app"
+    },
+    {
+      "key" : "p",
+      "type" : "application",
+      "value" : "/Users/sarraf/Public/PlariumPlay/StandAloneApps/raid-shadow-legends/133281/Raid.app"
     }
   ],
   "type" : "group"
