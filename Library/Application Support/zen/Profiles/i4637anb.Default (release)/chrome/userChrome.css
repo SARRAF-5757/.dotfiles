@@ -1,61 +1,27 @@
-/*! Transparency Stuff !*/
-/* Transparent URL bar styling */
-#urlbar[open][zen-floating-urlbar="true"] {
-    #urlbar-background {
-        background-color: light-dark(
-            color-mix(in srgb, #fdfdfd 80%, transparent),
-            color-mix(in srgb, #0e0e0e 80%, transparent)
-        ) !important;
-    }
+@import "ZenZero/modules/zz-tab-groups.css";
+  @import "ZenZero/modules/zz-tab-switcher.css";
+  @import "ZenZero/modules/zz-player.css";
+  @import "ZenZero/modules/zz-containers.css";
+  @import "ZenZero/modules/zz-custom-addon-icons.css";
+  @import "ZenZero/modules/zz-glance.css";
+  @import "ZenZero/modules/zz-general.css";
+/*   @import "ZenZero/modules/zz-compact-sidebar.css"; */
+
+/* other mods */
+
+/* auto hide toolbar buttons */
+#zen-sidebar-top-buttons {
+  transition: all 0.3s ease-in-out !important;
+  margin-top: 0 !important;
+  padding-top: 5px !important;
 }
 
-/* Transparent glance styling */
-.zen-glance-background > vbox {
-    mask-image: linear-gradient(
-        to right,
-        black 0%,
-        black 4%,
-        transparent 7%,
-        transparent 93.5%,
-        black 96%,
-        black 100%
-    );
-    mask-repeat: no-repeat;
-    mask-size: 100% 100%;
-}
-
-.zen-glance-overlay > vbox {
-    background-color: light-dark(#fff7, #0007) !important;
-    margin-top: 0.5% !important;
-    margin-bottom: 0.5% !important;
-    height: 98% !important;
-}
-
-
-
-/*! Custom Extension Icons !*/
-/* dark reader */
-[label="Dark Reader"] image {
-	list-style-image: url("https://github.com/SARRAF-5757/.dotfiles/blob/dots/Library/Application%20Support/zen/Profiles/lpjljjxv.Default%20(release)/chrome/images/darkReader.png?raw=true") !important;
-}
-
-/* zen internet */
-[label="Zen Internet"] image {
-	list-style-image: url("https://github.com/SARRAF-5757/.dotfiles/blob/dots/Library/Application%20Support/zen/Profiles/lpjljjxv.Default%20(release)/chrome/images/transparent-zen.png?raw=true") !important;
-}
-
-/* Bitwarden */
-[label="Bitwarden"] image {
-	list-style-image: url("https://github.com/SARRAF-5757/.dotfiles/blob/dots/Library/Application%20Support/zen/Profiles/lpjljjxv.Default%20(release)/chrome/images/bitwarden.png?raw=true") !important;
-}
-
-/* dark theme */
-[devtoolstheme="light"] {
-	[label="Dark Reader"],
-	[label="Zen Internet"],
-	[label="Bitwarden"] {
-		image {
-			filter: invert(0) !important;
-		}
-	}
+#navigator-toolbox:not(:has(#nav-bar:hover)):not(:has(#urlbar[open=""])) {
+  #zen-sidebar-top-buttons:not(:hover):not(:has([open="true"])):has(
+      toolbarbutton:not([hidden="true"]):not(#unified-extensions-button)
+    ) {
+    margin-top: -20px !important;
+    margin-bottom: 0 !important;
+    opacity: 0 !important;
+  }
 }
