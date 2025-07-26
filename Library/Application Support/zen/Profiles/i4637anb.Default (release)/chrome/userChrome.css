@@ -1,0 +1,61 @@
+/*! Transparency Stuff !*/
+/* Transparent URL bar styling */
+#urlbar[open][zen-floating-urlbar="true"] {
+    #urlbar-background {
+        background-color: light-dark(
+            color-mix(in srgb, #fdfdfd 80%, transparent),
+            color-mix(in srgb, #0e0e0e 80%, transparent)
+        ) !important;
+    }
+}
+
+/* Transparent glance styling */
+.zen-glance-background > vbox {
+    mask-image: linear-gradient(
+        to right,
+        black 0%,
+        black 4%,
+        transparent 7%,
+        transparent 93.5%,
+        black 96%,
+        black 100%
+    );
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+}
+
+.zen-glance-overlay > vbox {
+    background-color: light-dark(#fff7, #0007) !important;
+    margin-top: 0.5% !important;
+    margin-bottom: 0.5% !important;
+    height: 98% !important;
+}
+
+
+
+/*! Custom Extension Icons !*/
+/* dark reader */
+[label="Dark Reader"] image {
+	list-style-image: url("https://github.com/SARRAF-5757/.dotfiles/blob/dots/Library/Application%20Support/zen/Profiles/lpjljjxv.Default%20(release)/chrome/images/darkReader.png?raw=true") !important;
+}
+
+/* zen internet */
+[label="Zen Internet"] image {
+	list-style-image: url("https://github.com/SARRAF-5757/.dotfiles/blob/dots/Library/Application%20Support/zen/Profiles/lpjljjxv.Default%20(release)/chrome/images/transparent-zen.png?raw=true") !important;
+}
+
+/* Bitwarden */
+[label="Bitwarden"] image {
+	list-style-image: url("https://github.com/SARRAF-5757/.dotfiles/blob/dots/Library/Application%20Support/zen/Profiles/lpjljjxv.Default%20(release)/chrome/images/bitwarden.png?raw=true") !important;
+}
+
+/* dark theme */
+[devtoolstheme="light"] {
+	[label="Dark Reader"],
+	[label="Zen Internet"],
+	[label="Bitwarden"] {
+		image {
+			filter: invert(0) !important;
+		}
+	}
+}
