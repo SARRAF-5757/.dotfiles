@@ -26,8 +26,8 @@
 	"editor.smoothScrolling": false,					//makes scrolling per line
 	"editor.cursorSmoothCaretAnimation": "on",			//makes cursor's movement smooth
 	"editor.minimap.enabled": false,					//enable/disable minimal (customize below ↓)
+    "editor.minimap.renderCharacters": false,           //show blocks instead of characters in minimap
 	//"editor.minimap.autohide": true,
-	//"editor.minimap.renderCharacters": false,
 	"editor.guides.bracketPairs": "active",				//enable current bracket highlighting
 	"editor.multiCursorModifier": "alt",                 //modifier key
 	"editor.inlineSuggest.suppressSuggestions": true,	//suggestions are hidden until hover
@@ -40,7 +40,7 @@
 	
 	//!Workbench Settings
 	"window.titleBarStyle": "custom",
-	"workbench.colorTheme": "One Dark Pro Darker",
+	"workbench.colorTheme": "One Dark Pro Night Flat",
 	"workbench.productIconTheme": "fluent-icons", //Put sidebar on the right
 	"window.commandCenter": false, 						//hide the top bar
 	"workbench.layoutControl.enabled": false, 			//hide the other top bar
@@ -55,9 +55,11 @@
 	"workbench.tree.indent": 20,						//file explorer indentation
 	"workbench.sideBar.location": "right",				//sidebar at the right
 	"workbench.iconTheme": "catppuccin-mocha",			//file icons
-	"workbench.colorCustomizations": {
-		"terminal.background": "#00000000"
-	},
+	"workbench.colorCustomizations": {},
+    "chat.commandCenter.enabled": false,                //hide copilot elements from IDE
+    "animations.Enabled": false,
+    "window.systemColorTheme": "dark",
+    "window.autoDetectColorScheme": false,
 	
 	//!Terminal Settings
 	"terminal.integrated.fontFamily": "MesloLGS NF",
@@ -125,6 +127,10 @@
 	"[python]": {
 		"editor.rulers": [79]
 	},
+
+    //!JavaScript/TypeScript Settings
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
 	
 	//!Custom CSS for VS Code
 	"vscode_custom_css.imports": [

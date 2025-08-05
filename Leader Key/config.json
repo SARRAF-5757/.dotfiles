@@ -77,11 +77,6 @@
       "key" : "b",
       "type" : "application",
       "value" : "/Applications/Blip.app"
-    },
-    {
-      "key" : "p",
-      "type" : "application",
-      "value" : "/Users/sarraf/Public/PlariumPlay/StandAloneApps/raid-shadow-legends/133281/Raid.app"
     }
   ],
   "type" : "group"

@@ -18,11 +18,11 @@
 }
 
 /* No window controls - macOS */
-#zen-sidebar-top-buttons {
+/* #zen-sidebar-top-buttons {
   .titlebar-buttonbox-container {
     display: none !important;
   }
-}
+} */
 
 /* No split borders */
 hbox[zen-split="true"].deck-selected {
@@ -243,63 +243,6 @@ tab[busy] {
 /*******************************************************************************
  * CONTEXT MENU CUSTOMIZATION
  ******************************************************************************/
-
-/* Context menu styling and hidden items */
-#tabContextMenu,
-#contentAreaContextMenu,
-#toolbar-context-menu {
-  slot::before {
-    height: 50px !important;
-    width: 50px !important;
-    background-color: red !important;
-  }
-  /*   #context_zen-add-essential, */
-  #context_unpinTab,
-  #context_pinTab,
-  #context_bookmarkTab,
-  #context_moveTabOptions,
-  #context_sendTabToDevice,
-/*   #context_reopenInContainer, */
-  #context_selectAllTabs,
-  #context_closeDuplicateTabs,
-  #context_closeTabOptions,
-  #context_undoCloseTab,
-  menuseparator,
-  #context-back,
-  #context-inspect-a11y,
-  #context-take-screenshot,
-  #context-forward,
-  #context-reload,
-  #context-bookmarkpage,
-  #context-savepage,
-  #context-sendpagetodevice,
-  #context-selectall,
-  #context-viewsource,
-  #context-print-selection,
-  #context-viewpartialsource-selection,
-  #context-bookmarklink,
-  #context-savelink,
-  #context-openlinkinusercontext-menu,
-  #context-openlink,
-  #context-sendlinktodevice,
-  #context-searchselect-private,
-  #_52bda3fd-dc48-4b3d-a7b9-58af57879f1e_-menuitem-_stylebot-contextmenu,
-  #addon_darkreader_org-menuitem-_DarkReader-top,
-  #adguardadblocker_adguard_com-menuitem-391,
-  #toolbar-context-reloadSelectedTab,
-  #zen-context-menu-compact-mode,
-  #toolbar-context-selectAllTabs,
-  #toolbar-context-bookmarkSelectedTab,
-  #toolbar-context-undoCloseTab,
-  #toolbar-context-openANewTab,
-  #context_openANewTab,
-  #context-setDesktopBackground,
-  #context-sendimage {
-    display: none !important;
-  }
-
-  --menuitem-padding: 3px !important;
-}
 
 menuitem {
   transition: all 0.2s ease-in-out !important;

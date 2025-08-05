@@ -1,5 +1,6 @@
 tap "grishka/grishka"
 tap "homebrew/bundle"
+tap "krishkrosh/apps"
 tap "mhaeuser/mhaeuser"
 tap "smudge/smudge"
 tap "teamookla/speedtest"
@@ -14,8 +15,6 @@ brew "aspell"
 brew "ast-grep"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# C/C++ and Java libraries for Unicode and globalization
-brew "icu4c@76"
 # Platform built on V8 to build network applications
 brew "node"
 # Secure and free password manager for all of your devices
@@ -50,6 +49,8 @@ brew "git"
 brew "git-lfs"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# C/C++ and Java libraries for Unicode and globalization
+brew "icu4c@76"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Install and debug iPhone apps from the command-line
@@ -127,14 +128,18 @@ cask "discord"
 # Window peeking utility app
 cask "dockdoor"
 # App to build and share containerised applications and microservices
-cask "docker"
+cask "docker-desktop"
 # Advanced Dock preferences
 cask "dockey"
+# Web browser
+cask "firefox"
 cask "font-iosevka-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-meslo-for-powerlevel10k"
 cask "font-monaspace-nerd-font"
 cask "font-open-dyslexic-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Desktop client for GitHub repositories
 cask "github"
 # Graphically shows disk usage within a file system
@@ -193,10 +198,14 @@ cask "slack"
 cask "telegram-desktop"
 # To-do & task list manager
 cask "ticktick"
+# Turn your MacBook's trackpad into a precise digital weighing scale
+cask "trackweight"
 # Virtual machines UI using QEMU
 cask "utm"
 # Open-source code editor
 cask "visual-studio-code"
+# Web browser with built-in email client focusing on customization and control
+cask "vivaldi"
 # Rust-based terminal
 cask "warp"
 # Native desktop client for WhatsApp
@@ -204,13 +213,13 @@ cask "whatsapp"
 # Wine wrapper built with SwiftUI
 cask "whisky"
 # Gecko based web browser
-cask "zen-browser"
+cask "zen"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "Command X", id: 6448461551
 mas "darker", id: 1637413102
+mas "Developer", id: 640199958
 mas "Displaperture", id: 1543920362
-mas "Dockitty", id: 6743999434
 mas "Memory Diag", id: 748212890
 mas "Notability", id: 360593530
 mas "PhotoScape X", id: 929507092
@@ -228,9 +237,11 @@ vscode "catppuccin.catppuccin-vsc-icons"
 vscode "dbaeumer.vscode-eslint"
 vscode "eamodio.gitlens"
 vscode "enkia.tokyo-night"
+vscode "equimper.react-native-react-redux"
 vscode "esbenp.prettier-vscode"
 vscode "github.copilot"
 vscode "github.copilot-chat"
+vscode "github.github-vscode-theme"
 vscode "illixion.vscode-vibrancy-continued"
 vscode "jdinhlife.gruvbox"
 vscode "jeff-hykin.better-cpp-syntax"
@@ -245,6 +256,7 @@ vscode "ms-dotnettools.vscode-dotnet-runtime"
 vscode "ms-python.debugpy"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
 vscode "ms-vscode.cmake-tools"
@@ -254,8 +266,9 @@ vscode "ms-vscode.makefile-tools"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.vscode-serial-monitor"
 vscode "ms-vsliveshare.vsliveshare"
+vscode "mshr-h.veriloghdl"
+vscode "msjsdiag.vscode-react-native"
 vscode "oderwat.indent-rainbow"
-vscode "openai.chatgpt"
 vscode "pkief.material-icon-theme"
 vscode "pkief.material-product-icons"
 vscode "sdras.night-owl"
