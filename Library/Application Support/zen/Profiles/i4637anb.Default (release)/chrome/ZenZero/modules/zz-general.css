@@ -272,11 +272,10 @@ menuitem {
   }
 }
 
-
-/* transparent private browsing */
-#zen-browser-background{
+/* transparent private browsing (also lifts the dark tint from normal browsing*/
+/* #zen-browser-background{
   display: none !important;
-}
+} */
 
 /* zenOS26 */
 /* #navigator-toolbox{
