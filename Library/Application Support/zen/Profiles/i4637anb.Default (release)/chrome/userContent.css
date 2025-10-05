@@ -1,8 +1,16 @@
-/* @import "pdfjs.css"; */
 
+/*---------------------------------transparent zen windows lie setting about config etc--------------------------------------*/
 :root{
   --zen-colors-tertiary: transparent !important;
   --zen-settings-secondary-background: transparent !important;
+}
+
+#preferences-root{
+  background-color: transparent !important;
+}
+
+html:has([data-l10n-id]){
+  background-color: transparent !important;
 }
 
 .KEYJUMP_hint{
@@ -16,7 +24,10 @@
   transition: all 0.3s ease-in-out !important;
 }
 
-@-moz-document url(about:config){
+@-moz-document url(about:config), url(about:support){
+  html, #toolbar{
+    background-color: transparent !important;
+  }
   tr, table{
     background-color: transparent !important;
     border: none !important;
@@ -88,9 +99,10 @@ footer{
 
 
  /* transparency */
-/* .pdfViewer, body:has(.pdfViewer){
+.pdfViewer, body:has(.pdfViewer){
   background-color: transparent !important;
   background: none !important;
   border: none !important;
   box-shadow: none !important;
-} */
+} 
+

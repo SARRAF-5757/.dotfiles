@@ -146,7 +146,7 @@ html:not([lwt-sidebar="dark"]) {
 }
 
 /* Hide workspace dots with hover reveal */
-/* #zen-main-app-wrapper[zen-compact-mode="true"] #navigator-toolbox {
+#zen-main-app-wrapper[zen-compact-mode="true"] #navigator-toolbox {
   opacity: 1 !important;
 }
 
@@ -154,7 +154,7 @@ html:not([lwt-sidebar="dark"]) {
   bottom: -25px !important;
   opacity: 0 !important;
   transition: all 0.3s ease-in-out !important;
-} */
+}
 
 /* Workspace indicator styling and animation */
 .unified-extensions-item {
@@ -250,15 +250,16 @@ menuitem {
 
 [hasbeenopened="true"] {
   menuitem,
-  menu {
-    .menu-text {
+  menu,
+  toolbarbutton.subviewbutton{
+    .menu-text, .toolbarbutton-text {
       font-size: 0.93em !important;
       padding: 2px 5px !important;
       opacity: 1 !important;
       transition: all 0.2s ease-in-out !important;
     }
 
-    &:hover > .menu-text {
+    &:hover > .menu-text, &:hover > .toolbarbutton-text {
       padding-left: 8px !important;
       padding-right: 2px !important;
     }

@@ -1,0 +1,100 @@
+:root{
+  --folder-corner-radius: 1em;
+  --folder-border-color: light-dark(#0005, #fff5);
+  
+  --folder-border-width: 2px;
+}
+
+
+/* zen-folder zen-folder {
+  --folder-corner-radius: calc(1em - 5px);
+}
+
+zen-folder zen-folder zen-folder {
+  --folder-corner-radius: calc(1em - 10px);
+}
+
+zen-folder zen-folder zen-folder zen-folder {
+  --folder-corner-radius: calc(1em - 15px);
+}
+
+
+zen-folder zen-folder{
+  padding: 0.2em !important;
+} */
+
+
+
+.zen-workspace-tabs-section > zen-folder{
+    border-radius: 1em !important;
+    margin-top: 3px !important;
+    margin-bottom: 3px !important;
+  transition: all 0.3s ease-in-out !important;
+
+.tab-group-container > .tabbrowser-tab:nth-last-child(1), .tab-group-container >  zen-folder:nth-last-child(1){
+      border-bottom-left-radius: var(--folder-corner-radius) !important;
+      border-bottom-right-radius:  var(--folder-corner-radius) !important;
+    }
+  
+.tab-group-container > .tabbrowser-tab:nth-child(3), .tab-group-container >  zen-folder:nth-child(3){
+      border-top-left-radius:  var(--folder-corner-radius) !important;
+      border-top-right-radius:  var(--folder-corner-radius) !important;
+    }
+
+}
+
+zen-folder > *{
+  transition: all 0.3s ease-in-out !important;
+    border-radius: 1em !important;
+}
+
+
+body:has(zen-folder:hover){
+  zen-folder:hover{
+/*     background-color: light-dark(#fff3, #0003) !important; */
+/*     box-shadow: #0003 0 0 10px 0 !important; */
+/*   outline: var(--folder-border-width) solid var(--folder-border-color) !important; */
+  --folder-opacity: 0.75;
+  }
+}
+
+
+/* ---------------------- */
+
+
+/* ---------------------- */
+
+
+zen-folder[collapsed] [bursting][folder-active]{
+  border-radius:  var(--folder-corner-radius) !important
+}
+
+
+.zen-workspace-tabs-section > zen-folder:has(tab[selected]) {
+  outline: var(--folder-border-width) dashed var(--folder-border-color) !important;
+  border-radius: var(--folder-corner-radius) !important;
+  --folder-opacity: 0.55;
+}
+
+
+zen-folder:has(tab[selected]) {
+  border-radius: var(--folder-corner-radius) !important;
+}
+
+zen-folder {
+  & > .tab-group-container {
+    :root[zen-sidebar-expanded] & > * {
+      --zen-folder-indent: 9px !important;
+      margin-inline-start: var(--zen-folder-indent) !important;
+    }
+  }
+}
+
+.tabbrowser-tab[pending="true"] .tab-content{
+    filter: grayscale(1);
+    opacity: 0.5;
+}
+
+
+
+
