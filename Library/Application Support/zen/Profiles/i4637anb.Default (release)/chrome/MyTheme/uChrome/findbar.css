@@ -2,7 +2,7 @@ findbar {
     position: absolute !important;
     align-self: center !important;
 
-    width: 25% !important;
+    width: 23% !important;
     height: 80px !important;
     top: 10px !important;
     right: 10px !important;
@@ -12,8 +12,8 @@ findbar {
 
     border-top: unset !important;
     border-radius: calc(12px) !important;
-    background: color-mix(in srgb, var(--zen-primary-color) 1%, #000000a0) !important;
-    backdrop-filter: blur(8px) brightness(110%) saturate(150%);
+    background: color-mix(in srgb, var(--zen-primary-color) 6%, #030303c7) !important;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.55) !important;
 
     padding-left: 5px !important;
 
