@@ -2,7 +2,7 @@
 
 /* Default group background */
 .tab-group-label-container::before {
-    background-color: rgba(0,0,0,0.35) !important;
+    background-color: rgba(0, 0, 0, 0.2) !important;
     box-shadow: 0 0px 3px transparent !important;
     border-radius: 13px !important;
     transition: background-color 0.3s ease, box-shadow 0.3s ease !important;
@@ -28,12 +28,11 @@
     width: 4px;
     opacity: 0.5;
     border-radius: 5px;
-    background: var(--zen-primary-color);
+    background: rgba(255, 255, 255, 0.118);
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
 /* ------------------- Zen Folder Background ------------------- */
-
 zen-folder {
     position: relative;
 }
@@ -56,20 +55,20 @@ zen-folder::before {
 zen-folder:not(zen-folder zen-folder):has(> hbox.tab-group-label-container > label.tab-group-label[aria-expanded="true"]),
 zen-folder:not(zen-folder zen-folder):has([selected="true"]),
 zen-folder:not(zen-folder zen-folder):has([folder-active="true"]) {
-padding: 2px !important;
-border-radius: 16px;
-margin: 2px !important; /* Top-level margin */
+    padding: 2px !important;
+    border-radius: 16px;
+    margin: 2px !important; /* Top-level margin */
 }
 
 /* ------------------ Subfolders ------------------ */
 zen-folder zen-folder:has(> hbox.tab-group-label-container > label.tab-group-label[aria-expanded="true"]),
 zen-folder zen-folder:has([selected="true"]),
 zen-folder zen-folder:has([folder-active="true"]) {
-padding: 2px !important;
-margin-right: 2px !important;
-margin-left: 18px !important; /* Different margin for subfolders */
-margin-top: 2px !important;
-margin-bottom: 2px !important;
+    padding: 2px !important;
+    margin-right: 2px !important;
+    margin-left: 18px !important; /* Different margin for subfolders */
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
 }
 
 
@@ -77,17 +76,17 @@ margin-bottom: 2px !important;
 zen-folder:not(zen-folder zen-folder):has(> hbox.tab-group-label-container > label.tab-group-label[aria-expanded="true"])::before,
 zen-folder:not(zen-folder zen-folder):has([selected="true"])::before,
 zen-folder:not(zen-folder zen-folder):has([folder-active="true"])::before {
-opacity: 1 !important;
+    opacity: 1 !important;
 }
 
 /* Subfolders - only show background if expanded, NOT if selected or active */
 zen-folder zen-folder:has(> hbox.tab-group-label-container > label.tab-group-label[aria-expanded="true"])::before {
-opacity: 1 !important;
+    opacity: 1 !important;
 }
 
 zen-folder zen-folder:has([selected="true"])::before,
 zen-folder zen-folder:has([folder-active="true"])::before {
-opacity: 0 !important; /* disables background for active/selected subfolders */
+    opacity: 0 !important; /* disables background for active/selected subfolders */
 }
 
 
@@ -126,7 +125,7 @@ zen-folder .tabbrowser-tab[pinned] .tab-background {
 zen-folder:has(> hbox.tab-group-label-container > label.tab-group-label[aria-expanded="true"]) .tab-group-label-container::before,
 zen-folder:has([selected="true"]) .tab-group-label-container::before,
 zen-folder:has([folder-active="true"]) .tab-group-label-container::before {
-    background-color: rgba(0, 0, 0, 0.4) !important;
+    background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
 /* Hover state */
