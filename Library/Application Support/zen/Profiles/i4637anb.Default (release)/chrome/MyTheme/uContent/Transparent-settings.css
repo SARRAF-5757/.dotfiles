@@ -1,6 +1,8 @@
 :root{
     --zen-colors-tertiary: transparent !important;
     --zen-settings-secondary-background: transparent !important;
+    --_zen-scrollbar-thumb: transparent !important;
+    --_zen-scrollbar-track: transparent !important;
 }
 
 #preferences-root{
@@ -39,11 +41,13 @@ groupbox{
     /* background: var(--zen-colors-tertiary) !important; */
     background: light-dark(rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.35)) !important;
     border: none;
-    border-radius: 15px !important;
-    --groupbox-vertical-shrink: 3px !important;
+    border-radius: 18px !important;
     box-sizing: border-box !important;
-    clip-path: inset(var(--groupbox-vertical-shrink) 0 var(--groupbox-vertical-shrink) 0) !important;
     height: auto !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    margin-top: 2px !important;
+    margin-bottom: 2px !important;
 }
 
 @-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
@@ -111,4 +115,9 @@ groupbox{
 .dialogFrame {
     background: var(--zen-dialog-background);
     border-radius: 8px;
+}
+
+/* Hide the scrollbar */
+* {
+    scrollbar-width: none !important;
 }

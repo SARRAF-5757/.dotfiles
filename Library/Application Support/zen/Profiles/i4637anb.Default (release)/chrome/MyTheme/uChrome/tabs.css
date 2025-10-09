@@ -80,14 +80,14 @@ html:not([zen-single-toolbar="true"]):not([zen-sidebar-expanded="true"])
 
     /* ----- Hover state ----- */
     &:is([pinned], :not([pinned])):hover .tab-background {
-        background-color: rgba(0,0,0,0.45) !important;
+        background-color: rgba(0,0,0,0.2) !important;
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.55) !important;
     }
 
     /* ----- Selected state ----- */
     &:is([pinned], :not([pinned])):is([selected="true"], [visuallyselected="true"]) .tab-background {
-    background-color: rgba(0,0,0,0.4) !important;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.55) !important;
+        background-color: rgba(0,0,0,0.4) !important;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.55) !important;
     }
 }
 

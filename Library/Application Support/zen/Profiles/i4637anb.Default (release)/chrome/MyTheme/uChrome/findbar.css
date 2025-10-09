@@ -9,14 +9,11 @@ findbar {
     left: auto !important;
 
     opacity: 1 !important;
-
     border-top: unset !important;
     border-radius: calc(12px) !important;
     background: color-mix(in srgb, var(--zen-primary-color) 6%, #030303c7) !important;
     box-shadow: 0 8px 24px rgba(0,0,0,0.55) !important;
-
     padding-left: 5px !important;
-
     transition: bottom 0.5s ease, opacity 0.5s ease, border-radius 0.5s ease, height 0.5s ease, width 0.5s ease !important;
 
     & .findbar-container {
@@ -42,20 +39,18 @@ findbar {
 
         & .findbar-textbox {
             flex-grow: 1 !important;
-            /* Allows it to take all available space */
             width: auto !important;
             max-width: 100% !important;
             min-width: 0 !important;
-            /* Ensures it doesn't overflow */
             margin-right: 10px !important;
         }
 
         & .findbar-find-previous {
-            order: -2 !important;
+            order: 1 !important;
         }
 
         & .findbar-find-next {
-            order: -1 !important;
+            order: 2 !important;
             align-self: self-end !important;
         }
     }
@@ -82,7 +77,7 @@ findbar {
     }
 }
 
-/* Hide the "Match Diacritics" checkbox and its content */
+/* Hide the "Match Diacritics" checkbox */
 checkbox.findbar-match-diacritics,
 .findbar-match-diacritics,
 checkbox[anonid="find-match-diacritics"] {
