@@ -1,67 +1,3 @@
-/* ------------------- Close and Reset Button Styling ------------------- */
-.tab-reset-pin-button {
-    border-top-left-radius: 13px !important;
-    border-bottom-left-radius: 13px !important;
-    transition: background-color 0.2s ease-out !important;
-    position: relative;
-    z-index: 5;
-}
-
-/* Gradient overlay (right side) */
-.tabbrowser-tab .tab-background::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to left,
-        rgba(175, 10, 10, 0.75),
-        rgba(175, 30, 10, 0) 40%,
-        transparent 40%
-    );
-    filter: blur(12px) contrast(120%) brightness(150%);
-    opacity: 0;
-    transition: opacity 0.3s ease !important;
-    z-index: 3; /* under buttons */
-    pointer-events: none; /* prevents hover conflicts */
-}
-
-
-/* Show gradient when hovering close/reset */
-.tabbrowser-tab:has(.tab-close-button:hover, .tab-reset-button:hover) 
-.tab-background::before {
-    opacity: 0.7 !important;
-}
-
-/* Buttons */
-.tab-close-button,
-.tab-reset-button {
-    border-radius: 9px !important;
-    transition: opacity 0.25s ease-out !important;
-    position: relative;
-    z-index: 5; /* keep above gradient */
-}
-
-/* Fade buttons in */
-.tabbrowser-tab[selected="true"] .tab-close-button,
-.tabbrowser-tab[visuallyselected="true"] .tab-close-button,
-.tabbrowser-tab:hover .tab-close-button,
-.tabbrowser-tab[selected="true"] .tab-reset-button,
-.tabbrowser-tab[visuallyselected="true"] .tab-reset-button,
-.tabbrowser-tab:hover .tab-reset-button {
-    opacity: 0.4 !important;
-}
-
-.tabbrowser-tab .tab-close-button:hover,
-.tabbrowser-tab .tab-reset-button:hover {
-    opacity: 1 !important;
-}
-
-/* Layout fixes for Collapsed */
-html:not([zen-single-toolbar="true"]):not([zen-sidebar-expanded="true"]) 
-.tab-close-button {
-    transform: translateY(2px) scale(1.2);
-}
-
 /* ------------------- Tab Backgrounds ------------------- */
 .tabbrowser-tab {
     .tab-background {
@@ -79,20 +15,48 @@ html:not([zen-single-toolbar="true"]):not([zen-sidebar-expanded="true"])
     } */
 
     /* ----- Hover state ----- */
-    &:is([pinned], :not([pinned])):hover .tab-background {
+    /* &:is([pinned], :not([pinned])):hover .tab-background {
         background-color: rgba(0,0,0,0.2) !important;
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.55) !important;
-    }
+    } */
 
     /* ----- Selected state ----- */
-    &:is([pinned], :not([pinned])):is([selected="true"], [visuallyselected="true"]) .tab-background {
+    /* &:is([pinned], :not([pinned])):is([selected="true"], [visuallyselected="true"]) .tab-background {
         background-color: rgba(0,0,0,0.4) !important;
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.55) !important;
+    } */
+}
+
+/* ------------------- Essentials Backgrounds ------------------- */
+.zen-essentials-container .tabbrowser-tab {
+    .tab-background {
+        background-color: rgba(0, 0, 0, 0.2) !important;
+        box-shadow: 0 0px 3px transparent !important;
+        border-radius: 14px !important;
+    }
+    &:hover .tab-background {
+        background-color: rgba(0, 0, 0, 0.4) !important;
+        box-shadow: 0 0px 3px transparent !important;
+    }
+    &[selected],
+    &[visuallyselected] {
+        .tab-icon-image {
+            filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.6)) !important;
+        }
+
+        > .tab-stack > .tab-background {
+            border: none !important;
+            &::before {
+                opacity: 0 !important;
+            }
+            &::after {
+                filter: brightness(50%) blur(15px) !important;
+            }
+        }
     }
 }
 
 /* ------------------- New Tab Button Styling ------------------- */
-
 #tabs-newtab-button.toolbarbutton-1 {
     position: relative;
     background: transparent !important;
