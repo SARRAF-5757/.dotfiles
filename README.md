@@ -13,6 +13,7 @@
 - **VS Code Configuration**: Minimal VS Code setup with various utilities and custom CSS & JS + Keybindings using Hyperkey
 - **Ghostty Terminal Configuration**: Preferences and custom themes for a transparent minimal look.
 - **Warp Terminal Themes**: Some custom themes made for Warp Terminal
+- **LazyVim Configuration**: Mostly default, with a few functional preferences and theme changes to support Ghostty's transparent look
 - **Custom CSS for Zen Browser**: My custom transparent and minimal setup for the [Zen Browser](https://zen-browser.app/)
 - **Scripts**: Some useful scripts I use on the daily
 - **Homebrew**: Brewfile to install all the tools necessary + casks that I use personally
