@@ -1,4 +1,5 @@
 ## To replicate-
+
 1. Setup ssh key with github
 2. Install [Homebrew](https://brew.sh/)
 3. Clone repository
@@ -6,13 +7,18 @@
 5. Run '''stow .'''
 
 ## Stuff included
+
 - **Zsh Configuration**: Includes aliases, plugins, and themes (Powerlevel10k).
 - **Terminal Enhancements**: Improved `ls` (using `eza`), `cat` (using `bat`), and navigation (`zoxide`).
 - **VS Code Configuration**: Minimal VS Code setup with various utilities and custom CSS & JS + Keybindings using Hyperkey
+- **Ghostty Terminal Configuration**: Preferences and custom themes for a transparent minimal look.
+- **Warp Terminal Themes**: Some custom themes made for Warp Terminal
+- **Custom CSS for Zen Browser**: My custom transparent and minimal setup for the [Zen Browser](https://zen-browser.app/)
 - **Scripts**: Some useful scripts I use on the daily
 - **Homebrew**: Brewfile to install all the tools necessary + casks that I use personally
 
 ## Tools Used
+
 - [Oh My Zsh](https://ohmyz.sh/)
 - [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
 - [Zsh Syntax Highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
