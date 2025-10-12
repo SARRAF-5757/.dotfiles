@@ -3,7 +3,7 @@ background: "#010101"
 accent: "#dcd6cf"
 foreground: "#ffffff"
 background_image:
-  path: /Users/sarraf/.warp/themes/Mortal Kombat Scorpion Wallpaper/Mortal Kombat Scorpion Wallpaper.jpg
+  path: /Users/sarraf/.warp/themes/Scorpion/Scorpion.jpg
   opacity: 30
 details: darker
 terminal_colors:
