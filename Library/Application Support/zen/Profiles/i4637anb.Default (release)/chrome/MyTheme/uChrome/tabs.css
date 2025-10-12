@@ -11,20 +11,20 @@
 
     /* ----- Pinned tabs ----- */
     /* &[pinned] .tab-background {
-        background-color: rgba(0, 0, 0, 0.4) !important;
+        background-color: rgba(0, 0, 0, 0.1) !important;
     } */
 
     /* ----- Hover state ----- */
-    /* &:is([pinned], :not([pinned])):hover .tab-background {
+    &:is([pinned], :not([pinned])):hover .tab-background {
         background-color: rgba(0,0,0,0.2) !important;
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.55) !important;
-    } */
+    }
 
     /* ----- Selected state ----- */
-    /* &:is([pinned], :not([pinned])):is([selected="true"], [visuallyselected="true"]) .tab-background {
+    &:is([pinned], :not([pinned])):is([selected="true"], [visuallyselected="true"]) .tab-background {
         background-color: rgba(0,0,0,0.4) !important;
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.55) !important;
-    } */
+    }
 }
 
 /* ------------------- Essentials Backgrounds ------------------- */
@@ -77,6 +77,12 @@
 }
 
 #tabs-newtab-button.toolbarbutton-1:hover::before {
-    background-color: rgba(0,0,0,0.40) !important;
+    background-color: rgba(0,0,0,0.2) !important;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.55) !important;
+}
+
+/* Grey out unloaded tabs */
+.tab-icon-image[pending="true"] {
+    filter: grayscale(80%) brightness(80%) contrast(90%) !important;
+    opacity: 0.7 !important;
 }

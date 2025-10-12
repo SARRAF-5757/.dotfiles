@@ -14,7 +14,7 @@ cursor-text = red
 
 #-------------- THEME --------------#
 # To see available themes- 'ghostty +list-themes'
-theme = #myTheme
+theme = #MyTheme
 font-size = 16
 font-family = MonaspiceAr Nerd Font Mono
 font-style = Medium
@@ -22,6 +22,7 @@ font-style = Medium
 background = black
 background-opacity = 0.57
 background-blur-radius = 60
+
 background-image = /Users/sarraf/.dotfiles/.config/ghostty/themes/swirl.png
 background-image-opacity = 0.02
 background-image-position = center
