@@ -11,12 +11,14 @@
 - **Zsh Configuration**: Includes aliases, plugins, and themes (Powerlevel10k).
 - **Terminal Enhancements**: Improved `ls` (using `eza`), `cat` (using `bat`), and navigation (`zoxide`).
 - **VS Code Configuration**: Minimal VS Code setup with various utilities and custom CSS & JS + Keybindings using Hyperkey
-- **Ghostty Terminal Configuration**: Preferences and custom themes for a transparent minimal look.
-- **Warp Terminal Themes**: Some custom themes made for Warp Terminal
+- **Ghostty Terminal Configuration**: Tweaks and custom themes for a transparent minimal [Ghostty](https://ghostty.org/) terminal setup
+- **Warp Terminal Themes**: Some custom themes made for [Warp Terminal](https://www.warp.dev/download)
 - **LazyVim Configuration**: Mostly default, with a few functional preferences and theme changes to support Ghostty's transparent look
 - **Custom CSS for Zen Browser**: My custom transparent and minimal setup for the [Zen Browser](https://zen-browser.app/)
 - **Scripts**: Some useful scripts I use on the daily
 - **Homebrew**: Brewfile to install all the tools necessary + casks that I use personally
+- **Leader Key Keybindings**: My command set for [Leader Key](https://github.com/mikker/LeaderKey.app) App
+- **Raycast Configuration**: Password-locked for security, only stored here for personal use
 
 ## Tools Used
 
