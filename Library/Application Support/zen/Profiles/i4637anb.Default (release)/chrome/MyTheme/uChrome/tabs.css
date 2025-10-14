@@ -81,8 +81,8 @@
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.55) !important;
 }
 
-/* Grey out unloaded tabs */
+/* Dim uUnloaded Tabs */
 .tab-icon-image[pending="true"] {
-    filter: grayscale(80%) brightness(80%) contrast(90%) !important;
-    opacity: 0.7 !important;
+    filter: grayscale(80%) brightness(60%) !important;
+    opacity: 0.3 !important;
 }

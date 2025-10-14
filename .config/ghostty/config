@@ -1,20 +1,22 @@
 #-------------- UI --------------#
 macos-icon = custom
 macos-titlebar-style = tabs
-window-height = 32
-window-width = 100
+window-height = 37
+window-width = 122
 window-padding-x = 10,10
 window-padding-y = 5,10
 window-padding-balance = true
 cursor-style = bar
-cursor-color = #B4CC51
+adjust-cursor-thickness = 3
+cursor-color = #ffa217
 shell-integration-features = no-cursor
 cursor-style-blink = false
 cursor-text = red
 
 #-------------- THEME --------------#
 # To see available themes- 'ghostty +list-themes'
-theme = #MyTheme
+#theme = *MyTheme
+theme = TokyoNight
 font-size = 16
 font-family = MonaspiceAr Nerd Font Mono
 font-style = Medium
@@ -23,18 +25,39 @@ background = black
 background-opacity = 0.57
 background-blur-radius = 60
 
-background-image = /Users/sarraf/.dotfiles/.config/ghostty/themes/swirl.png
+#background-image = /Users/sarraf/.dotfiles/.config/ghostty/themes/swirl.png
 background-image-opacity = 0.02
 background-image-position = center
 background-image-fit = contain
 
+#---------------- SHADERS --------------#
+#---Cursors---#
+#custom-shader = shaders/cursor_blaze_no_trail.glsl
+custom-shader = shaders/cursor_blaze_tapered.glsl
+#custom-shader = shaders/cursor_frozen.glsl
+#custom-shader = shaders/cursor_smear.glsl
+#custom-shader = shaders/cursor_smear_fade.glsl
+
+#---Interface---#
+#custom-shader = shaders/tiles.glsl
+#custom-shader = shaders/galaxy.glsl
+#custom-shader = shaders/sparks.glsl
+#custom-shader = shaders/snow.glsl
+#custom-shader = shaders/transparent-crt.glsl
+#custom-shader = shaders/bettercrt.glsl
+#custom-shader = shaders/dither.glsl
+#custom-shader = shaders/glitchy.glsl
+#custom-shader = shaders/water.glsl
+#custom-shader = shaders/drunkard.glsl
+
+
 
 #-------------- BEHAVIOR --------------#
+cursor-click-to-move = true
 working-directory = /Users/sarraf/
 window-inherit-working-directory = false
 window-save-state = always
 window-new-tab-position = end
-cursor-click-to-move = true
 
 #-------------- KEYBINDS --------------#
 keybind = super+a=select_all
