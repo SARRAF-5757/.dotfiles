@@ -61,14 +61,16 @@ alias gitr='git remote show origin'
 bindkey '^I' autosuggest-accept
 
 # Functions
-function title() {         # Customize tab titles
+function title() {          # Customize tab titles
     echo -en "\e]2;$@\a"
 }
 
-gitac() {
-    git add -A
-    git commit -m "$1"
-    git push origin
+gitac() {                   # Git add, commit, and push with a message
+    if [ -z "$1" ]; then
+        echo "Error: Please provide a commit message."
+        return 1
+    fi
+    git add -A && git commit -m "$1" && git push
 }
 
 
