@@ -65,14 +65,6 @@ function title() {          # Customize tab titles
     echo -en "\e]2;$@\a"
 }
 
-gitac() {                   # Git add, commit, and push with a message
-    if [ -z "$1" ]; then
-        echo "Error: Please provide a commit message."
-        return 1
-    fi
-    git add -A && git commit -m "$1" && git push
-}
-
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
