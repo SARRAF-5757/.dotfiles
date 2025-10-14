@@ -1,10 +1,10 @@
+[user]
+	name = SARRAF-5757
+	email = 61262059+SARRAF-5757@users.noreply.github.com
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 [alias]
-	ac = commit -am
-[user]
-	name = SARRAF-5757
-	email = 61262059+SARRAF-5757@users.noreply.github.com
+	ac = !git add -A && git commit -m
