@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Required parameters:
 # @raycast.schemaVersion 1
 # @raycast.title Update
@@ -24,4 +23,6 @@ echo "Updating raycast extensions..."
 open -g raycast://extensions/raycast/raycast/check-for-extension-updates
 echo "Updating Raycast..."
 open -g raycast://extensions/raycast/raycast/check-for-updates
+echo "Updating OMP..."
+oh-my-posh upgrade
 echo "Update Finished" | figlet | lolcat
