@@ -40,7 +40,7 @@
 	
 	//!Workbench Settings
 	"window.titleBarStyle": "custom",
-	"workbench.colorTheme": "One Dark Pro Night Flat",
+	"workbench.colorTheme": "Night Owl",
 	"workbench.productIconTheme": "fluent-icons", //Put sidebar on the right
 	"window.commandCenter": false, 						//hide the top bar
 	"workbench.layoutControl.enabled": false, 			//hide the other top bar
@@ -55,7 +55,9 @@
 	"workbench.tree.indent": 20,						//file explorer indentation
 	"workbench.sideBar.location": "right",				//sidebar at the right
 	"workbench.iconTheme": "catppuccin-mocha",			//file icons
-	"workbench.colorCustomizations": {},
+	"workbench.colorCustomizations": {
+        "terminal.background": "#00000000"
+    },
     "chat.commandCenter.enabled": false,                //hide copilot elements from IDE
     "animations.Enabled": false,
     "window.systemColorTheme": "dark",
@@ -158,7 +160,8 @@
 	"indentRainbow.ignoreErrorLanguages": [	//ignore indent error for these
 		"plaintext",
 		"markdown",
-		"python"
+		"python",
+        "json"
 	],
 
 	//!File icon theme tweaks

@@ -61,3 +61,5 @@ window-new-tab-position = end
 
 #-------------- KEYBINDS --------------#
 keybind = super+a=select_all
+keybind = cmd+backspace=esc:w
+keybind = cmd+backspace=text:\x15
