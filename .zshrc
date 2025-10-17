@@ -27,6 +27,11 @@ plugins=(
     vscode
     eza
     zoxide
+    brew
+    colored-man-pages
+    colorize
+    thefuck
+    themes
 )
 
 #!-----------------------------ZSH OPTIONS-----------------------------!#
@@ -59,6 +64,7 @@ source $ZSH/oh-my-zsh.sh
 bindkey '^I' autosuggest-accept
 bindkey '\e\x7F' backward-kill-word
 bindkey '\ew' backward-kill-line
+bindkey \^U backward-kill-line
 
 # Aliases
 alias tree='eza -T --total-size --no-quotes --icons=always --color=always'
@@ -66,11 +72,12 @@ alias ls='eza --width 70 --no-quotes --icons=always --color=always -a'
 alias lls='eza -l --icons=always --total-size --git --no-user --no-permissions --no-time'
 alias cat='bat'
 alias cd='z'
+alias cls='clear'
 alias gits='git status'
 alias gitr='git remote show origin'
 # Multi-distro neovim setup
 alias avim='NVIM_APPNAME="nvim-astronvim" nvim'
-alias lvim='NVIM_APPNAME="nvim-lazyvim" nvim'
+alias vim='NVIM_APPNAME="nvim-lazyvim" nvim'
 alias chvim='NVIM_APPNAME="nvim-nvchad" nvim'
 alias kvim='NVIM_APPNAME="nvim-kickstart" nvim'
 

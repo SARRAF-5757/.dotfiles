@@ -8,7 +8,7 @@ window-padding-y = 5,10
 window-padding-balance = true
 cursor-style = bar
 adjust-cursor-thickness = 3
-cursor-color = #ffa217
+cursor-color = #178bff
 shell-integration-features = no-cursor
 cursor-style-blink = false
 cursor-text = red
@@ -33,10 +33,10 @@ background-image-fit = contain
 #---------------- SHADERS --------------#
 #---Cursors---#
 #custom-shader = shaders/cursor_blaze_no_trail.glsl
-custom-shader = shaders/cursor_blaze_tapered.glsl
+#custom-shader = shaders/cursor_blaze_tapered.glsl
 #custom-shader = shaders/cursor_frozen.glsl
 #custom-shader = shaders/cursor_smear.glsl
-#custom-shader = shaders/cursor_smear_fade.glsl
+custom-shader = shaders/cursor_smear_fade.glsl
 
 #---Interface---#
 #custom-shader = shaders/tiles.glsl
@@ -61,5 +61,6 @@ window-new-tab-position = end
 
 #-------------- KEYBINDS --------------#
 keybind = super+a=select_all
+#keybind = super+shift+alt+ctrl+space=super+shift+p
 keybind = cmd+backspace=esc:w
 keybind = cmd+backspace=text:\x15
