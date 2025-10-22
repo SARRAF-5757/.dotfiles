@@ -4,9 +4,3 @@
 @import "MyTheme/uChrome/findbar.css";
 @import "MyTheme/uChrome/folders.css";
 @import "MyTheme/uChrome/tabs.css";
-
-/* Fix find in page opacity */
-findbar * {
-  opacity: 1 !important;
-  /* background-color: rgba(0, 0, 0, 0.31) !important; */
-}
