@@ -1,125 +1,301 @@
 {
-    "global": { "show_in_menu_bar": false },
-    "profiles": [
-        {
-            "complex_modifications": {
-                "rules": [
-                    {
-                        "description": "Caps hold to hyperkey & tap to F12",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "caps_lock",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift",
-                                        "modifiers": ["left_command", "left_control", "left_option"]
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "f12",
-                                        "modifiers": ["fn"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Show Desktop on Hyper+Comma",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "comma",
-                                    "modifiers": {
-                                        "mandatory": ["left_shift", "left_control", "left_option", "left_command"],
-                                        "optional": ["any"]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "f11",
-                                        "modifiers": ["fn"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Akimbo cmd to F12",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "simultaneous": [
-                                        { "key_code": "left_command" },
-                                        { "key_code": "right_command" }
-                                    ],
-                                    "simultaneous_options": {
-                                        "to_after_key_up": [
-                                            {
-                                                "key_code": "f12",
-                                                "modifiers": ["fn"]
-                                            }
-                                        ]
-                                    }
-                                },
-                                "to": [{ "key_code": "vk_none" }],
-                                "type": "basic"
-                            }
-                        ]
-                    }
-                ]
-            },
-            "devices": [
-                {
-                    "identifiers": {
-                        "is_pointing_device": true,
-                        "product_id": 1024,
-                        "vendor_id": 12538
-                    },
-                    "ignore": false
+  "global": { "show_in_menu_bar": false },
+  "profiles": [
+    {
+      "complex_modifications": {
+        "parameters": {
+          "basic.to_delayed_action_delay_milliseconds": 80,
+          "basic.to_if_alone_timeout_milliseconds": 300,
+          "basic.to_if_held_down_threshold_milliseconds": 80
+        },
+        "rules": [
+          {
+            "description": "Home-row mods for Apple keyboard",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "identifiers": [{ "is_built_in_keyboard": true }],
+                    "type": "device_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "f",
+                  "modifiers": { "optional": ["any"] }
                 },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 591,
-                        "vendor_id": 1452
-                    },
-                    "simple_modifications": [
-                        {
-                            "from": { "apple_vendor_top_case_key_code": "keyboard_fn" },
-                            "to": [{ "key_code": "f12" }]
-                        },
-                        {
-                            "from": { "key_code": "right_command" },
-                            "to": [{ "key_code": "f11" }]
-                        },
-                        {
-                            "from": { "key_code": "right_option" },
-                            "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
-                        }
+                "to": [
+                  {
+                    "key_code": "left_command",
+                    "lazy": true
+                  }
+                ],
+                "to_if_alone": [{ "key_code": "f" }],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "identifiers": [{ "is_built_in_keyboard": true }],
+                    "type": "device_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "d",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "lazy": true
+                  }
+                ],
+                "to_if_alone": [{ "key_code": "d" }],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "identifiers": [{ "is_built_in_keyboard": true }],
+                    "type": "device_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "s",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "to": [
+                  {
+                    "key_code": "left_option",
+                    "lazy": true
+                  }
+                ],
+                "to_if_alone": [{ "key_code": "s" }],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "identifiers": [{ "is_built_in_keyboard": true }],
+                    "type": "device_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "a",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "to": [
+                  {
+                    "key_code": "left_control",
+                    "lazy": true
+                  }
+                ],
+                "to_if_alone": [{ "key_code": "a" }],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "identifiers": [{ "is_built_in_keyboard": true }],
+                    "type": "device_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "j",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "to": [
+                  {
+                    "key_code": "right_command",
+                    "lazy": true
+                  }
+                ],
+                "to_if_alone": [{ "key_code": "j" }],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "identifiers": [{ "is_built_in_keyboard": true }],
+                    "type": "device_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "k",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "to": [
+                  {
+                    "key_code": "right_shift",
+                    "lazy": true
+                  }
+                ],
+                "to_if_alone": [{ "key_code": "k" }],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "identifiers": [{ "is_built_in_keyboard": true }],
+                    "type": "device_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "l",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "to": [
+                  {
+                    "key_code": "right_option",
+                    "lazy": true
+                  }
+                ],
+                "to_if_alone": [{ "key_code": "l" }],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "identifiers": [{ "is_built_in_keyboard": true }],
+                    "type": "device_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "semicolon",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "to": [
+                  {
+                    "key_code": "right_control",
+                    "lazy": true
+                  }
+                ],
+                "to_if_alone": [{ "key_code": "semicolon" }],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Caps hold to hyperkey & tap to F12",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "caps_lock",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": ["left_command", "left_control", "left_option"]
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "f12",
+                    "modifiers": ["fn"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Show Desktop on Hyper+Comma",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "comma",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_shift",
+                      "left_control",
+                      "left_option",
+                      "left_command"
+                    ],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f11",
+                    "modifiers": ["fn"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Akimbo cmd to F12",
+            "manipulators": [
+              {
+                "from": {
+                  "simultaneous": [
+                    { "key_code": "left_command" },
+                    { "key_code": "right_command" }
+                  ],
+                  "simultaneous_options": {
+                    "to_after_key_up": [
+                      {
+                        "key_code": "f12",
+                        "modifiers": ["fn"]
+                      }
                     ]
+                  }
                 },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": true,
-                        "product_id": 12292,
-                        "vendor_id": 14000
-                    },
-                    "ignore": false
-                }
-            ],
-            "name": "Default profile",
-            "selected": true,
-            "virtual_hid_keyboard": {
-                "country_code": 0,
-                "keyboard_type_v2": "ansi"
+                "to": [{ "key_code": "vk_none" }],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      },
+      "devices": [
+        {
+          "identifiers": {
+            "is_pointing_device": true,
+            "product_id": 1024,
+            "vendor_id": 12538
+          },
+          "ignore": false
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "product_id": 591,
+            "vendor_id": 1452
+          },
+          "simple_modifications": [
+            {
+              "from": { "apple_vendor_top_case_key_code": "keyboard_fn" },
+              "to": [{ "key_code": "f12" }]
+            },
+            {
+              "from": { "key_code": "right_command" },
+              "to": [{ "key_code": "f11" }]
+            },
+            {
+              "from": { "key_code": "right_option" },
+              "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
             }
+          ]
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": true,
+            "product_id": 12292,
+            "vendor_id": 14000
+          },
+          "ignore": false
         }
-    ]
+      ],
+      "name": "My Profile",
+      "selected": true,
+      "virtual_hid_keyboard": {
+        "country_code": 0,
+        "keyboard_type_v2": "ansi"
+      }
+    }
+  ]
 }
+
