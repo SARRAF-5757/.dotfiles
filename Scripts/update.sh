@@ -15,14 +15,24 @@
 echo "Updating Brew..."
 brew upgrade
 brew cleanup
+echo " "
+echo " "
+echo " "
 echo "Updating App Store..."
 mas upgrade
-echo "Updating zsh..."
-omz update
+echo " "
+echo " "
+echo " "
 echo "Updating raycast extensions..."
 open -g raycast://extensions/raycast/raycast/check-for-extension-updates
+echo " "
+echo " "
 echo "Updating Raycast..."
 open -g raycast://extensions/raycast/raycast/check-for-updates
+echo " "
+echo " "
 echo "Updating OMP..."
 oh-my-posh upgrade
-echo "Update Finished" | figlet | lolcat
+echo "Update Finished" | figlet | lolcat -a -d 100
+echo " "
+echo " "

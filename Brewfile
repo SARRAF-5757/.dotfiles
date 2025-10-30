@@ -1,7 +1,9 @@
+tap "felixkratz/formulae"
 tap "grishka/grishka"
-tap "homebrew/bundle"
+tap "jandedobbeleer/oh-my-posh"
 tap "krishkrosh/apps"
 tap "mhaeuser/mhaeuser"
+tap "nikitabobko/tap"
 tap "smudge/smudge"
 tap "teamookla/speedtest"
 tap "zackelia/formulae"
@@ -15,6 +17,8 @@ brew "aspell"
 brew "ast-grep"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Control and limit battery charging on Apple Silicon MacBooks
+brew "batt"
 # Platform built on V8 to build network applications
 brew "node"
 # Secure and free password manager for all of your devices
@@ -27,8 +31,6 @@ brew "clang-format"
 brew "cmake"
 # Console Matrix
 brew "cmatrix"
-# Dependency manager for Cocoa projects
-brew "cocoapods"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Apjanke's fork of the classic cowsay project
@@ -41,8 +43,12 @@ brew "eza"
 brew "fd"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
+# User-friendly command-line shell for UNIX-like operating systems
+brew "fish"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# Interact with Google Gemini AI models from the command-line
+brew "gemini-cli"
 # Distributed revision control system
 brew "git"
 # Git extension for versioning large files
@@ -63,12 +69,16 @@ brew "lolcat"
 brew "luarocks"
 # Mac App Store command-line interface
 brew "mas"
+# Control and observe media playback from the command-line
+brew "media-control"
 # Text-based UI library
 brew "ncurses"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Space Invaders in the terminal
 brew "ninvaders"
+# Modern shell for the GitHub era
+brew "nushell"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Search tool like grep and The Silver Searcher
@@ -95,6 +105,8 @@ brew "yt-dlp"
 brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Prompt theme engine for any shell
+brew "jandedobbeleer/oh-my-posh/oh-my-posh", link: false
 # A CLI for configuring 'Night Shift' on macOS 🌕🌖🌗🌘🌑
 brew "smudge/smudge/nightlight"
 # Ookla Speedtest
@@ -105,6 +117,8 @@ cask "alt-tab"
 cask "android-file-transfer"
 # Android SDK component
 cask "android-platform-tools"
+# User-friendly GUI app for Homebrew
+cask "applite"
 # Electronics prototyping platform
 cask "arduino-ide"
 # Multi-track audio editor and recorder
@@ -121,6 +135,8 @@ cask "blender"
 cask "blip"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
+# Write, edit, and chat about your code with AI
+cask "cursor"
 # Run Stable Diffusion locally
 cask "diffusionbee"
 # Voice and text chat software
@@ -133,10 +149,12 @@ cask "docker-desktop"
 cask "dockey"
 # Web browser
 cask "firefox"
+# Privacy-focused Firefox-based browser
+cask "floorp"
 cask "font-iosevka-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-meslo-for-powerlevel10k"
-cask "font-monaspace-nerd-font"
+cask "font-monaspice-nerd-font"
 cask "font-open-dyslexic-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
@@ -184,10 +202,12 @@ cask "neardrop"
 cask "notion"
 # Simple application that will prevent iTunes or Apple Music from launching
 cask "notunes"
-# Verify system files structure, run miscellaneous maintenance and more
-cask "onyx"
+# Utility to uninstall apps and remove leftover files from old/uninstalled apps
+cask "pearcleaner"
 # Customise and maintain app icons
 cask "pictogram"
+# Control your tools with a few keystrokes
+cask "raycast"
 # Block your own access to distracting websites
 cask "selfcontrol"
 # Web browser
@@ -196,8 +216,6 @@ cask "sigmaos"
 cask "slack"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
-# To-do & task list manager
-cask "ticktick"
 # Turn your MacBook's trackpad into a precise digital weighing scale
 cask "trackweight"
 # Virtual machines UI using QEMU
@@ -210,15 +228,12 @@ cask "vivaldi"
 cask "warp"
 # Native desktop client for WhatsApp
 cask "whatsapp"
-# Wine wrapper built with SwiftUI
-cask "whisky"
 # Gecko based web browser
 cask "zen"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "Command X", id: 6448461551
 mas "darker", id: 1637413102
-mas "Developer", id: 640199958
 mas "Displaperture", id: 1543920362
 mas "Memory Diag", id: 748212890
 mas "Notability", id: 360593530
@@ -235,6 +250,7 @@ vscode "brandonkirbyson.vscode-animations"
 vscode "catppuccin.catppuccin-vsc"
 vscode "catppuccin.catppuccin-vsc-icons"
 vscode "dbaeumer.vscode-eslint"
+vscode "dtoplak.vscode-glsllint"
 vscode "eamodio.gitlens"
 vscode "enkia.tokyo-night"
 vscode "equimper.react-native-react-redux"
@@ -266,15 +282,14 @@ vscode "ms-vscode.makefile-tools"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.vscode-serial-monitor"
 vscode "ms-vsliveshare.vsliveshare"
-vscode "mshr-h.veriloghdl"
 vscode "msjsdiag.vscode-react-native"
 vscode "oderwat.indent-rainbow"
 vscode "pkief.material-icon-theme"
 vscode "pkief.material-product-icons"
 vscode "sdras.night-owl"
+vscode "slevesque.shader"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "tomoki1207.pdf"
-vscode "twxs.cmake"
 vscode "usernamehw.errorlens"
 vscode "vadimcn.vscode-lldb"
 vscode "violetbp.lc2k"
