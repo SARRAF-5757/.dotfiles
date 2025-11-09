@@ -183,10 +183,10 @@
 		},
 		{
 			"tag": "todo",
-			"color": "#474747",
+			"color": "#ffffff",
 			"strikethrough": false,
 			"underline": false,
-			"backgroundColor": "#ff8C00", //yellow highlight
+			"backgroundColor": "#ff8C004d", //yellow highlight
 			"bold": false,
 			"italic": false
 		},
