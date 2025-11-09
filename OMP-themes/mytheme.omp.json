@@ -1,7 +1,8 @@
 {
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "transient_prompt": {
     "template": "\ue285 ",
-    "foreground": "#d6deeb",
+    "foreground": "#AB76D9",
     "background": "transparent"
   },
   "upgrade": {
@@ -101,18 +102,9 @@
           "leading_diamond": "\ue0b6",
           "trailing_diamond": "\ue0d6",
           "template": "\uf489  {{ .Name }} ",
-          "foreground": "#011627",
-          "background": "#adb8ca",
-          "type": "shell",
-          "style": "diamond"
-        },
-        {
-          "leading_diamond": "\ue0b2",
-          "trailing_diamond": "\ue0d6",
-          "template": "\ue266 {{ round .PhysicalPercentUsed .Precision }}% ",
           "foreground": "#ffffff",
-          "background": "#dc6482",
-          "type": "sysinfo",
+          "background": "#DC6482",
+          "type": "shell",
           "style": "diamond"
         },
         {

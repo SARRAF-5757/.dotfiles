@@ -40,7 +40,7 @@
 	
 	//!Workbench Settings
 	"window.titleBarStyle": "custom",
-	"workbench.colorTheme": "Night Owl",
+	"workbench.colorTheme": "Forest Cottage - Classic",
 	"workbench.productIconTheme": "fluent-icons", //Put sidebar on the right
 	"window.commandCenter": false, 						//hide the top bar
 	"workbench.layoutControl.enabled": false, 			//hide the other top bar
@@ -54,7 +54,7 @@
 	"scm.diffDecorations": "none", 						//disable git's added/deleted/modified colorsw
 	"workbench.tree.indent": 20,						//file explorer indentation
 	"workbench.sideBar.location": "right",				//sidebar at the right
-	"workbench.iconTheme": "catppuccin-mocha",			//file icons
+	"workbench.iconTheme": "material-icon-theme",			//file icons
 	"workbench.colorCustomizations": {
         "terminal.background": "#00000000"
     },
@@ -214,7 +214,7 @@
 			"strikethrough": false,
 			"underline": false,
 			"backgroundColor": "transparent",
-			"bold": false,
+			"bold": true,
 			"italic": false
 		},
 		{
@@ -224,6 +224,15 @@
 			"underline": false,
 			"backgroundColor": "transparent",
 			"bold": false,
+			"italic": false
+		},
+        {
+			"tag": "^",
+			"color": "#ff8C00", //yellow
+			"strikethrough": false,
+			"underline": false,
+			"backgroundColor": "transparent",
+			"bold": true,
 			"italic": false
 		}
 	],

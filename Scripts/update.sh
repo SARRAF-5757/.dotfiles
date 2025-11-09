@@ -33,6 +33,6 @@ echo " "
 echo " "
 echo "Updating OMP..."
 oh-my-posh upgrade
-echo "Update Finished" | figlet | lolcat -a -d 100
+echo "Update Finished" | figlet | lolcat
 echo " "
 echo " "
