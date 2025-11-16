@@ -69,7 +69,7 @@ bindkey \^U backward-kill-line
 # Aliases
 alias tree='eza -T --total-size --no-quotes --icons=always --color=always'
 alias ls='eza --width 70 --no-quotes --icons=always --color=always -a'
-alias lls='eza -l --icons=always --total-size --git --no-user --no-permissions --no-time'
+alias lss='eza -l --icons=always --total-size --git --no-user --no-permissions --no-time'
 alias cat='bat'
 alias cd='z'
 alias cls='clear'

@@ -51,7 +51,6 @@ custom-shader = shaders/cursor_frozen.glsl
 #custom-shader = shaders/drunkard.glsl
 
 
-
 #-------------- BEHAVIOR --------------#
 cursor-click-to-move = true
 working-directory = /Users/sarraf/
@@ -60,7 +59,8 @@ window-save-state = always
 window-new-tab-position = end
 
 #-------------- KEYBINDS --------------#
-keybind = super+a=select_all
+keybind = global:cmd+s=toggle_quick_terminal
+#keybind = super+a=select_all
 #keybind = super+shift+alt+ctrl+space=super+shift+p
-keybind = cmd+backspace=esc:w
-keybind = cmd+backspace=text:\x15
+#keybind = cmd+backspace=esc:w
+#keybind = cmd+backspace=text:\x15

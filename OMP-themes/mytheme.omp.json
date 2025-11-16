@@ -40,11 +40,11 @@
         {
           "properties": {
             "folder_icon": "\uf07c ",
-            "folder_separator_icon": "<#011627>\ue0b1</> ",
+            "folder_separator_icon": "<#011627>\ue0bb</> ",
             "home_icon": " \ueb06 ",
             "style": "agnoster"
           },
-          "template": "{{ path .Path .Location }}",
+          "template": "{{ path .Path .Location }} ",
           "foreground": "#011627",
           "powerline_symbol": "\ue0b0",
           "background": "#82AAFF",
@@ -80,16 +80,14 @@
           "properties": {
             "always_enabled": true
           },
-          "trailing_diamond": "\ue0b4",
+          "trailing_diamond": "\ue0b0",
           "template": " {{ if gt .Code 0 }}\uf00d {{ reason .Code }}{{ else }}\uf00c{{ end }} ",
           "foreground": "#ffffff",
           "powerline_symbol": "\ue0b0",
           "background": "#00897b",
           "type": "status",
           "style": "diamond",
-          "background_templates": [
-            "{{ if gt .Code 0 }}#e91e63{{ end }}"
-          ]
+          "background_templates": ["{{ if gt .Code 0 }}#e91e63{{ end }}"]
         }
       ]
     },
@@ -417,9 +415,7 @@
           "foreground": "#ab76d9",
           "type": "status",
           "style": "plain",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}#ef5350{{ end }}"
-          ]
+          "foreground_templates": ["{{ if gt .Code 0 }}#ef5350{{ end }}"]
         }
       ],
       "newline": true
