@@ -37,10 +37,11 @@
 	"editor.accessibilitySupport": "off",				//annoying screen reader popup
 	"editor.hover.delay": 900,							//stops tooltips from poppubg up without intention while coding
 	"editor.detectIndentation": false,                  //disables auto-detection of indentation based on file contents
+    "editor.inlayHints.enabled": "off",                 //disables rendering hints in the text editor
 	
 	//!Workbench Settings
 	"window.titleBarStyle": "custom",
-	"workbench.colorTheme": "Forest Cottage - Classic",
+    "workbench.colorTheme": "IEC Purple",
 	"workbench.productIconTheme": "fluent-icons", //Put sidebar on the right
 	"window.commandCenter": false, 						//hide the top bar
 	"workbench.layoutControl.enabled": false, 			//hide the other top bar
@@ -133,6 +134,14 @@
     //!JavaScript/TypeScript Settings
     "typescript.updateImportsOnFileMove.enabled": "always",
     "javascript.updateImportsOnFileMove.enabled": "always",
+
+    //!Copilot
+    "github.copilot.enable": {  //disable autocompletions
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
 	
 	//!Custom CSS for VS Code
 	"vscode_custom_css.imports": [
@@ -168,6 +177,10 @@
 	"material-icon-theme.hidesExplorerArrows": true,
 	"catppuccin-icons.hidesExplorerArrows": true,
 	"symbols.hidesExplorerArrows": true,
+
+    //!Vibrancy Continued
+    "vscode_vibrancy.type": "hud",
+    "vscode_vibrancy.opacity": -1,
 	
 	//!Better Comments
 	"better-comments.highlightPlainText": true,
@@ -279,7 +292,6 @@
 	"asvetliakov.vscode-neovim": 1
 	},
 	"security.workspace.trust.untrustedFiles": "open",
-	"vscode_vibrancy.opacity": 0,						//vibrancy theme
 	"editor.tokenColorCustomizations": {
 		//to disable italics
 		"textMateRules": [

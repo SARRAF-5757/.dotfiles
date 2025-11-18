@@ -3,6 +3,10 @@ return {
         "folke/tokyonight.nvim",
         lazy = true,
         opts = {
+            float = {
+                transparent = true,
+                solid = true,
+            },
             style = "night",
             transparent = true,
         },
@@ -11,6 +15,10 @@ return {
         "catppuccin/nvim",
         lazy = true,
         opts = {
+            float = {
+                transparent = true,
+                solid = true,
+            },
             flavour = "mocha",
             transparent_background = true,
         },
@@ -19,8 +27,12 @@ return {
         "navarasu/onedark.nvim",
         lazy = true,
         opts = {
-                style = "darker",
+            float = {
                 transparent = true,
-            }
+                solid = true,
+            },
+            style = "darker",
+            transparent = true,
+        },
     },
 }
