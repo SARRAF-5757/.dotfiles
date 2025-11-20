@@ -1,0 +1,18 @@
+"$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
+
+[mgr]
+ratio          = [ 2, 4, 4 ]
+sort_by        = "extension"
+linemode       = "size"
+show_hidden    = false
+show_symlink   = true
+mouse_events   = [ "click", "scroll", "touch", "drag" ]
+
+[preview]
+max_width       = 1500
+max_height      = 1500
+
+[preview.alignment]
+horizontal = "center"
+vertacil = "center"
+
