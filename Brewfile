@@ -19,7 +19,7 @@ brew "ast-grep"
 brew "bat"
 # Control and limit battery charging on Apple Silicon MacBooks
 brew "batt"
-# Platform built on V8 to build network applications
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
 # Secure and free password manager for all of your devices
 brew "bitwarden-cli"
@@ -41,6 +41,8 @@ brew "curl"
 brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
 # User-friendly command-line shell for UNIX-like operating systems
@@ -55,8 +57,6 @@ brew "git"
 brew "git-lfs"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
-# C/C++ and Java libraries for Unicode and globalization
-brew "icu4c@76"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Install and debug iPhone apps from the command-line
@@ -99,8 +99,12 @@ brew "thefuck"
 brew "watchman"
 # Internet file retriever
 brew "wget"
+# Blazing fast terminal file manager written in Rust, based on async I/O
+brew "yazi"
 # Feature-rich command-line audio/video downloader
 brew "yt-dlp"
+# Programming language designed for robustness, optimality, and clarity
+brew "zig"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # UNIX shell (command interpreter)
@@ -156,6 +160,7 @@ cask "font-jetbrains-mono-nerd-font"
 cask "font-meslo-for-powerlevel10k"
 cask "font-monaspice-nerd-font"
 cask "font-open-dyslexic-nerd-font"
+cask "font-symbols-only-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Desktop client for GitHub repositories
@@ -226,6 +231,8 @@ cask "visual-studio-code"
 cask "vivaldi"
 # Rust-based terminal
 cask "warp"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
+cask "wezterm"
 # Native desktop client for WhatsApp
 cask "whatsapp"
 # Gecko based web browser
@@ -241,31 +248,32 @@ mas "PhotoScape X", id: 929507092
 mas "QuickShade", id: 931571202
 mas "Spark Desktop", id: 6445813049
 mas "Xcode", id: 497799835
+vscode "4a454646.github-purple"
 vscode "aaron-bond.better-comments"
+vscode "akamud.vscode-theme-onedark"
 vscode "alefragnani.bookmarks"
 vscode "alefragnani.project-manager"
 vscode "alexcvzz.vscode-sqlite"
+vscode "azemoh.one-monokai"
 vscode "be5invis.vscode-custom-css"
 vscode "brandonkirbyson.vscode-animations"
 vscode "catppuccin.catppuccin-vsc"
 vscode "catppuccin.catppuccin-vsc-icons"
 vscode "dbaeumer.vscode-eslint"
+vscode "dracula-theme.theme-dracula"
 vscode "dtoplak.vscode-glsllint"
 vscode "eamodio.gitlens"
-vscode "enkia.tokyo-night"
 vscode "equimper.react-native-react-redux"
 vscode "esbenp.prettier-vscode"
 vscode "github.copilot"
 vscode "github.copilot-chat"
-vscode "github.github-vscode-theme"
 vscode "illixion.vscode-vibrancy-continued"
-vscode "jdinhlife.gruvbox"
 vscode "jeff-hykin.better-cpp-syntax"
 vscode "llvm-vs-code-extensions.vscode-clangd"
+vscode "makashi.dark-purple"
 vscode "mechatroner.rainbow-csv"
 vscode "miguelsolorio.fluent-icons"
 vscode "miguelsolorio.symbols"
-vscode "monokai.theme-monokai-pro-vscode"
 vscode "ms-dotnettools.csdevkit"
 vscode "ms-dotnettools.csharp"
 vscode "ms-dotnettools.vscode-dotnet-runtime"
@@ -284,9 +292,10 @@ vscode "ms-vscode.vscode-serial-monitor"
 vscode "ms-vsliveshare.vsliveshare"
 vscode "msjsdiag.vscode-react-native"
 vscode "oderwat.indent-rainbow"
+vscode "ongshu777.lunar-blue"
 vscode "pkief.material-icon-theme"
 vscode "pkief.material-product-icons"
-vscode "sdras.night-owl"
+vscode "purpleddive.iec-p"
 vscode "slevesque.shader"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "tomoki1207.pdf"
@@ -296,4 +305,5 @@ vscode "violetbp.lc2k"
 vscode "xaver.clang-format"
 vscode "xshrim.txt-syntax"
 vscode "yinfei.luahelper"
+vscode "zephyrj.forest-cottage"
 vscode "zhuangtongfa.material-theme"

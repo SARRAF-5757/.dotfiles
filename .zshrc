@@ -75,6 +75,8 @@ alias cd='z'
 alias cls='clear'
 alias gits='git status'
 alias gitr='git remote show origin'
+alias gl=carbonyl_url
+alias google=google
 # Multi-distro neovim setup
 alias avim='NVIM_APPNAME="nvim-astronvim" nvim'
 alias vim='NVIM_APPNAME="nvim-lazyvim" nvim'
@@ -84,6 +86,14 @@ alias kvim='NVIM_APPNAME="nvim-kickstart" nvim'
 # Functions
 function title() {          # Customize tab titles
     echo -en "\e]2;$@\a"
+}
+
+function carbonyl_url() {
+  carbonyl "https://$1"
+}
+
+function google() {
+  carbonyl "https://www.google.com/search?q=$1"
 }
 
 export EDITOR="vim"
