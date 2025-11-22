@@ -1,0 +1,25 @@
+* operator + motion = applies the action to the entirity of the movement
+
+MOVEMENT
+w - movement; goes to the beginning of next word
+b - movement; goes to the beginning of previous word
+e - movement; goes to the end of next word
+0 - movement; start of the line
+$ - movement; end of the line
+gg - movement; beginning of file
+G - movement; end of file
+% - movement; move to the matching parenthesis
+OPERATORS
+d - operator; delete
+c - operator; delete and go into insert mode
+o - operator; add a ine below the current line and go into insert mode
+r<char> - operator; replace character with <char>
+
+SHORTCUTS / FREEQUENTS
+x - shortcut; delete character under cursor
+dd - shortcut; delete entire line
+d$ - shortcut; delete entire line after cursor
+d0 - shortcut; delete entire line before cursor
+d2w - shortcut; delete 2 words
+a - shortcut; insert character before cursor
+yap - shortcut; yank the whole paragraph

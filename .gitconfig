@@ -7,4 +7,15 @@
 	process = git-lfs filter-process
 	required = true
 [alias]
-	ac = !git add -A && git commit -m
+  ac = !git add -A && git commit -m
+[diff]
+    colorMoved = default
+[core]
+  pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[merge]
+  conflictStyle = zdiff3
+[delta]
+    navigate = true
+	  side-by-side = true
