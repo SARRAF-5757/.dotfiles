@@ -56,7 +56,9 @@
 	"workbench.tree.indent": 20,						//file explorer indentation
 	"workbench.sideBar.location": "right",				//sidebar at the right
 	"workbench.iconTheme": "material-icon-theme",			//file icons
-	"workbench.colorCustomizations": {},
+	"workbench.colorCustomizations": {
+        "terminal.background": "#00000000"
+    },
     "chat.commandCenter.enabled": false,                //hide copilot elements from IDE
     "animations.Enabled": false,
     "window.systemColorTheme": "dark",

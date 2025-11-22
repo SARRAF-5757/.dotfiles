@@ -9,6 +9,12 @@ return {
             },
             style = "night",
             transparent = true,
+            custom_highlights = function(colors)
+                return {
+                    CursorLine = { bg = "NONE" },
+                    CursorLineNr = { fg = colors.mauve, bg = "NONE" },
+                }
+            end,
         },
     },
     {
@@ -21,6 +27,12 @@ return {
             },
             flavour = "mocha",
             transparent_background = true,
+            custom_highlights = function(colors)
+                return {
+                    CursorLine = { bg = "NONE" },
+                    CursorLineNr = { fg = colors.mauve, bg = "NONE" },
+                }
+            end,
         },
     },
     {
@@ -33,6 +45,12 @@ return {
             },
             style = "darker",
             transparent = true,
+            custom_highlights = function(colors)
+                return {
+                    CursorLine = { bg = "NONE" },
+                    CursorLineNr = { fg = colors.mauve, bg = "NONE" },
+                }
+            end,
         },
     },
 }

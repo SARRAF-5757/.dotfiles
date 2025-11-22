@@ -53,6 +53,8 @@ brew "fzf"
 brew "gemini-cli"
 # Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
 # Git extension for versioning large files
 brew "git-lfs"
 # User-friendly cURL replacement (command-line HTTP client)
