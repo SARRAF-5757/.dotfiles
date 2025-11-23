@@ -1,4 +1,4 @@
-## To replicate-
+## To replicate on a new machine-
 
 1. Setup ssh key with github
 2. Install [Homebrew](https://brew.sh/)
@@ -6,27 +6,19 @@
 4. Install from Brewfile '''brew bundle --file=~/.dotfiles/Brewfile'''
 5. Run '''stow .'''
 
-## Stuff included
+## Things Included
 
-- **Zsh Configuration**: Includes aliases, plugins, and themes (Powerlevel10k).
-- **Terminal Enhancements**: Improved `ls` (using `eza`), `cat` (using `bat`), and navigation (`zoxide`).
-- **VS Code Configuration**: Minimal VS Code setup with various utilities and custom CSS & JS + Keybindings using Hyperkey
-- **Ghostty Terminal Configuration**: Tweaks and custom themes for a transparent minimal [Ghostty](https://ghostty.org/) terminal setup
-- **Warp Terminal Themes**: Some custom themes made for [Warp Terminal](https://www.warp.dev/download)
-- **LazyVim Configuration**: Mostly default, with a few functional preferences and theme changes to support Ghostty's transparent look
-- **Custom CSS for Zen Browser**: My custom transparent and minimal setup for the [Zen Browser](https://zen-browser.app/)
-- **Scripts**: Some useful scripts I use on the daily
 - **Homebrew**: Brewfile to install all the tools necessary + casks that I use personally
+- **Shell Configurations**: My daily driver is ZSH, but fish and nu are also there for playing around. ZSH config includes aliases, plugins, and themes.
+- **Terminal Enhancements**: Improved `ls` (using `eza`), `cat` (using `bat`), and navigation (`zoxide`).
+- **Terminal Configurations**: [Ghostty](https://ghostty.org/)and [Wezterm](https://wezterm.org/) configs available. Tweaks are made for a transparent and minimal terminal setup
+- **Warp Terminal Themes**: Some custom themes made for [Warp Terminal](https://www.warp.dev/download)
+- **Multi-distro Neovim Setup**: My daily driver is LazyVim, others aren't really configured, just there for playing around.
+- **Yazi Configuration**: Terminal file browser yazi setup to work with the multi-distro neovim setup.
+- **Git Config**: Use [Delta](https://github.com/dandavison/delta) for prettier git diff.
+- **VS Code Configuration**: Minimal VS Code setup with various utilities and custom CSS & JS + Keybindings using Hyperkey
+- **Custom CSS for Zen Browser**: My custom transparent and minimal setup for the [Zen Browser](https://zen-browser.app/) (Now available as a standalone - [BlackGlass](https://github.com/SARRAF-5757/BlackGlass))
+- **Scripts**: Some useful scripts I use on the daily
 - **Leader Key Keybindings**: My command set for [Leader Key](https://github.com/mikker/LeaderKey.app) App
+- **Karabiner Elements Config**: Complex modifications to add hyperkey, vim motions, home row mods, etc
 - **Raycast Configuration**: Password-locked for security, only stored here for personal use
-
-## Tools Used
-
-- [Oh My Zsh](https://ohmyz.sh/)
-- [Powerlevel10k](https://github.com/romkatv/powerlevel10k)
-- [Zsh Syntax Highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-- [Zsh Autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-- [Eza (fancy ls)](https://github.com/eza-community/eza)
-- [Bat (better cat)](https://github.com/sharkdp/bat)
-- [Zoxide (cd with a memory)](https://github.com/ajeetdsouza/zoxide)
-- [Silver Searcher (search files faster)](https://github.com/ggreer/the_silver_searcher)
