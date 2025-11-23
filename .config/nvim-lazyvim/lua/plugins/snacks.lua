@@ -5,6 +5,12 @@ return {
             sources = {
                 explorer = {
                     hidden = true,
+                    layout = {
+                        preset = "right",
+                        layout = {
+                            width = 0.23,
+                        },
+                    },
                 },
                 files = {
                     hidden = true,

@@ -64,7 +64,7 @@
           "type": "git"
         },
         {
-          "background": "#575656",
+          "background": "#3a3939",
           "foreground": "#d6deeb",
           "leading_diamond": "\ue0d7",
           "properties": {

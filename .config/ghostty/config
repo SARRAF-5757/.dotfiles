@@ -39,16 +39,16 @@ custom-shader = shaders/cursor_frozen.glsl
 #custom-shader = shaders/cursor_smear_fade.glsl
 
 #---Interface---#
-#custom-shader = shaders/tiles.glsl
-#custom-shader = shaders/galaxy.glsl
-#custom-shader = shaders/sparks.glsl
-#custom-shader = shaders/snow.glsl
-#custom-shader = shaders/transparent-crt.glsl
-#custom-shader = shaders/bettercrt.glsl
-#custom-shader = shaders/dither.glsl
-#custom-shader = shaders/glitchy.glsl
-#custom-shader = shaders/water.glsl
-#custom-shader = shaders/drunkard.glsl
+# custom-shader = shaders/transparent-crt.glsl
+# custom-shader = shaders/tiles.glsl
+# custom-shader = shaders/galaxy.glsl
+# custom-shader = shaders/sparks.glsl
+# custom-shader = shaders/snow.glsl
+# custom-shader = shaders/bettercrt.glsl
+# custom-shader = shaders/dither.glsl
+# custom-shader = shaders/glitchy.glsl
+# custom-shader = shaders/water.glsl
+# custom-shader = shaders/drunkard.glsl
 
 
 #-------------- BEHAVIOR --------------#

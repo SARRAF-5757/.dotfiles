@@ -34,4 +34,11 @@ return {
             transparent = true,
         },
     },
+    {
+        "rebelot/kanagawa.nvim",
+        lazy = true,
+        opts = {
+            transparent = true,
+        },
+    },
 }

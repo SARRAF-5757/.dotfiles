@@ -22,6 +22,7 @@ ZSH_THEME=""
 plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
+    zsh-history-substring-search
     macos
     git
     vscode
@@ -77,6 +78,7 @@ alias gits='git status'
 alias gitr='git remote show origin'
 alias gl=carbonyl_url
 alias google=google
+alias e='yazi'
 # Multi-distro neovim setup
 alias avim='NVIM_APPNAME="nvim-astronvim" nvim'
 alias vim='NVIM_APPNAME="nvim-lazyvim" nvim'
@@ -96,25 +98,25 @@ function google() {
   carbonyl "https://www.google.com/search?q=$1"
 }
 
-export EDITOR="vim"
-function y() {              # Yazi Setup
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
+# export EDITOR="vim"
+# function y() {              # Yazi Setup
+# 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+# 	yazi "$@" --cwd-file="$tmp"
+# 	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+# 		builtin cd -- "$cwd"
+# 	fi
+# 	rm -f -- "$tmp"
+# }
+#
 
-
-# Oh My Posh
+##!-----------------------------Oh My Posh-----------------------------!#
 # eval "$(oh-my-posh init zsh --config ~/Coding/Personal/OMP-Wizard/build/temp.omp.json --trace)"
 # eval "$(oh-my-posh init zsh --config ~/Coding/Personal/OMP-Wizard/build/test.omp.json --trace)"
 
 # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/mytheme.omp.json --trace)"
-# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/nightowl.omp.json --trace)"
+eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/nightowl.omp.json --trace)"
 # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/atomic.omp.json --trace)"
-eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/bubbles.omp.json --trace)"
+# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/bubbles.omp.json --trace)"
 # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/chips.omp.json --trace)"
 # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/catppuccin.omp.json --trace)"
 
