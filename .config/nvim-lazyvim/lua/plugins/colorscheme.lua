@@ -1,56 +1,37 @@
 return {
     {
-        "folke/tokyonight.nvim",
-        lazy = true,
-        opts = {
-            float = {
-                transparent = true,
-                solid = true,
-            },
-            style = "night",
-            transparent = true,
-            custom_highlights = function(colors)
-                return {
-                    CursorLine = { bg = "NONE" },
-                    CursorLineNr = { fg = colors.mauve, bg = "NONE" },
-                }
-            end,
-        },
-    },
-    {
         "catppuccin/nvim",
         lazy = true,
         opts = {
-            float = {
-                transparent = true,
-                solid = true,
-            },
             flavour = "mocha",
             transparent_background = true,
-            custom_highlights = function(colors)
-                return {
-                    CursorLine = { bg = "NONE" },
-                    CursorLineNr = { fg = colors.mauve, bg = "NONE" },
-                }
-            end,
+        },
+    },
+    {
+        "EdenEast/nightfox.nvim",
+        lazy = true,
+        opts = {
+            transparent = true,
+        },
+    },
+    {
+        "folke/tokyonight.nvim",
+        lazy = true,
+        opts = {
+            style = "night",
+            transparent = true,
+            styles = {
+                sidebars = "transparent",
+                floats = "transparent",
+            },
         },
     },
     {
         "navarasu/onedark.nvim",
         lazy = true,
         opts = {
-            float = {
-                transparent = true,
-                solid = true,
-            },
             style = "darker",
             transparent = true,
-            custom_highlights = function(colors)
-                return {
-                    CursorLine = { bg = "NONE" },
-                    CursorLineNr = { fg = colors.mauve, bg = "NONE" },
-                }
-            end,
         },
     },
 }
