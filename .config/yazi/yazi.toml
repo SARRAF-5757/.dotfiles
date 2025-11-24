@@ -16,3 +16,7 @@ max_height      = 1500
 horizontal = "center"
 vertacil = "center"
 
+[opener]
+edit = [
+  { run = 'NVIM_APPNAME="nvim-lazyvim" nvim "%*"', block=true, for = "unix"},
+]
