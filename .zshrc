@@ -79,6 +79,7 @@ alias gitr='git remote show origin'
 alias gl=carbonyl_url
 alias google=google
 alias e='yazi'
+alias t='btop'
 # Multi-distro neovim setup
 alias avim='NVIM_APPNAME="nvim-astronvim" nvim'
 alias vim='NVIM_APPNAME="nvim-lazyvim" nvim'

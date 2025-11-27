@@ -3,9 +3,14 @@ return {
   event = { 'BufReadPre', 'BufNewFile' },
   config = function()
     local lint = require 'lint'
+
+    -- clang-tidy location fix
+    local llvm_prefix = vim.fn.trim(vim.fn.system 'brew --prefix llvm')
+    lint.linters.clangtidy.cmd = llvm_prefix .. '/bin/clang-tidy'
+
     lint.linters_by_ft = {
       markdown = { 'markdownlint' },
-      cpp = { 'clangd' },
+      cpp = { 'clangtidy' },
     }
 
     -- Create autocommand which carries out the actual linting on the specified events.
