@@ -7,18 +7,18 @@ tap "nikitabobko/tap"
 tap "smudge/smudge"
 tap "teamookla/speedtest"
 tap "zackelia/formulae"
-# Command-line interface for SQLite
-brew "sqlite"
-# Simple system information tool written in Python
-brew "archey4"
 # Spell checker with better logic than ispell
 brew "aspell"
 # Code searching, linting, rewriting
 brew "ast-grep"
+# Improved shell history for zsh, bash, fish and nushell
+brew "atuin"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Control and limit battery charging on Apple Silicon MacBooks
 brew "batt"
+# Command-line interface for SQLite
+brew "sqlite"
 # Open-source, cross-platform JavaScript runtime environment
 brew "node"
 # Secure and free password manager for all of your devices
@@ -39,8 +39,12 @@ brew "cowsay"
 brew "curl"
 # Modern, maintained replacement for ls
 brew "eza"
+# Like neofetch, but much faster because written mostly in C
+brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Low-level access to audio, keyboard, mouse, joystick, and graphics
+brew "sdl2"
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 # Banner-like program prints strings as ASCII art
@@ -65,6 +69,8 @@ brew "imagemagick"
 brew "ios-deploy"
 # Simple terminal UI for git commands
 brew "lazygit"
+# Next-gen compiler infrastructure
+brew "llvm"
 # Rainbows and unicorns in your console!
 brew "lolcat"
 # Package manager for the Lua programming language
@@ -85,6 +91,8 @@ brew "nushell"
 brew "pkgconf"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Safe, concurrent, practical language
+brew "rust"
 # Display and control your Android device
 brew "scrcpy"
 # Terminal multiplexer with VT100/ANSI terminal emulation
@@ -97,6 +105,8 @@ brew "sl"
 brew "stow"
 # Programmatically correct mistyped console commands
 brew "thefuck"
+# Official tldr client written in Rust
+brew "tlrc"
 # Watch files and take action when they change
 brew "watchman"
 # Internet file retriever

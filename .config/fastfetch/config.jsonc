@@ -1,0 +1,78 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "source": "asahi",
+    "padding": {
+      "top": 2,
+      "left": 4,
+      "right": 5,
+    },
+  },
+  "display": {
+    "separator": ": ",
+    "color": {
+      "keys": "magenta",
+      "title": "yellow",
+    },
+    "key": {
+      "width": 26,
+      "type": "both",
+    },
+    "bar": {
+      "width": 15,
+      "char": {
+        "elapsed": "■",
+        "total": "-",
+      },
+    },
+    "percent": {
+      "type": 3, // 1=number, 2=bar, 3=both, 9=colored number
+      "color": {
+        "green": "green",
+        "yellow": "light_yellow",
+        "red": "light_red",
+      },
+    },
+  },
+  "modules": [
+    "title",
+    "separator",
+    {
+      "type": "os",
+      "format": "{pretty-name}",
+    },
+    "host",
+    {
+      "type": "display",
+      "format": "{width}\uf467{height} | {inch} inch | {refresh-rate} Hz",
+    },
+    "kernel",
+    "packages",
+    "shell",
+    "editor",
+    "de",
+    "icons",
+    "terminal",
+    "terminalfont",
+    "break",
+    "uptime",
+    {
+      "type": "localip",
+      "format": "{ipv4}",
+    },
+    "cpuusage",
+    "memory",
+    "swap",
+    {
+      "type": "disk",
+      "format": "{size-percentage-bar} {size-used} / {size-total} ({size-percentage})",
+    },
+    {
+      "type": "battery",
+      "format": "{capacity-bar} {time-formatted} left",
+    },
+    "poweradapter",
+    "break",
+    "colors",
+  ],
+}

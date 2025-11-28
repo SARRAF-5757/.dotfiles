@@ -20,12 +20,13 @@ config.keys = {
 		action = wezterm.action.CloseCurrentPane({ confirm = false }),
 	},
 }
+config.window_close_confirmation = "NeverPrompt"
 
 -- Transprency (both fancy and retro)
 config.use_fancy_tab_bar = true
 config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.7
-config.macos_window_background_blur = 40
+config.macos_window_background_blur = 50
 config.window_frame = {
 	inactive_titlebar_bg = "rgba(0, 0, 0, 0.7)",
 	active_titlebar_bg = "rgba(0, 0, 0, 0.7)",

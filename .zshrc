@@ -35,6 +35,11 @@ plugins=(
     themes
 )
 
+#!---------------------------CONFIGURE PLUGINS---------------------------!#
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#3e3e3e,bold"
+ZSH_AUTOSUGGEST_STRATEGY=(completion match_prev_cmd)
+
+
 #!-----------------------------ZSH OPTIONS-----------------------------!#
 # CASE_SENSITIVE="true"                 # case-sensitive completion
 # HYPHEN_INSENSITIVE="true"             # hyphen-insensitive completion (Case-sensitive must be off)
@@ -48,18 +53,14 @@ DISABLE_AUTO_TITLE="true"               # disable auto-setting terminal title
 # ENABLE_CORRECTION="true"              # enable command auto-correction
 #COMPLETION_WAITING_DOTS="%F{red}waiting...%f"   # display red dots whilst waiting for completion
 # DISABLE_UNTRACKED_FILES_DIRTY="true"  # disable marking untracked files under VCS as dirty
-#HIST_STAMPS="mm/dd/yyyy"                # change time stamp format in the history command output
+# HIST_STAMPS="mm/dd/yyyy"              # change time stamp format in the history command output
 # ZSH_CUSTOM=/path/to/new-custom-folder # if using custom folder than $ZSH/custom
 
 
-#!---------------------------CONFIGURE PLUGINS---------------------------!#
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#3e3e3e,bold"
-ZSH_AUTOSUGGEST_STRATEGY=(completion match_prev_cmd)
-
 # Load Oh My Zsh
 source $ZSH/oh-my-zsh.sh
-
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 
 # Keybinds
 bindkey '^I' autosuggest-accept
@@ -73,18 +74,22 @@ alias ls='eza --width 70 --no-quotes --icons=always --color=always -a'
 alias lss='eza -l --icons=always --total-size --git --no-user --no-permissions --no-time'
 alias cat='bat'
 alias cd='z'
+alias find='fd'
+alias e='yazi'
+alias t='btop'
 alias cls='clear'
+alias ff='fastfetch'
 alias gits='git status'
 alias gitr='git remote show origin'
 alias gl=carbonyl_url
 alias google=google
-alias e='yazi'
-alias t='btop'
+
 # Multi-distro neovim setup
 alias avim='NVIM_APPNAME="nvim-astronvim" nvim'
 alias vim='NVIM_APPNAME="nvim-lazyvim" nvim'
 alias chvim='NVIM_APPNAME="nvim-nvchad" nvim'
 alias kvim='NVIM_APPNAME="nvim-kickstart" nvim'
+
 
 # Functions
 function title() {          # Customize tab titles
@@ -108,7 +113,9 @@ function google() {
 # 	fi
 # 	rm -f -- "$tmp"
 # }
-#
+
+
+eval "$(atuin init zsh)"
 
 ##!-----------------------------Oh My Posh-----------------------------!#
 # eval "$(oh-my-posh init zsh --config ~/Coding/Personal/OMP-Wizard/build/temp.omp.json --trace)"
