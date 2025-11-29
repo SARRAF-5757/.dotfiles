@@ -1,0 +1,5 @@
+inline_height_shell_up_key_binding = 15
+style = "compact"
+[theme]
+name = "catppuccin-mocha-lavender"
+

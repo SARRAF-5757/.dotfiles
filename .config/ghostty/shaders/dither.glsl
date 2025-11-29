@@ -18,13 +18,22 @@ float getBayerFromPacked(int x, int y) {
 #define LEVELS 2.0 // Available color steps per channel
 #define INV_LEVELS (1.0 / LEVELS)
 
+// Toggle transparency support here
+bool use_transparency = true; 
+
 void mainImage(out vec4 fragColor, in vec2 fragCoord)
 {
     vec2 uv = fragCoord * (1.0 / iResolution.xy);
-    vec3 color = texture(iChannel0, uv).rgb;
+    
+    // Sample full texture (including alpha)
+    vec4 texColor = texture(iChannel0, uv);
+    vec3 color = texColor.rgb;
  
     float threshold = getBayerFromPacked(int(fragCoord.x), int(fragCoord.y));
     vec3 dithered = floor(color * LEVELS + threshold) * INV_LEVELS;
 
-    fragColor = vec4(dithered, 1.0);
+    // Determine final alpha based on the toggle
+    float alpha = use_transparency ? texColor.a : 1.0;
+
+    fragColor = vec4(dithered, alpha);
 }

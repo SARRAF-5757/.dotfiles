@@ -10,6 +10,7 @@
 
 float warp = 0.25; // simulate curvature of CRT monitor
 float scan = 0.50; // simulate darkness between scanlines
+bool use_transparency = true; // toggle transparency support
 
 void mainImage(out vec4 fragColor, in vec2 fragCoord)
 {
@@ -25,9 +26,15 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
     // determine if we are drawing in a scanline
     float apply = abs(sin(fragCoord.y) * 0.25 * scan);
         
-    // sample the texture
-    vec3 color = texture(iChannel0, uv).rgb;
+    // sample the texture (now capturing full vec4 for alpha)
+    vec4 texColor = texture(iChannel0, uv);
+    
+    // mix the sampled rgb with the scanline intensity
+    vec3 color = mix(texColor.rgb, vec3(0.0), apply);
+    
+    // determine final alpha based on the toggle
+    float alpha = use_transparency ? texColor.a : 1.0;
 
-    // mix the sampled color with the scanline intensity
-    fragColor = vec4(mix(color, vec3(0.0), apply), 1.0);
+    // Output with the calculated alpha
+    fragColor = vec4(color, alpha);
 }

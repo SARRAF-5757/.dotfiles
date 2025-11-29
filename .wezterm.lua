@@ -2,6 +2,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 -- General config
+config.max_fps = 120
 config.initial_cols = 122
 config.initial_rows = 37
 config.font = wezterm.font("MonaspiceAr Nerd Font Mono")

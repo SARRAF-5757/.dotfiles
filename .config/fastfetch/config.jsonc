@@ -7,6 +7,10 @@
       "left": 4,
       "right": 5,
     },
+    // "color": {
+    //   "1": "yellow",
+    //   "2": "red",
+    // },
   },
   "display": {
     "separator": ": ",
@@ -15,7 +19,7 @@
       "title": "yellow",
     },
     "key": {
-      "width": 26,
+      "width": 24,
       "type": "both",
     },
     "bar": {
@@ -74,5 +78,6 @@
     "poweradapter",
     "break",
     "colors",
+    "break",
   ],
 }

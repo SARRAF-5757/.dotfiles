@@ -22,7 +22,7 @@ ZSH_THEME=""
 plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
-    zsh-history-substring-search
+    # zsh-history-substring-search
     macos
     git
     vscode
@@ -64,9 +64,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Keybinds
 bindkey '^I' autosuggest-accept
-bindkey '\e\x7F' backward-kill-word
-bindkey '\ew' backward-kill-line
-bindkey \^U backward-kill-line
+# bindkey '^[[A' history-substring-search-up
+# bindkey '^[[B' history-substring-search-down 
 
 # Aliases
 alias tree='eza -T --total-size --no-quotes --icons=always --color=always'
@@ -77,7 +76,7 @@ alias cd='z'
 alias find='fd'
 alias e='yazi'
 alias t='btop'
-alias cls='clear'
+alias cls='clear; ff'
 alias ff='fastfetch'
 alias gits='git status'
 alias gitr='git remote show origin'
@@ -128,3 +127,4 @@ eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/nightowl.omp.json --
 # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/chips.omp.json --trace)"
 # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/catppuccin.omp.json --trace)"
 
+cls

@@ -12,12 +12,15 @@
 #define UI3 uvec3(UI0, UI1, 2798796415U)
 #define UIF (1. / float(0xffffffffU))
 
+// Toggle transparency support
+bool use_transparency = true;
+
 // Hash by David_Hoskins
 vec3 hash33(vec3 p)
 {
-	uvec3 q = uvec3(ivec3(p)) * UI3;
-	q = (q.x ^ q.y ^ q.z)*UI3;
-	return -1. + 2. * vec3(q) * UIF;
+    uvec3 q = uvec3(ivec3(p)) * UI3;
+    q = (q.x ^ q.y ^ q.z)*UI3;
+    return -1. + 2. * vec3(q) * UIF;
 }
 
 // Gradient noise by iq
@@ -49,15 +52,15 @@ float gnoise(vec3 x)
     float vf = dot(gf, w - vec3(1., 0., 1.));
     float vg = dot(gg, w - vec3(0., 1., 1.));
     float vh = dot(gh, w - vec3(1., 1., 1.));
-	
+    
     // interpolation
     float gNoise = va + u.x * (vb - va) + 
-           		u.y * (vc - va) + 
-           		u.z * (ve - va) + 
-           		u.x * u.y * (va - vb - vc + vd) + 
-           		u.y * u.z * (va - vc - ve + vg) + 
-           		u.z * u.x * (va - vb - ve + vf) + 
-           		u.x * u.y * u.z * (-va + vb + vc - vd + ve - vf - vg + vh);
+                   u.y * (vc - va) + 
+                   u.z * (ve - va) + 
+                   u.x * u.y * (va - vb - vc + vd) + 
+                   u.y * u.z * (va - vc - ve + vg) + 
+                   u.z * u.x * (va - vb - ve + vf) + 
+                   u.x * u.y * u.z * (-va + vb + vc - vd + ve - vf - vg + vh);
     
     return 2. * gNoise;
 }
@@ -65,7 +68,7 @@ float gnoise(vec3 x)
 // gradient noise in range [0, 1]
 float gnoise01(vec3 x)
 {
-	return .5 + .5 * gnoise(x);   
+    return .5 + .5 * gnoise(x);    
 }
 
 // warp uvs for the crt effect
@@ -88,7 +91,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     
     // smoothed interval for which the glitch gets triggered
     float glitchAmount = SS(DURATION * .001, DURATION * AMT, mod(t, DURATION));  
-	float displayNoise = 0.;
+    float displayNoise = 0.;
     vec3 col = vec3(0.);
     vec2 eps = vec2(5. / iResolution.x, 0.);
     vec2 st = vec2(0.);
@@ -102,16 +105,29 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     distortion += smoothstep(.999, 1., sin((uv.y + t * 1.6) * 2.)) * .02;
     distortion -= smoothstep(.999, 1., sin((uv.y + t) * 2.)) * .02;
     st = uv + vec2(distortion, 0.);
-    // chromatic aberration
-    col.r += textureLod(iChannel0, st + eps + distortion, 0.).r;
-    col.g += textureLod(iChannel0, st, 0.).g;
-    col.b += textureLod(iChannel0, st - eps - distortion, 0.).b;
     
+    vec4 sampR = textureLod(iChannel0, st + eps + distortion, 0.);
+    vec4 sampG = textureLod(iChannel0, st, 0.);
+    vec4 sampB = textureLod(iChannel0, st - eps - distortion, 0.);
+    
+    col.r += sampR.r;
+    col.g += sampG.g;
+    col.b += sampB.b;
+    
+    float finalAlpha = use_transparency ? max(sampR.a, max(sampG.a, sampB.a)) : 1.0;
+
     // white noise + scanlines
     displayNoise = 0.2 * clamp(displayNoise, 0., 1.);
+    
+    // If transparency is enabled, mask the noise by the alpha.
+    if (use_transparency) {
+        displayNoise *= finalAlpha;
+    }
+
     col += (.15 + .65 * glitchAmount) * (hash33(vec3(fragCoord, mod(float(iFrame),
-					1000.))).r) * displayNoise;
+                     1000.))).r) * displayNoise;
     col -= (.25 + .75 * glitchAmount) * (sin(4. * t + uv.y * iResolution.y * 1.75))
-					* displayNoise;
-    fragColor = vec4(col, 1.0);
+                     * displayNoise;
+                     
+    fragColor = vec4(col, finalAlpha);
 }

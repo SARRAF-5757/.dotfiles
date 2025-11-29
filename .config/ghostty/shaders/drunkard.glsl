@@ -2,6 +2,9 @@
 // (c) moni-dz (https://github.com/moni-dz) 
 // CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
+// Toggle transparency support here
+bool use_transparency = true;
+
 vec2 hash2(vec2 p) {
     uvec2 q = uvec2(floatBitsToUint(p.x), floatBitsToUint(p.y));
     q = (q * uvec2(1597334673U, 3812015801U)) ^ (q.yx * uvec2(2798796415U, 1979697793U));
@@ -39,7 +42,7 @@ float fbm(vec2 p) {
 
 
 #define NOISE_SCALE 1.0      // How distorted the image you want to be
-#define NOISE_INTENSITY 0.05 // How strong the noise effect is
+#define NOISE_INTENSITY 0.01 // How strong the noise effect is
 #define ABERRATION true      // Chromatic aberration
 #define ABERRATION_DELTA 0.1 // How strong the chromatic aberration effect is
 #define ANIMATE true
@@ -54,15 +57,28 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord)
     float noise = fbm(noisePos) * NOISE_INTENSITY;
 
     vec3 col;
+    float alpha;
 
     if (ABERRATION) {
-        col.r = texture(iChannel0, uv + vec2(noise * (1.0 + ABERRATION_DELTA))).r;
-        col.g = texture(iChannel0, uv + vec2(noise)).g;
-        col.b = texture(iChannel0, uv + vec2(noise * (1.0 - ABERRATION_DELTA))).b;
+        vec4 texR = texture(iChannel0, uv + vec2(noise * (1.0 + ABERRATION_DELTA)));
+        vec4 texG = texture(iChannel0, uv + vec2(noise));
+        vec4 texB = texture(iChannel0, uv + vec2(noise * (1.0 - ABERRATION_DELTA)));
+
+        col.r = texR.r;
+        col.g = texG.g;
+        col.b = texB.b;
+
+        if (use_transparency) {
+            alpha = max(texR.a, max(texG.a, texB.a));
+        } else {
+            alpha = 1.0;
+        }
     } else {
         vec2 distortedUV = uv + vec2(noise);
-        col = texture(iChannel0, distortedUV).rgb;
+        vec4 tex = texture(iChannel0, distortedUV);
+        col = tex.rgb;
+        alpha = use_transparency ? tex.a : 1.0;
     }
 
-    fragColor = vec4(col, 1.0);
+    fragColor = vec4(col, alpha);
 }

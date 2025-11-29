@@ -3,10 +3,10 @@
 //Shader License: CC BY 3.0
 //Author: Jan Mróz (jaszunio15)
 
-#define SMOKE_INTENSITY_MULTIPLIER 0.9
+#define SMOKE_INTENSITY_MULTIPLIER 0.0
 #define PARTICLES_ALPHA_MOD 0.9
-#define SMOKE_ALPHA_MOD 0.5
-#define LAYERS_COUNT 8
+#define SMOKE_ALPHA_MOD 0.0
+#define LAYERS_COUNT 3
 
 #define BLACK_BLEND_THRESHOLD .4
 
@@ -15,7 +15,7 @@
 #define PI 3.1415927
 #define TWO_PI 6.283185
 
-#define ANIMATION_SPEED 1.0
+#define ANIMATION_SPEED 0.5
 #define MOVEMENT_SPEED .33
 #define MOVEMENT_DIRECTION vec2(0.7, 1.0)
 
