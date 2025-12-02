@@ -34,7 +34,7 @@ background-image-fit = contain
 #------Cursors------#
 # custom-shader = shaders/cursor_blaze_no_trail.glsl
 # custom-shader = shaders/cursor_blaze_tapered.glsl
-# custom-shader = shaders/cursor_frozen.glsl
+custom-shader = shaders/cursor_frozen.glsl
 # custom-shader = shaders/cursor_smear.glsl
 # custom-shader = shaders/cursor_smear_fade.glsl
 
@@ -46,10 +46,10 @@ background-image-fit = contain
 # custom-shader = shaders/crt.glsl
 # custom-shader = shaders/matrix.glsl
 # custom-shader = shaders/galaxy.glsl
-# custom-shader = shaders/galaxy_color.glsl
 # custom-shader = shaders/sparks.glsl
 # custom-shader = shaders/snow.glsl
 # custom-shader = shaders/underwater.glsl
+# custom-shader = shaders/shake.glsl
 #---gimmic---#
 # custom-shader = shaders/water.glsl
 # custom-shader = shaders/drunkard.glsl

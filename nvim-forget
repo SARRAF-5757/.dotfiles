@@ -12,7 +12,8 @@ G - movement; end of file
 OPERATORS
 d - operator; delete
 c - operator; delete and go into insert mode
-o - operator; add a ine below the current line and go into insert mode
+o - operator; add a line below the current line and go into insert mode
+p - operator; add a line below without going into insert mode
 r<char> - operator; replace character with <char>
 
 SHORTCUTS / FREEQUENTS
@@ -23,3 +24,7 @@ d0 - shortcut; delete entire line before cursor
 d2w - shortcut; delete 2 words
 a - shortcut; insert character before cursor
 yap - shortcut; yank the whole paragraph
+
+LAZYVIM SPEFICS
+cr - rename variable across file
+cd - see erors in a floating window

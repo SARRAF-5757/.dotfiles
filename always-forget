@@ -1,0 +1,2 @@
+* Save Brewfile - `brew bundle dump --describe --force`
+* Enable Clamshell mode - `sudo pmset disablesleep 1`
