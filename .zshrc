@@ -77,6 +77,7 @@ alias find='fd'
 alias e='yazi'
 alias t='btop'
 alias ff='fastfetch'
+alias of="onefetch --http-url --disabled-fields=churn"
 alias disk='diskonaut'
 alias gits='git status'
 alias gitd='git diff'
