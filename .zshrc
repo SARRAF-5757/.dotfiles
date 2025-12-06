@@ -76,9 +76,10 @@ alias cd='z'
 alias find='fd'
 alias e='yazi'
 alias t='btop'
-alias cls='clear; ff'
 alias ff='fastfetch'
+alias disk='diskonaut'
 alias gits='git status'
+alias gitd='git diff'
 alias gitr='git remote show origin'
 alias gl=carbonyl_url
 alias google=google
@@ -103,6 +104,17 @@ function google() {
   carbonyl "https://www.google.com/search?q=$1"
 }
 
+function cls() {            # Similar clear logic to cd
+    clear
+    if git rev-parse --is-inside-work-tree &>/dev/null; then
+        echo ""
+        onefetch --http-url --disabled-fields=churn
+        echo ""
+    else
+        fastfetch
+    fi
+}
+
 # export EDITOR="vim"
 # function y() {              # Yazi Setup
 # 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -117,14 +129,48 @@ function google() {
 eval "$(atuin init zsh)"
 
 ##!-----------------------------Oh My Posh-----------------------------!#
-# eval "$(oh-my-posh init zsh --config ~/Coding/Personal/OMP-Wizard/build/temp.omp.json --trace)"
+eval "$(oh-my-posh init zsh --config ~/Coding/Personal/OMP-Wizard/build/temp.omp.json --trace)"
 # eval "$(oh-my-posh init zsh --config ~/Coding/Personal/OMP-Wizard/build/test.omp.json --trace)"
 
 # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/mytheme.omp.json --trace)"
-eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/nightowl.omp.json --trace)"
+# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/nightowl.omp.json --trace)"
 # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/atomic.omp.json --trace)"
 # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/bubbles.omp.json --trace)"
 # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/chips.omp.json --trace)"
 # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/catppuccin.omp.json --trace)"
 
-cls
+
+#!----------------------------SETUO AUTO FETCHING----------------------------!#
+last_repository="" # Variable to track the last repo we were in
+
+checkGitDir() {
+  current_repository=$(git rev-parse --show-toplevel 2> /dev/null)
+
+  if [[ -n "$current_repository" ]]; then
+    # If in a repo, and it's different from the last one we saw...
+    if [[ "$current_repository" != "$last_repository" ]]; then
+      echo ""
+      onefetch --http-url --disabled-fields=churn
+      echo ""
+      last_repository="$current_repository"
+    fi
+  else
+    # If not in a repo, reset the tracker so onefetch runs if we re-enter later
+    last_repository=""
+  fi
+}
+
+autoload -U add-zsh-hook # Hook the to change-directory event
+add-zsh-hook chpwd checkGitDir
+
+
+#!------------------------------STARTUP COMMANDS------------------------------!#
+if git rev-parse --is-inside-work-tree &>/dev/null; then # If we started inside a git repo
+    echo ""
+    onefetch --http-url --disabled-fields=churn
+    echo ""
+    last_repository=$(git rev-parse --show-toplevel 2> /dev/null)
+else
+    fastfetch # If not in a git repo
+fi
+

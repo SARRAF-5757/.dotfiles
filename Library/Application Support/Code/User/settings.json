@@ -222,7 +222,7 @@
 			"italic": false
 		},
 		{
-			"tag": "*",
+			"tag": "#",
 			"color": "#00ffd2", //cyan
 			"strikethrough": false,
 			"underline": false,
@@ -230,17 +230,8 @@
 			"bold": true,
 			"italic": false
 		},
-		{
-			"tag": "#",
-			"color": "#00FFFF", //blue
-			"strikethrough": false,
-			"underline": false,
-			"backgroundColor": "transparent",
-			"bold": false,
-			"italic": false
-		},
-        {
-			"tag": "^",
+    {
+			"tag": "*",
 			"color": "#ff8C00", //yellow
 			"strikethrough": false,
 			"underline": false,

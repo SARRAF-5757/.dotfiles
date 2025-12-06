@@ -1,2 +1,3 @@
 * Save Brewfile - `brew bundle dump --describe --force`
 * Enable Clamshell mode - `sudo pmset disablesleep 1`
+* Download MP3 using yt-dlp - `yt-dlp -x --audio-format mp3 <URL>`

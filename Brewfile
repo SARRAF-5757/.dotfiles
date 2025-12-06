@@ -13,6 +13,10 @@ brew "aspell"
 brew "ast-grep"
 # Improved shell history for zsh, bash, fish and nushell
 brew "atuin"
+# Text-based UI library
+brew "ncurses"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Control and limit battery charging on Apple Silicon MacBooks
@@ -25,6 +29,8 @@ brew "node"
 brew "bitwarden-cli"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# Console Bonsai is a bonsai tree generator, written in C using ncurses
+brew "cbonsai"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 # Cross-platform make
@@ -37,6 +43,8 @@ brew "coreutils"
 brew "cowsay"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# Terminal visual disk space navigator
+brew "diskonaut"
 # Modern, maintained replacement for ls
 brew "eza"
 # Like neofetch, but much faster because written mostly in C
@@ -79,14 +87,16 @@ brew "luarocks"
 brew "mas"
 # Control and observe media playback from the command-line
 brew "media-control"
-# Text-based UI library
-brew "ncurses"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Space Invaders in the terminal
 brew "ninvaders"
 # Modern shell for the GitHub era
 brew "nushell"
+# Command-line Git information tool
+brew "onefetch"
+# Animated pipes terminal screensaver
+brew "pipes-sh"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Search tool like grep and The Silver Searcher
@@ -171,7 +181,7 @@ cask "font-iosevka-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-meslo-for-powerlevel10k"
 cask "font-monaspice-nerd-font"
-cask "font-open-dyslexic-nerd-font"
+cask "font-opendyslexic-nerd-font"
 cask "font-symbols-only-nerd-font"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"

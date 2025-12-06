@@ -4,7 +4,7 @@ return {
     event = "VeryLazy",
     keys = {
         {
-            "<leader>cc",
+            "<leader>cp",
             function()
                 require("oklch-color-picker").pick_under_cursor()
             end,
