@@ -1,8 +1,3 @@
-#Enable Powerlevel10k instant prompt.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
-
 #!------------------------------VARIABLES------------------------------!#
 export ZSH="$HOME/.oh-my-zsh" # Path to Oh My Zsh installation
 
@@ -18,7 +13,7 @@ fi
 ZSH_THEME=""
 
 
-#!-----------------------------LOAD PLUGINS-----------------------------!#
+#!-----------------------------LOAD PLUGINS----------------------------!#
 plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
@@ -35,7 +30,7 @@ plugins=(
     themes
 )
 
-#!---------------------------CONFIGURE PLUGINS---------------------------!#
+#!--------------------------CONFIGURE PLUGINS--------------------------!#
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#3e3e3e,bold"
 ZSH_AUTOSUGGEST_STRATEGY=(completion match_prev_cmd)
 
@@ -62,12 +57,12 @@ source $ZSH/oh-my-zsh.sh
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
-# Keybinds
+#!------------------------------KEYBINDS------------------------------!#
 bindkey '^I' autosuggest-accept
 # bindkey '^[[A' history-substring-search-up
 # bindkey '^[[B' history-substring-search-down 
 
-# Aliases
+#!-------------------------------ALIASES------------------------------!#
 alias tree='eza -T --total-size --no-quotes --icons=always --color=always'
 alias ls='eza --width 70 --no-quotes --icons=always --color=always -a'
 alias lss='eza -l --icons=always --total-size --git --no-user --no-permissions --no-time'
@@ -92,7 +87,8 @@ alias chvim='NVIM_APPNAME="nvim-nvchad" nvim'
 alias kvim='NVIM_APPNAME="nvim-kickstart" nvim'
 
 
-# Functions
+
+#!-----------------------------FUNCTIONS----------------------------!#
 function title() {          # Customize tab titles
     echo -en "\e]2;$@\a"
 }
@@ -129,7 +125,7 @@ function cls() {            # Similar clear logic to cd
 
 eval "$(atuin init zsh)"
 
-##!-----------------------------Oh My Posh-----------------------------!#
+##!----------------------------Oh My Posh----------------------------!#
 eval "$(oh-my-posh init zsh --config ~/Coding/Personal/OMP-Wizard/build/temp.omp.json --trace)"
 # eval "$(oh-my-posh init zsh --config ~/Coding/Personal/OMP-Wizard/build/test.omp.json --trace)"
 
@@ -141,7 +137,7 @@ eval "$(oh-my-posh init zsh --config ~/Coding/Personal/OMP-Wizard/build/temp.omp
 # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/catppuccin.omp.json --trace)"
 
 
-#!----------------------------SETUO AUTO FETCHING----------------------------!#
+#!----------------------SETUO AUTO FETCHING-------------------------!#
 last_repository="" # Variable to track the last repo we were in
 
 checkGitDir() {
@@ -165,7 +161,7 @@ autoload -U add-zsh-hook # Hook the to change-directory event
 add-zsh-hook chpwd checkGitDir
 
 
-#!------------------------------STARTUP COMMANDS------------------------------!#
+#!--------------------------STARTUP COMMANDS-------------------------!#
 if git rev-parse --is-inside-work-tree &>/dev/null; then # If we started inside a git repo
     echo ""
     onefetch --http-url --disabled-fields=churn

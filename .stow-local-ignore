@@ -9,5 +9,5 @@
 # Custom Files (should be used from .dotfiles directly)
 /Scripts
 /Leader Key
+/Miscellaneous
 Brewfile
-Raycast.rayconfig
