@@ -126,8 +126,7 @@ function cls() {            # Similar clear logic to cd
 eval "$(atuin init zsh)"
 
 ##!----------------------------Oh My Posh----------------------------!#
-eval "$(oh-my-posh init zsh --config ~/Coding/Personal/OMP-Wizard/build/temp.omp.json --trace)"
-# eval "$(oh-my-posh init zsh --config ~/Coding/Personal/OMP-Wizard/build/test.omp.json --trace)"
+eval "$(oh-my-posh init zsh --config ~/Coding/Personal/OMP-Wizard/build/generated-theme.omp.json --trace)"
 
 # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/mytheme.omp.json --trace)"
 # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/nightowl.omp.json --trace)"
