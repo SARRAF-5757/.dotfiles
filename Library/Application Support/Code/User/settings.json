@@ -63,17 +63,14 @@
     "animations.Enabled": false,
     "window.systemColorTheme": "dark",
     "window.autoDetectColorScheme": false,
-	
-	//!Terminal Settings
+  //!Terminal Settings
 	"terminal.integrated.fontFamily": "MesloLGS NF",
 	"terminal.integrated.cursorStyle":"line",
 	"terminal.integrated.fontWeight": "bold",
 	"terminal.integrated.fontSize": 12,
 	"terminal.external.osxExec": "Warp.app",
-	"terminal.integrated.shell.osx": "zsh",
 	"terminal.integrated.gpuAcceleration": "off",
-	
-	//!File Handling
+  //!File Handling
 	"files.autoSave": "afterDelay",
 	"files.autoSaveDelay": 100,
 	"files.autoSaveWhenNoErrors": true,

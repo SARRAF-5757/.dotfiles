@@ -17,7 +17,7 @@ cursor-text = red
 # To see available themes- 'ghostty +list-themes'
 #theme = *MyTheme
 theme = Catppuccin Mocha
-font-size = 16
+font-size = 15
 font-family = MonaspiceAr Nerd Font Mono
 font-style = Medium
 
