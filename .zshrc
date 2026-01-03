@@ -1,3 +1,10 @@
+#!----------------------------Powerlevel10k----------------------------!#
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
+
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+
 #!------------------------------VARIABLES------------------------------!#
 export ZSH="$HOME/.oh-my-zsh" # Path to Oh My Zsh installation
 
@@ -8,12 +15,7 @@ else
     export EDITOR='nvim'
 fi
 
-#!------------------------------ZSH THEME------------------------------!#
-# ZSH_THEME="powerlevel10k/powerlevel10k"
-ZSH_THEME=""
-
-
-#!-----------------------------LOAD PLUGINS----------------------------!#
+#!-----------------------------OMZ PLUGINS----------------------------!#
 plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
@@ -30,12 +32,12 @@ plugins=(
     themes
 )
 
-#!--------------------------CONFIGURE PLUGINS--------------------------!#
+#!----------------------PLUGIN CONFIGURATIONS-----------------------!#
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#3e3e3e,bold"
 ZSH_AUTOSUGGEST_STRATEGY=(completion match_prev_cmd)
 
 
-#!-----------------------------ZSH OPTIONS-----------------------------!#
+#!----------------------LOAD ZSH WITH OPTIONS-----------------------!#
 # CASE_SENSITIVE="true"                 # case-sensitive completion
 # HYPHEN_INSENSITIVE="true"             # hyphen-insensitive completion (Case-sensitive must be off)
 # zstyle ':omz:update' mode disabled    # disable automatic updates
@@ -51,10 +53,21 @@ DISABLE_AUTO_TITLE="true"               # disable auto-setting terminal title
 # HIST_STAMPS="mm/dd/yyyy"              # change time stamp format in the history command output
 # ZSH_CUSTOM=/path/to/new-custom-folder # if using custom folder than $ZSH/custom
 
-
 # Load Oh My Zsh
 source $ZSH/oh-my-zsh.sh
+
+
+##!-------------------------LOAD ZSH THEME--------------------------!#
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+eval "$(oh-my-posh init zsh --config ~/Coding/Personal/OMP-Wizard/build/generated-theme.omp.json --trace)"
+
+# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/mytheme.omp.json --trace)"
+# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/nightowl.omp.json --trace)"
+# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/atomic.omp.json --trace)"
+# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/bubbles.omp.json --trace)"
+# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/chips.omp.json --trace)"
+# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/catppuccin.omp.json --trace)"
 
 
 #!------------------------------KEYBINDS------------------------------!#
@@ -63,9 +76,10 @@ bindkey '^I' autosuggest-accept
 # bindkey '^[[B' history-substring-search-down 
 
 #!-------------------------------ALIASES------------------------------!#
-alias tree='eza -T --total-size --no-quotes --icons=always --color=always'
 alias ls='eza --width 70 --no-quotes --icons=always --color=always -a'
 alias lss='eza -l --icons=always --total-size --git --no-user --no-permissions --no-time'
+alias tree='eza -T --total-size --no-quotes --icons=always --color=always'
+alias tre='eza -T --total-size --no-quotes --icons=always --color=always -L 2'
 alias cat='bat'
 alias cd='z'
 alias find='fd'
@@ -85,7 +99,6 @@ alias avim='NVIM_APPNAME="nvim-astronvim" nvim'
 alias vim='NVIM_APPNAME="nvim-lazyvim" nvim'
 alias chvim='NVIM_APPNAME="nvim-nvchad" nvim'
 alias kvim='NVIM_APPNAME="nvim-kickstart" nvim'
-
 
 
 #!-----------------------------FUNCTIONS----------------------------!#
@@ -124,17 +137,6 @@ function cls() {            # Similar clear logic to cd
 
 
 eval "$(atuin init zsh)"
-
-##!----------------------------Oh My Posh----------------------------!#
-eval "$(oh-my-posh init zsh --config ~/Coding/Personal/OMP-Wizard/build/generated-theme.omp.json --trace)"
-
-# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/mytheme.omp.json --trace)"
-# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/nightowl.omp.json --trace)"
-# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/atomic.omp.json --trace)"
-# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/bubbles.omp.json --trace)"
-# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/chips.omp.json --trace)"
-# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/catppuccin.omp.json --trace)"
-
 
 #!----------------------SETUO AUTO FETCHING-------------------------!#
 last_repository="" # Variable to track the last repo we were in
