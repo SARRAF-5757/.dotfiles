@@ -1,16 +1,10 @@
 {
   "actions" : [
     {
-      "key" : "e",
+      "key" : "d",
       "label" : "Terminal",
       "type" : "application",
-      "value" : "/Applications/Warp.app"
-    },
-    {
-      "key" : "d",
-      "label" : "Code",
-      "type" : "application",
-      "value" : "/Applications/VS Code.app"
+      "value" : "/Applications/Ghostty.app"
     },
     {
       "key" : "f",
@@ -69,14 +63,34 @@
       "value" : "/Applications/Notion.app"
     },
     {
-      "key" : "s",
-      "type" : "application",
-      "value" : "/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app"
-    },
-    {
       "key" : "b",
       "type" : "application",
       "value" : "/Applications/Blip.app"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "w",
+          "label" : "Capture Window",
+          "type" : "url",
+          "value" : "raycast://extensions/Aayush9029/screenshot/capture-window"
+        },
+        {
+          "key" : "s",
+          "label" : "Capture Screen",
+          "type" : "url",
+          "value" : "raycast://extensions/Aayush9029/screenshot/capture-screen"
+        },
+        {
+          "key" : "a",
+          "label" : "All-in-one",
+          "type" : "url",
+          "value" : "raycast://extensions/Aayush9029/screenshot/all-in-one"
+        }
+      ],
+      "key" : "s",
+      "label" : "Screenshot",
+      "type" : "group"
     }
   ],
   "type" : "group"

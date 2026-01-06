@@ -3,7 +3,7 @@ return {
     opts = {
         formatters = {
             prettier = {
-                prepend_args = { "--print-width", "180" },
+                prepend_args = { "--print-width", "170" },
             },
         },
     },
