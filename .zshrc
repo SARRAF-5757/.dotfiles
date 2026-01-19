@@ -162,6 +162,12 @@ autoload -U add-zsh-hook # Hook the to change-directory event
 add-zsh-hook chpwd checkGitDir
 
 
+#!----------------------------DOCKER-------------------------------!#
+fpath=(/Users/sarraf/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+
+
 #!--------------------------STARTUP COMMANDS-------------------------!#
 if git rev-parse --is-inside-work-tree &>/dev/null; then # If we started inside a git repo
     echo ""

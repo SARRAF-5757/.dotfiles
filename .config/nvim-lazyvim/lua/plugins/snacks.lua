@@ -12,6 +12,9 @@ return {
                             width = 0.23,
                         },
                     },
+                    exclude = {
+                        "*.DS_Store",
+                    },
                 },
                 files = {
                     hidden = true,
