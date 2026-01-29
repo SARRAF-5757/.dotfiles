@@ -4,6 +4,7 @@ tap "jandedobbeleer/oh-my-posh"
 tap "krishkrosh/apps"
 tap "mhaeuser/mhaeuser"
 tap "nikitabobko/tap"
+tap "sinelaw/fresh"
 tap "smudge/smudge"
 tap "teamookla/speedtest"
 tap "zackelia/formulae"
@@ -37,6 +38,8 @@ brew "clang-format"
 brew "cmake"
 # Console Matrix
 brew "cmatrix"
+# Dependency manager for Cocoa projects
+brew "cocoapods"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Apjanke's fork of the classic cowsay project
@@ -53,12 +56,14 @@ brew "fastfetch"
 brew "fd"
 # Low-level access to audio, keyboard, mouse, joystick, and graphics
 brew "sdl2"
-# Play, record, convert, and stream audio and video
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # Banner-like program prints strings as ASCII art
 brew "figlet"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
+# Text editor for your terminal: easy, powerful and fast
+brew "fresh-editor"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Interact with Google Gemini AI models from the command-line
@@ -71,7 +76,7 @@ brew "git-delta"
 brew "git-lfs"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
-# Tools and libraries to manipulate images in many formats
+# Tools and libraries to manipulate images in select formats
 brew "imagemagick"
 # Install and debug iPhone apps from the command-line
 brew "ios-deploy"
@@ -135,8 +140,6 @@ brew "zsh"
 brew "jandedobbeleer/oh-my-posh/oh-my-posh", link: false
 # A CLI for configuring 'Night Shift' on macOS 🌕🌖🌗🌘🌑
 brew "smudge/smudge/nightlight"
-# Ookla Speedtest
-brew "teamookla/speedtest/speedtest"
 # Enable Windows-like alt-tab
 cask "alt-tab"
 # Transfer files from and to an Android smartphone
@@ -152,7 +155,7 @@ cask "audacity"
 # 3D model slicing software for 3D printers, maintained by Bambu Lab
 cask "bambu-studio"
 # Control the platform power state of your Apple Silicon device
-cask "battery-toolkit"
+cask "mhaeuser/mhaeuser/battery-toolkit"
 # Desktop password and login vault
 cask "bitwarden"
 # 3D creation suite
@@ -161,8 +164,6 @@ cask "blender"
 cask "blip"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
-# Write, edit, and chat about your code with AI
-cask "cursor"
 # Run Stable Diffusion locally
 cask "diffusionbee"
 # Voice and text chat software
@@ -224,7 +225,9 @@ cask "microsoft-powerpoint"
 # Word processor
 cask "microsoft-word"
 # Unofficial Google Nearby Share app
-cask "neardrop"
+cask "grishka/grishka/neardrop"
+# Reverse proxy, secure introspectable tunnels to localhost
+cask "ngrok"
 # App to write, plan, collaborate, and get organised
 cask "notion"
 # Simple application that will prevent iTunes or Apple Music from launching
@@ -244,9 +247,7 @@ cask "slack"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
 # Turn your MacBook's trackpad into a precise digital weighing scale
-cask "trackweight"
-# Virtual machines UI using QEMU
-cask "utm"
+cask "krishkrosh/apps/trackweight"
 # Open-source code editor
 cask "visual-studio-code"
 # Web browser with built-in email client focusing on customization and control
@@ -264,6 +265,7 @@ cask "zoom"
 mas "Command X", id: 6448461551
 mas "darker", id: 1637413102
 mas "Displaperture", id: 1543920362
+mas "Launchie", id: 6752657468
 mas "Memory Diag", id: 748212890
 mas "Notability", id: 360593530
 mas "PhotoScape X", id: 929507092
@@ -276,6 +278,7 @@ vscode "akamud.vscode-theme-onedark"
 vscode "alefragnani.bookmarks"
 vscode "alefragnani.project-manager"
 vscode "alexcvzz.vscode-sqlite"
+vscode "alexowl.transparent-color-theme"
 vscode "azemoh.one-monokai"
 vscode "be5invis.vscode-custom-css"
 vscode "brandonkirbyson.vscode-animations"
@@ -283,6 +286,7 @@ vscode "catppuccin.catppuccin-vsc"
 vscode "catppuccin.catppuccin-vsc-icons"
 vscode "dbaeumer.vscode-eslint"
 vscode "dracula-theme.theme-dracula"
+vscode "drcika.apc-extension"
 vscode "dtoplak.vscode-glsllint"
 vscode "eamodio.gitlens"
 vscode "equimper.react-native-react-redux"
@@ -296,6 +300,7 @@ vscode "makashi.dark-purple"
 vscode "mechatroner.rainbow-csv"
 vscode "miguelsolorio.fluent-icons"
 vscode "miguelsolorio.symbols"
+vscode "ms-azuretools.vscode-containers"
 vscode "ms-dotnettools.csdevkit"
 vscode "ms-dotnettools.csharp"
 vscode "ms-dotnettools.vscode-dotnet-runtime"
@@ -303,6 +308,7 @@ vscode "ms-python.debugpy"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
 vscode "ms-python.vscode-python-envs"
+vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
 vscode "ms-vscode.cmake-tools"
@@ -318,12 +324,14 @@ vscode "ongshu777.lunar-blue"
 vscode "pkief.material-icon-theme"
 vscode "pkief.material-product-icons"
 vscode "purpleddive.iec-p"
+vscode "shd101wyy.markdown-preview-enhanced"
 vscode "slevesque.shader"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "tomoki1207.pdf"
 vscode "usernamehw.errorlens"
 vscode "vadimcn.vscode-lldb"
 vscode "violetbp.lc2k"
+vscode "visualstudiotoolsforunity.vstuc"
 vscode "xaver.clang-format"
 vscode "xshrim.txt-syntax"
 vscode "yinfei.luahelper"
