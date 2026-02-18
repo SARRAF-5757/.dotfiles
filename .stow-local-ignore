@@ -11,3 +11,5 @@
 /Leader Key
 /Miscellaneous
 Brewfile
+always-forget
+nvim-forget

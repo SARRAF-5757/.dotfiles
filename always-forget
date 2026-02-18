@@ -3,3 +3,4 @@
 * Download MP3 using yt-dlp - `yt-dlp -x --audio-format mp3 <URL>`
 * List everything globally installed via npm - `npm list -g --depth=0`
 * List all Ghostty themes - `ghostty +list-themes`
+* Change Stage Manager animation speed - `defaults write com.apple.WindowManager AnimationSpeed -float 1`

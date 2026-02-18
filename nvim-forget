@@ -28,3 +28,5 @@ yap - shortcut; yank the whole paragraph
 LAZYVIM SPEFICS
 cr - rename variable across file
 cd - see erors in a floating window
+sr - search and replace
+sg - search inside project files
