@@ -4,6 +4,7 @@ tap "jandedobbeleer/oh-my-posh"
 tap "krishkrosh/apps"
 tap "mhaeuser/mhaeuser"
 tap "nikitabobko/tap"
+tap "pear-devs/pear"
 tap "sinelaw/fresh"
 tap "smudge/smudge"
 tap "teamookla/speedtest"
@@ -62,8 +63,6 @@ brew "ffmpeg"
 brew "figlet"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
-# Text editor for your terminal: easy, powerful and fast
-brew "fresh-editor"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Interact with Google Gemini AI models from the command-line
@@ -146,18 +145,12 @@ cask "alt-tab"
 cask "android-file-transfer"
 # Android SDK component
 cask "android-platform-tools"
-# User-friendly GUI app for Homebrew
-cask "applite"
 # Electronics prototyping platform
 cask "arduino-ide"
 # Multi-track audio editor and recorder
 cask "audacity"
 # 3D model slicing software for 3D printers, maintained by Bambu Lab
 cask "bambu-studio"
-# Control the platform power state of your Apple Silicon device
-cask "mhaeuser/mhaeuser/battery-toolkit"
-# Desktop password and login vault
-cask "bitwarden"
 # 3D creation suite
 cask "blender"
 # Send any size file between devices
@@ -176,8 +169,6 @@ cask "docker-desktop"
 cask "dockey"
 # Web browser
 cask "firefox"
-# Privacy-focused Firefox-based browser
-cask "floorp"
 cask "font-iosevka-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-meslo-for-powerlevel10k"
@@ -204,8 +195,6 @@ cask "jordanbaird-ice"
 cask "karabiner-elements"
 # File archiver
 cask "keka"
-# Utility that shows the latest app updates
-cask "latest"
 # Application launcher
 cask "leader-key"
 # Customise mouse behavior
@@ -224,8 +213,6 @@ cask "microsoft-excel"
 cask "microsoft-powerpoint"
 # Word processor
 cask "microsoft-word"
-# Unofficial Google Nearby Share app
-cask "grishka/grishka/neardrop"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 # App to write, plan, collaborate, and get organised
@@ -240,8 +227,6 @@ cask "pictogram"
 cask "raycast"
 # Block your own access to distracting websites
 cask "selfcontrol"
-# Web browser
-cask "sigmaos"
 # Team communication and collaboration software
 cask "slack"
 # Desktop client for Telegram messenger
@@ -250,8 +235,6 @@ cask "telegram-desktop"
 cask "krishkrosh/apps/trackweight"
 # Open-source code editor
 cask "visual-studio-code"
-# Web browser with built-in email client focusing on customization and control
-cask "vivaldi"
 # Rust-based terminal
 cask "warp"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
@@ -265,9 +248,9 @@ cask "zoom"
 mas "Command X", id: 6448461551
 mas "darker", id: 1637413102
 mas "Displaperture", id: 1543920362
-mas "Launchie", id: 6752657468
 mas "Memory Diag", id: 748212890
 mas "Notability", id: 360593530
+mas "Okta Verify", id: 490179405
 mas "PhotoScape X", id: 929507092
 mas "QuickShade", id: 931571202
 mas "Spark Desktop", id: 6445813049
@@ -291,7 +274,6 @@ vscode "dtoplak.vscode-glsllint"
 vscode "eamodio.gitlens"
 vscode "equimper.react-native-react-redux"
 vscode "esbenp.prettier-vscode"
-vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "illixion.vscode-vibrancy-continued"
 vscode "jeff-hykin.better-cpp-syntax"
@@ -312,6 +294,7 @@ vscode "ms-vscode-remote.remote-containers"
 vscode "ms-vscode-remote.remote-ssh"
 vscode "ms-vscode-remote.remote-ssh-edit"
 vscode "ms-vscode.cmake-tools"
+vscode "ms-vscode.cpp-devtools"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.cpptools-extension-pack"
 vscode "ms-vscode.makefile-tools"

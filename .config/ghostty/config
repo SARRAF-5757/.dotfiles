@@ -67,7 +67,7 @@ window-save-state = always
 window-new-tab-position = end
 
 #-------------- KEYBINDS --------------#
-# keybind = global:shift+ctrl+alt+super+space=toggle_command_palette
+keybind = shift+ctrl+alt+super+space=toggle_command_palette
 keybind = global:cmd+s=toggle_quick_terminal
 #keybind = super+a=select_all
 #keybind = super+shift+alt+ctrl+space=super+shift+p

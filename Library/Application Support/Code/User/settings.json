@@ -124,10 +124,16 @@
   "[python]": {
     "editor.rulers": [79]
   },
+  "python.analysis.typeCheckingMode": "standard",
 
   //!JavaScript/TypeScript Settings
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
+
+  //!Unity (omnisharp)
+  "omnisharp.useModernNet": false,
+  "omnisharp.monoPath": "/Library/Frameworks/Mono.frame@work/Versions/Current ",
+  "telemetry.telemetryLevel": "off",
 
   //!Copilot
   "github.copilot.enable": {
@@ -393,7 +399,6 @@
     ]
   },
   "window.systemColorTheme": "dark",
-"window.autoDetectColorScheme": false,
-"terminal.integrated.enableMultiLinePasteWarning": "never",
-"python.analysis.typeCheckingMode": "standard"
+  "window.autoDetectColorScheme": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never"
 }
