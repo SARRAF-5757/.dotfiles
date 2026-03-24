@@ -30,3 +30,4 @@ cr - rename variable across file
 cd - see erors in a floating window
 sr - search and replace
 sg - search inside project files
+<leader> cp - color picker

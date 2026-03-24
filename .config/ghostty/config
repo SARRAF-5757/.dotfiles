@@ -1,8 +1,8 @@
 #-------------- UI --------------#
 macos-icon = custom
 macos-titlebar-style = tabs
-window-height = 37
-window-width = 122
+# window-height = 37
+# window-width = 122
 window-padding-x = 10,10
 window-padding-y = 5,7
 window-padding-balance = true
@@ -12,6 +12,7 @@ cursor-color = #178bff
 shell-integration-features = no-cursor
 cursor-style-blink = false
 cursor-text = red
+scrollbar = never
 
 #-------------- THEME --------------#
 # To see available themes- 'ghostty +list-themes'
@@ -22,7 +23,7 @@ font-family = MonaspiceAr Nerd Font Mono
 font-style = Medium
 
 background = black
-background-opacity = 0.70
+background-opacity = 0.65
 background-blur-radius = 60
 
 #background-image = /Users/sarraf/.dotfiles/.config/ghostty/themes/swirl.png
@@ -61,15 +62,46 @@ custom-shader = shaders/cursor_frozen.glsl
 
 #-------------- BEHAVIOR --------------#
 cursor-click-to-move = true
+mouse-hide-while-typing = true
 working-directory = /Users/sarraf/
 window-inherit-working-directory = false
 window-save-state = always
 window-new-tab-position = end
+notify-on-command-finish = unfocused
+notify-on-command-finish-action = no-bell,notify
+notify-on-command-finish-after = 10s
 
 #-------------- KEYBINDS --------------#
 keybind = shift+ctrl+alt+super+space=toggle_command_palette
-keybind = global:cmd+s=toggle_quick_terminal
-#keybind = super+a=select_all
-#keybind = super+shift+alt+ctrl+space=super+shift+p
-#keybind = cmd+backspace=esc:w
-#keybind = cmd+backspace=text:\x15
+# keybind = global:cmd+s=toggle_quick_terminal
+# keybind = super+a=select_all
+# keybind = super+shift+alt+ctrl+space=super+shift+p
+# keybind = cmd+backspace=esc:w
+# keybind = cmd+backspace=text:\x15
+
+# Split Table
+keybind = split/arrow_up=new_split:up
+keybind = split/arrow_down=new_split:down
+keybind = split/arrow_left=new_split:left
+keybind = split/arrow_right=new_split:right
+keybind = split/s=new_split:auto
+keybind = split/escape=deactivate_key_table
+keybind = split/catch_all=deactivate_key_table
+
+keybind = alt+s=activate_key_table:split
+
+# Resize Split Table
+keybind = resize/arrow_up=resize_split:up,10
+keybind = resize/arrow_down=resize_split:down,10
+keybind = resize/arrow_left=resize_split:left,10
+keybind = resize/arrow_right=resize_split:right,10
+keybind = resize/escape=deactivate_key_table
+keybind = resize/catch_all=deactivate_key_table
+
+keybind = alt+r=activate_key_table:resize
+
+# Navigate Splits
+keybind = alt+h=goto_split:left
+keybind = alt+l=goto_split:right
+keybind = alt+j=goto_split:down
+keybind = alt+k=goto_split:up

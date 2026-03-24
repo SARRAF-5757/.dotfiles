@@ -6,3 +6,4 @@ vim.opt.softtabstop = 4
 vim.opt.autoindent = true
 vim.opt.smarttab = true
 vim.opt.textwidth = 150
+vim.o.mousescroll = "ver:1,hor:1"

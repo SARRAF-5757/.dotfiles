@@ -21,4 +21,5 @@
 - **Scripts**: Some useful scripts I use on the daily
 - **Leader Key Keybindings**: My command set for [Leader Key](https://github.com/mikker/LeaderKey.app) App
 - **Karabiner Elements Config**: Complex modifications to add hyperkey, vim motions, home row mods, etc
+- **Mousecape Cape Collection**: Collection of MacOS cursors I've hunted down from the internet and some of the ones I've created
 - **Raycast Configuration**: Password-locked for security, only stored here for personal use

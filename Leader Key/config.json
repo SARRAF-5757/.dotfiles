@@ -13,11 +13,6 @@
       "value" : "/Applications/Zen.app"
     },
     {
-      "key" : "c",
-      "type" : "application",
-      "value" : "/Applications/ChatGPT.app"
-    },
-    {
       "key" : "m",
       "type" : "application",
       "value" : "/System/Applications/Messages.app"

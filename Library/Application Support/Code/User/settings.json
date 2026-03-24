@@ -42,7 +42,7 @@
 
   //!Workbench Settings
   "window.titleBarStyle": "custom",
-  "workbench.colorTheme": "IEC Purple",
+  "workbench.colorTheme": "Forest Cottage - Classic",
   "workbench.productIconTheme": "fluent-icons", //Put sidebar on the right
   "window.commandCenter": false, //hide the top bar
   "workbench.layoutControl.enabled": false, //hide the other top bar
@@ -57,16 +57,21 @@
   "workbench.tree.indent": 20, //file explorer indentation
   "workbench.sideBar.location": "right", //sidebar at the right
   "workbench.iconTheme": "material-icon-theme", //file icons
-  "workbench.colorCustomizations": {},
+  "workbench.colorCustomizations": {
+    "terminal.background": "#00000000"
+},
   "chat.commandCenter.enabled": false, //hide copilot elements from IDE
   "animations.Enabled": false,
+  "window.confirmBeforeClose": "keyboardOnly",
   //!Terminal Settings
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.fontWeight": "bold",
-  "terminal.integrated.fontSize": 12,
+  "terminal.integrated.fontSize": 13,
   "terminal.external.osxExec": "Warp.app",
   "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+
   //!File Handling
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 100,
@@ -397,8 +402,7 @@
         }
       }
     ]
-  },
-  "window.systemColorTheme": "dark",
-  "window.autoDetectColorScheme": false,
-  "terminal.integrated.enableMultiLinePasteWarning": "never"
+},
+"window.systemColorTheme": "dark",
+"window.autoDetectColorScheme": false
 }
