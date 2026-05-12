@@ -163,8 +163,6 @@ cask "diffusionbee"
 cask "discord"
 # Window peeking utility app
 cask "dockdoor"
-# App to build and share containerised applications and microservices
-cask "docker-desktop"
 # Advanced Dock preferences
 cask "dockey"
 # Web browser
@@ -237,6 +235,8 @@ cask "krishkrosh/apps/trackweight"
 cask "via"
 # Open-source code editor
 cask "visual-studio-code"
+# Live wallpaper app
+cask "wallspace"
 # Rust-based terminal
 cask "warp"
 # GPU-accelerated cross-platform terminal emulator and multiplexer

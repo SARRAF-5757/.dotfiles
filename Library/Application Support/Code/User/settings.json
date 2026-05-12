@@ -42,7 +42,7 @@
 
   //!Workbench Settings
   "window.titleBarStyle": "custom",
-  "workbench.colorTheme": "Forest Cottage - Classic",
+  "workbench.colorTheme": "Atom One Dark",
   "workbench.productIconTheme": "fluent-icons", //Put sidebar on the right
   "window.commandCenter": false, //hide the top bar
   "workbench.layoutControl.enabled": false, //hide the other top bar
@@ -58,7 +58,33 @@
   "workbench.sideBar.location": "right", //sidebar at the right
   "workbench.iconTheme": "material-icon-theme", //file icons
   "workbench.colorCustomizations": {
-    "terminal.background": "#00000000"
+    "terminal.background": "#00000000",
+    "editorPane.background": "#00000000",
+    "editorGroupHeader.tabsBackground": "#00000000",
+    "editorGroupHeader.noTabsBackground": "#00000000",
+    "breadcrumb.background": "#00000000",
+    "editorGutter.background": "#00000000",
+    "panel.background": "#00000000",
+    "panelStickyScroll.background": "#00000000",
+    "tab.activeBackground": "#00000000",
+    "tab.unfocusedActiveBackground": "#00000000",
+    "sideBar.background": "#0000004d",
+    "sideBarTitle.background": "#0000004d",
+    "sideBarStickyScroll.background": "#0000004d",
+    "activityBar.background": "#0000004d",
+    "editor.background": "#0000004d",
+    "editorStickyScroll.background": "#0000004d",
+    "editorStickyScrollGutter.background": "#0000004d",
+    "tab.inactiveBackground": "#0000004d",
+    "tab.unfocusedInactiveBackground": "#0000004d",
+    "inlineChat.background": "#000000e6",
+    "editorWidget.background": "#000000e6",
+    "editorHoverWidget.background": "#000000e6",
+    "editorSuggestWidget.background": "#000000e6",
+    "notifications.background": "#000000e6",
+    "notificationCenterHeader.background": "#000000e6",
+    "menu.background": "#000000e6",
+    "quickInput.background": "#000000e6"
 },
   "chat.commandCenter.enabled": false, //hide copilot elements from IDE
   "animations.Enabled": false,
@@ -186,8 +212,7 @@
   "symbols.hidesExplorerArrows": true,
 
   //!Vibrancy Continued
-  "vscode_vibrancy.type": "fullscreen-ui",
-  "vscode_vibrancy.opacity": -1,
+  "vscode_vibrancy.backgroundOverride": "#000000",
 
   //!Better Comments
   "better-comments.highlightPlainText": true,
@@ -404,5 +429,6 @@
     ]
 },
 "window.systemColorTheme": "dark",
-"window.autoDetectColorScheme": false
+"window.autoDetectColorScheme": false,
+"editor.renderWhitespace": "all",
 }

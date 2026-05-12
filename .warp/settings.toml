@@ -1,0 +1,195 @@
+[terminal]
+
+[terminal.input]
+input_box_type_setting = "universal"
+completions_open_while_typing = true
+honor_ps1 = false
+alias_expansion_enabled = true
+show_hint_text = false
+
+[terminal.input.extra_meta_keys]
+left_alt = false
+right_alt = false
+
+[text_editing]
+vim_unnamed_system_clipboard = true
+vim_mode_enabled = false
+
+[agents]
+cloud_conversation_storage_enabled = true
+
+[agents.profiles]
+agent_mode_coding_permissions = "always_allow_reading"
+agent_mode_execute_readonly_commands = true
+
+[agents.warp_agent]
+is_any_ai_enabled = true
+
+[agents.warp_agent.active_ai]
+enabled = true
+shared_block_title_generation_enabled = false
+
+[agents.warp_agent.input]
+ai_auto_detection_enabled = true
+nld_in_terminal_enabled = true
+
+[agents.knowledge]
+warp_drive_context_enabled = false
+
+[agents.voice]
+voice_input_enabled = false
+
+[code]
+
+[code.editor]
+open_file_editor = { external_editor = "vs_code" }
+
+[code.indexing]
+agent_mode_codebase_context = false
+
+[appearance]
+spacing = "normal"
+
+[appearance.window]
+override_blur = 43
+new_windows_num_rows = 30
+open_windows_at_custom_size = true
+override_opacity = 36
+new_windows_num_columns = 85
+
+[appearance.text]
+line_height_ratio = 1.2000000476837158
+font_name = "MonaspiceAr Nerd Font Mono"
+match_ai_font = false
+notebook_font_size = 14.0
+ai_font_name = "MonaspiceAr Nerd Font Propo"
+font_size = 17.0
+ligature_rendering_enabled = true
+
+[appearance.blocks]
+show_block_dividers = true
+
+[appearance.full_screen_apps]
+alt_screen_padding = { custom = { uniform_padding = 0.0 } }
+
+[appearance.input]
+input_mode = "pinned_to_bottom"
+
+[appearance.tabs]
+show_indicators_button = true
+workspace_decoration_visibility = "always_show"
+
+[appearance.themes]
+theme = "dark"
+selected_system_themes = { dark = "dark", light = "gruvbox_light" }
+system_theme = false
+
+[appearance.panes]
+should_dim_inactive_panes = true
+focus_pane_on_hover = true
+
+[appearance.cursor]
+cursor_blink = "enabled"
+cursor_display_type = "bar"
+
+[appearance.icon]
+app_icon = "mono"
+
+[appearance.vertical_tabs]
+enabled = false
+display_granularity = "panes"
+view_mode = "expanded"
+
+[general]
+link_tooltip = false
+mouse_scroll_multiplier = 1.0
+snackbar_enabled = true
+show_warning_before_quitting = true
+new_tab_placement = "after_all_tabs"
+
+[general.undo_close]
+grace_period = 120
+
+[global_hotkey]
+
+[global_hotkey.dedicated_window]
+enabled = false
+
+[global_hotkey.dedicated_window.settings]
+active_pin_position = "right"
+hide_window_when_unfocused = true
+keybinding = "ctrl-alt-shift-cmd-A"
+
+[global_hotkey.dedicated_window.settings.pin_position_to_size_percentages]
+bottom = { height = 30, width = 100 }
+left = { height = 100, width = 40 }
+right = { height = 100, width = 33 }
+top = { height = 30, width = 100 }
+
+[global_hotkey.toggle_all_windows]
+keybinding = "ctrl-alt-shift-cmd-A"
+enabled = false
+
+[notifications]
+
+[notifications.preferences]
+is_agent_task_completed_enabled = true
+is_long_running_enabled = true
+is_needs_attention_enabled = true
+is_password_prompt_enabled = true
+long_running_threshold = 30
+mode = "enabled"
+play_notification_sound = true
+
+[privacy]
+telemetry_enabled = true
+crash_reporting_enabled = true
+custom_secret_regex_list = [
+  { name = "IPv4 Address", pattern = '\b((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?\b){4}\b' },
+  {
+    name = "IPv6 Address",
+    pattern = '\b((([0-9A-Fa-f]{1,4}:){1,6}:)|(([0-9A-Fa-f]{1,4}:){7}))([0-9A-Fa-f]{1,4})\b',
+  },
+  { name = "Slack App Token", pattern = '\bxapp-[0-9]+-[A-Za-z0-9_]+-[0-9]+-[a-f0-9]+\b' },
+  { name = "Phone Number", pattern = '\b(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}\b' },
+  {
+    name = "AWS Access ID",
+    pattern = '\b(AKIA|A3T|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{12,}\b',
+  },
+  {
+    name = "MAC Address",
+    pattern = '\b((([a-zA-z0-9]{2}[-:]){5}([a-zA-z0-9]{2}))|(([a-zA-z0-9]{2}:){5}([a-zA-z0-9]{2})))\b',
+  },
+  { name = "Google API Key", pattern = '\bAIza[0-9A-Za-z-_]{35}\b' },
+  { name = "Google OAuth ID", pattern = '\b[0-9]+-[0-9A-Za-z_]{32}\.apps\.googleusercontent\.com\b' },
+  { name = "GitHub Classic Personal Access Token", pattern = '\bghp_[A-Za-z0-9_]{36}\b' },
+  { name = "GitHub Fine-Grained Personal Access Token", pattern = '\bgithub_pat_[A-Za-z0-9_]{82}\b' },
+  { name = "GitHub OAuth Access Token", pattern = '\bgho_[A-Za-z0-9_]{36}\b' },
+  { name = "GitHub User-to-Server Token", pattern = '\bghu_[A-Za-z0-9_]{36}\b' },
+  { name = "GitHub Server-to-Server Token", pattern = '\bghs_[A-Za-z0-9_]{36}\b' },
+  { name = "Stripe Key", pattern = '\b(?:r|s)k_(test|live)_[0-9a-zA-Z]{24}\b' },
+  { name = "Firebase Auth Domain", pattern = '\b([a-z0-9-]){1,30}(\.firebaseapp\.com)\b' },
+  { name = "JWT", pattern = '\b(ey[a-zA-z0-9_\-=]{10,}\.){2}[a-zA-z0-9_\-=]{10,}\b' },
+  { name = "OpenAI API Key", pattern = '\bsk-[a-zA-Z0-9]{48}\b' },
+  { name = "Anthropic API Key", pattern = '\bsk-ant-api\d{0,2}-[a-zA-Z0-9\-]{80,120}\b' },
+  { name = "Generic SK API Key", pattern = '\bsk-[a-zA-Z0-9\-]{10,100}\b' },
+  { name = "Fireworks API Key", pattern = '\bfw_[a-zA-Z0-9]{24}\b' },
+]
+
+[account]
+is_settings_sync_enabled = true
+
+[session]
+
+[session.new_session_shell_override]
+executable = "/bin/zsh"
+
+[session.working_directory_config]
+advanced_mode = false
+global = { custom_dir = "/Users/sarraf/Coding", mode = "custom_dir" }
+new_tab = { custom_dir = "", mode = "previous_dir" }
+new_window = { custom_dir = "", mode = "previous_dir" }
+split_pane = { custom_dir = "", mode = "previous_dir" }
+
+[workflows]
+show_global_workflows_in_universal_search = true
