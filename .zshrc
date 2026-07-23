@@ -60,15 +60,14 @@ source $ZSH/oh-my-zsh.sh
 ##!-------------------------LOAD ZSH THEME--------------------------!#
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-eval "$(oh-my-posh init zsh --config ~/Coding/Personal/OMP-Wizard/build/generated-theme.omp.json --trace)"
-
-# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/mytheme.omp.json --trace)"
-# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/nightowl.omp.json --trace)"
-# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/atomic.omp.json --trace)"
-# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/bubbles.omp.json --trace)"
-# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/chips.omp.json --trace)"
-# eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/catppuccin.omp.json --trace)"
-
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+    # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/mytheme.omp.json --trace)"
+    # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/nightowl.omp.json --trace)"
+    # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/atomic.omp.json --trace)"
+    eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/bubbles.omp.json --trace)"
+    # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/chips.omp.json --trace)"
+    # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/catppuccin.omp.json --trace)"
+fi
 
 #!------------------------------KEYBINDS------------------------------!#
 bindkey '^I' autosuggest-accept
@@ -93,6 +92,7 @@ alias gitd='git diff'
 alias gitr='git remote show origin'
 alias gl=carbonyl_url
 alias google=google
+alias gemini=agy
 
 # Multi-distro neovim setup
 alias avim='NVIM_APPNAME="nvim-astronvim" nvim'
@@ -178,3 +178,7 @@ else
     fastfetch # If not in a git repo
 fi
 
+
+# Oh My Posh configuration wizard generated entry
+# eval "$(oh-my-posh init zsh --config '/Users/sarraf/.config/oh-my-posh/omp-wizard.json')"
+export PATH="$HOME/.local/bin:$PATH"

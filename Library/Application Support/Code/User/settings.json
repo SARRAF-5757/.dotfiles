@@ -15,12 +15,6 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode", //"esbenp.prettier-vscode",
   "editor.formatOnPaste": false,
   "editor.tabSize": 4,
-  "[javascriptreact]": {
-    "editor.tabSize": 2
-  },
-  "[typescriptreact]": {
-    "editor.tabSize": 2
-  },
   "editor.wordWrapColumn": 90,
   //"editor.rulers": [90],
   "editor.stickyScroll.enabled": false, //sticky function headers
@@ -158,6 +152,19 @@
   "python.analysis.typeCheckingMode": "standard",
 
   //!JavaScript/TypeScript Settings
+  "[typescriptreact]": {
+    "editor.tabSize": 2
+  },
+  "[javascriptreact]": {
+    "editor.tabSize": 2
+  },
+  
+  "[typescript]": {
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
 

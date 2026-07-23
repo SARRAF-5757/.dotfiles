@@ -1,5 +1,6 @@
 ---
-"input:open_completion_suggestions": ctrl-space
 "terminal:open_share_block_modal": ctrl-alt-shift-cmd-up
+"input:open_completion_suggestions": ctrl-space
 "workspace:toggle_command_palette": ctrl-alt-shift-cmd-space
 "editor_view:insert_autosuggestion": tab
+"workspace:toggle_vertical_tabs_panel": cmd-e

@@ -1,4 +1,4 @@
-tap "felixkratz/formulae"
+tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae"
 tap "grishka/grishka"
 tap "homebrew/cask"
 tap "homebrew/core"
@@ -11,6 +11,8 @@ tap "sinelaw/fresh"
 tap "smudge/smudge"
 tap "teamookla/speedtest"
 tap "zackelia/formulae"
+# Apple Intelligence from the command-line, with OpenAi-compatible API server
+brew "apfel"
 # Spell checker with better logic than ispell
 brew "aspell"
 # Code searching, linting, rewriting
@@ -57,8 +59,8 @@ brew "eza"
 brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# Low-level access to audio, keyboard, mouse, joystick, and graphics
-brew "sdl2"
+# SDL2 compatibility layer that uses SDL3 behind the scenes
+brew "sdl2-compat"
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # Banner-like program prints strings as ASCII art
@@ -81,6 +83,8 @@ brew "httpie"
 brew "imagemagick"
 # Install and debug iPhone apps from the command-line
 brew "ios-deploy"
+# Featureful UNIX password cracker
+brew "john"
 # Simple terminal UI for git commands
 brew "lazygit"
 # Next-gen compiler infrastructure
@@ -137,20 +141,16 @@ brew "zig"
 brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
-# Prompt theme engine for any shell
-brew "jandedobbeleer/oh-my-posh/oh-my-posh", link: false
-# A CLI for configuring 'Night Shift' on macOS 🌕🌖🌗🌘🌑
-brew "smudge/smudge/nightlight"
 # Enable Windows-like alt-tab
 cask "alt-tab"
-# Transfer files from and to an Android smartphone
-cask "android-file-transfer"
 # Android SDK component
 cask "android-platform-tools"
+# Tools for building Android applications
+cask "android-studio"
+# Terminal interface for Antigravity agents
+cask "antigravity-cli"
 # Electronics prototyping platform
 cask "arduino-ide"
-# Multi-track audio editor and recorder
-cask "audacity"
 # 3D model slicing software for 3D printers, maintained by Bambu Lab
 cask "bambu-studio"
 # 3D creation suite
@@ -179,6 +179,8 @@ cask "ghostty"
 cask "github"
 # Graphically shows disk usage within a file system
 cask "grandperspective"
+# Open-source video transcoder
+cask "handbrake-app"
 # Free and open-source media player
 cask "iina"
 # Tool to optimise images to a smaller size
@@ -195,6 +197,8 @@ cask "karabiner-elements"
 cask "keka"
 # Application launcher
 cask "leader-key"
+# Free cross-platform office suite, fresh version
+cask "libreoffice"
 # Customise mouse behavior
 cask "linearmouse"
 # Software for Logitech devices
@@ -203,14 +207,6 @@ cask "logi-options+"
 cask "lunar"
 # UI replacement for volume, brightness and now playing controls
 cask "mediamate"
-# Provides updates to various Microsoft products
-cask "microsoft-auto-update"
-# Spreadsheet software
-cask "microsoft-excel"
-# Presentation software
-cask "microsoft-powerpoint"
-# Word processor
-cask "microsoft-word"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 # App to write, plan, collaborate, and get organised
@@ -229,10 +225,7 @@ cask "selfcontrol"
 cask "slack"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
-# Turn your MacBook's trackpad into a precise digital weighing scale
-cask "krishkrosh/apps/trackweight"
-# Keyboard configurator
-cask "via"
+cask "trackweight"
 # Open-source code editor
 cask "visual-studio-code"
 # Live wallpaper app
@@ -251,13 +244,10 @@ mas "Command X", id: 6448461551
 mas "darker", id: 1637413102
 mas "Displaperture", id: 1543920362
 mas "Memory Diag", id: 748212890
-mas "Notability", id: 360593530
 mas "Okta Verify", id: 490179405
 mas "PhotoScape X", id: 929507092
 mas "QuickShade", id: 931571202
-mas "Spark Desktop", id: 6445813049
 mas "Xcode", id: 497799835
-vscode "4a454646.github-purple"
 vscode "aaron-bond.better-comments"
 vscode "akamud.vscode-theme-onedark"
 vscode "alefragnani.bookmarks"
@@ -277,7 +267,6 @@ vscode "dtoplak.vscode-glsllint"
 vscode "eamodio.gitlens"
 vscode "equimper.react-native-react-redux"
 vscode "esbenp.prettier-vscode"
-vscode "github.copilot-chat"
 vscode "illixion.vscode-vibrancy-continued"
 vscode "jeff-hykin.better-cpp-syntax"
 vscode "llvm-vs-code-extensions.vscode-clangd"
@@ -312,6 +301,7 @@ vscode "pkief.material-icon-theme"
 vscode "pkief.material-product-icons"
 vscode "purpleddive.iec-p"
 vscode "ritwickdey.liveserver"
+vscode "shahilkumar.docxreader"
 vscode "shd101wyy.markdown-preview-enhanced"
 vscode "slevesque.shader"
 vscode "stivo.tailwind-fold"
@@ -328,3 +318,8 @@ vscode "xshrim.txt-syntax"
 vscode "yinfei.luahelper"
 vscode "zephyrj.forest-cottage"
 vscode "zhuangtongfa.material-theme"
+npm "@ghgrab/ghgrab"
+npm "carbonyl"
+npm "cli-fireplace"
+npm "eas-cli"
+npm "fast-cli"
