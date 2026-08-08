@@ -1,3 +1,6 @@
 *.DS_Store
-/.config/karabiner/automatic_backups/
-/.config/karabiner/assets/
+.DS_Store
+**/karabiner/automatic_backups/
+**/karabiner/assets/
+*.ab
+*.db

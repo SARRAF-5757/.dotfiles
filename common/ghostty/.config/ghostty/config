@@ -26,7 +26,7 @@ background = black
 background-opacity = 0.65
 background-blur-radius = 60
 
-#background-image = /Users/sarraf/.dotfiles/.config/ghostty/themes/swirl.png
+#background-image = ~/.config/ghostty/themes/swirl.png
 background-image-opacity = 0.02
 background-image-position = center
 background-image-fit = contain
@@ -63,7 +63,7 @@ background-image-fit = contain
 #-------------- BEHAVIOR --------------#
 cursor-click-to-move = true
 mouse-hide-while-typing = true
-working-directory = /Users/sarraf/
+working-directory = home
 window-inherit-working-directory = false
 window-save-state = always
 window-new-tab-position = end

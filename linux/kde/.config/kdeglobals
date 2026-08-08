@@ -1,0 +1,25 @@
+[General]
+ColorScheme=BreezeDark
+TerminalApplication=ghostty
+TerminalService=com.mitchellh.ghostty.desktop
+font=Inter,10,-1,5,50,0,0,0,0,0
+fixed=MonaspiceAr Nerd Font Mono,10,-1,5,50,0,0,0,0,0
+menuFont=Inter,10,-1,5,50,0,0,0,0,0
+toolBarFont=Inter,10,-1,5,50,0,0,0,0,0
+smallestReadableFont=Inter,8,-1,5,50,0,0,0,0,0
+
+[KDE]
+ShowDeleteCommand=true
+SingleClick=false
+contrast=4
+
+[Icons]
+Theme=breeze-dark
+
+[WM]
+activeBackground=36,39,58
+activeBlend=23,139,255
+activeForeground=202,211,245
+inactiveBackground=30,30,46
+inactiveBlend=49,50,68
+inactiveForeground=165,173,203

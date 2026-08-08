@@ -1,0 +1,438 @@
+{
+  // cspell:disable
+  //*--------------------NATIVE SETTINGS--------------------*//
+
+  //!Editor Settings
+  "editor.fontSize": 14,
+  "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+  //"editor.fontFamily": "MonaspiceRn Nerd Font Mono",
+  //"editor.fontFamily": "Iosevka Nerd Font Mono",
+  "editor.fontVariations": true,
+  "editor.inlineSuggest.fontFamily": "MonaspiceKr Nerd Font Mono",
+  "editor.fontLigatures": true,
+  //"editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'ss09', 'liga'", //for Monaspace
+
+  "editor.defaultFormatter": "esbenp.prettier-vscode", //"esbenp.prettier-vscode",
+  "editor.formatOnPaste": false,
+  "editor.tabSize": 4,
+  "editor.wordWrapColumn": 90,
+  //"editor.rulers": [90],
+  "editor.stickyScroll.enabled": false, //sticky function headers
+  "editor.smoothScrolling": false, //makes scrolling per line
+  "editor.cursorSmoothCaretAnimation": "on", //makes cursor's movement smooth
+  "editor.minimap.enabled": false, //enable/disable minimal (customize below ↓)
+  "editor.minimap.renderCharacters": false, //show blocks instead of characters in minimap
+  //"editor.minimap.autohide": true,
+  "editor.guides.bracketPairs": "active", //enable current bracket highlighting
+  "editor.multiCursorModifier": "alt", //modifier key
+  "editor.inlineSuggest.suppressSuggestions": true, //suggestions are hidden until hover
+  "editor.selectionHighlight": false, //stop highlighting every instance of selected word
+  "editor.occurrencesHighlight": "off", //stop highlighting every instance of the symbol under cursor
+  "editor.renderLineHighlight": "none", //stop highlighting the cursor line
+  "editor.accessibilitySupport": "off", //annoying screen reader popup
+  "editor.hover.delay": 900, //stops tooltips from poppubg up without intention while coding
+  "editor.detectIndentation": false, //disables auto-detection of indentation based on file contents
+  "editor.inlayHints.enabled": "off", //disables rendering hints in the text editor
+
+  //!Workbench Settings
+  "window.titleBarStyle": "custom",
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.productIconTheme": "fluent-icons", //Put sidebar on the right
+  "window.commandCenter": false, //hide the top bar
+  "workbench.layoutControl.enabled": false, //hide the other top bar
+  "workbench.statusBar.visible": false, //hide bottom statusbar
+  "breadcrumbs.enabled": false, //hide file path on the top
+  "workbench.tree.renderIndentGuides": "always", //indent guides for functions
+  "workbench.tree.enableStickyScroll": true, //sticky function headers
+  "workbench.editor.openPositioning": "last", //open new tabs at the very end
+  "workbench.tips.enabled": false, //disable bulb in IDE
+  "workbench.startupEditor": "none", //prevent welcome or any editor from launching
+  "scm.diffDecorations": "none", //disable git's added/deleted/modified colorsw
+  "workbench.tree.indent": 20, //file explorer indentation
+  "workbench.sideBar.location": "right", //sidebar at the right
+  "workbench.iconTheme": "material-icon-theme", //file icons
+  "workbench.colorCustomizations": {
+    "terminal.background": "#00000000",
+    "editorPane.background": "#00000000",
+    "editorGroupHeader.tabsBackground": "#00000000",
+    "editorGroupHeader.noTabsBackground": "#00000000",
+    "breadcrumb.background": "#00000000",
+    "editorGutter.background": "#00000000",
+    "panel.background": "#00000000",
+    "panelStickyScroll.background": "#00000000",
+    "tab.activeBackground": "#00000000",
+    "tab.unfocusedActiveBackground": "#00000000",
+    "sideBar.background": "#0000004d",
+    "sideBarTitle.background": "#0000004d",
+    "sideBarStickyScroll.background": "#0000004d",
+    "activityBar.background": "#0000004d",
+    "editor.background": "#0000004d",
+    "editorStickyScroll.background": "#0000004d",
+    "editorStickyScrollGutter.background": "#0000004d",
+    "tab.inactiveBackground": "#0000004d",
+    "tab.unfocusedInactiveBackground": "#0000004d",
+    "inlineChat.background": "#000000e6",
+    "editorWidget.background": "#000000e6",
+    "editorHoverWidget.background": "#000000e6",
+    "editorSuggestWidget.background": "#000000e6",
+    "notifications.background": "#000000e6",
+    "notificationCenterHeader.background": "#000000e6",
+    "menu.background": "#000000e6",
+    "quickInput.background": "#000000e6"
+},
+  "chat.commandCenter.enabled": false, //hide copilot elements from IDE
+  "animations.Enabled": false,
+  "window.confirmBeforeClose": "keyboardOnly",
+  //!Terminal Settings
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.fontWeight": "bold",
+  "terminal.integrated.fontSize": 13,
+  "terminal.external.linuxExec": "ghostty",
+  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+
+  //!File Handling
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 100,
+  "files.autoSaveWhenNoErrors": true,
+  "explorer.confirmDelete": false, //delete confirmation disables
+  //"explorer.decorations.badges": false,   //disable change/error indicators in file explorer
+  "projectManager.git.baseFolders": [
+    "~/.dotfiles",
+    "~/Coding/Personal",
+    "~/Coding/EECS370",
+    "~/Coding/EECS485"
+  ],
+  "projectManager.groupList": true,
+  "projectManager.showParentFolderInfoOnDuplicates": true,
+  "git.openRepositoryInParentFolders": "always",
+
+  //*--------------------EXTENSION SETTINGS--------------------*//
+
+  //!C/C++ Settings
+  "C_Cpp.intelliSenseEngine": "disabled", //disable intellisense for c++ and use clang
+  "C_Cpp.default.cppStandard": "c++17",
+  "cmake.configureOnOpen": true,
+  "makefile.configureOnOpen": true,
+  //?C++ Code Formatting
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format",
+    "editor.formatOnPaste": true,
+    //"editor.formatOnSave": true,
+    "editor.autoIndent": "full",
+    "editor.insertSpaces": false,
+    "editor.tabSize": 4
+  },
+  "C_Cpp.formatting": "clangFormat",
+  "clang-format.fallbackStyle": "LLVM",
+  "C_Cpp.codeAnalysis.clangTidy.checks.disabled": ["readability-magic-numbers", "cppcoreguidelines-avoid-magic-numbers"],
+
+  //!LC2K settings [EECS 370]
+  "[lc2k]": {
+    "editor.insertSpaces": false,
+    "editor.tabSize": 8,
+    "editor.autoIndent": "advanced",
+    "editor.formatOnSave": true,
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true
+  },
+
+  //!Verilog settings [EECS270]
+  "[verilog]": {
+    "editor.defaultFormatter": "mshr-h.veriloghdl"
+  },
+
+  //!Python Settings
+  "[python]": {
+    "editor.rulers": [79]
+  },
+  "python.analysis.typeCheckingMode": "standard",
+
+  //!JavaScript/TypeScript Settings
+  "[typescriptreact]": {
+    "editor.tabSize": 2
+  },
+  "[javascriptreact]": {
+    "editor.tabSize": 2
+  },
+  
+  "[typescript]": {
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  //!Unity (omnisharp)
+  "omnisharp.useModernNet": false,
+  "omnisharp.monoPath": "/Library/Frameworks/Mono.frame@work/Versions/Current ",
+  "telemetry.telemetryLevel": "off",
+
+  //!Copilot
+  "github.copilot.enable": {
+    //disable autocompletions
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+
+  //!Custom CSS for VS Code
+  "vscode_custom_css.imports": [
+    "~/.config/Code/User/custom-vscode.css",
+    "~/.config/Code/User/vscode-blur-script.js"
+  ],
+
+  //!GitLens
+  "gitlens.currentLine.fontSize": 10,
+  "gitlens.currentLine.fontFamily": "MonaspiceKr Nerd Font Mono",
+  "gitlens.plusFeatures.enabled": false,
+  "gitlens.hovers.enabled": false,
+  "gitlens.codeLens.enabled": false,
+
+  //!Prettier
+  "prettier.useTabs": false,
+  "prettier.experimentalTernaries": true,
+  "prettier.printWidth": 1000, //so that code doesn't wrap arround annoyingly
+
+  //!Indent-coloring
+  "indentRainbow.lightIndicatorStyleLineWidth": 6,
+  "indentRainbow.indicatorStyle": "light",
+  "indentRainbow.colors": ["rgba(255,255,64,0.07)", "rgba(127,255,127,0.07)", "rgba(255,127,255,0.07)", "rgba(79,236,236,0.07)"],
+  "indentRainbow.ignoreErrorLanguages": [
+    //ignore indent error for these
+    "plaintext",
+    "markdown",
+    "python",
+    "json"
+  ],
+
+  //!File icon theme tweaks
+  "material-icon-theme.hidesExplorerArrows": true,
+  "catppuccin-icons.hidesExplorerArrows": true,
+  "symbols.hidesExplorerArrows": true,
+
+  //!Vibrancy Continued
+  "vscode_vibrancy.backgroundOverride": "#000000",
+
+  //!Better Comments
+  "better-comments.highlightPlainText": true,
+  "better-comments.tags": [
+    {
+      "tag": "//",
+      "color": "#474747", //grey
+      "strikethrough": true,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "todo",
+      "color": "#ffffff",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "#ff8C004d", //yellow highlight
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "!",
+      "color": "#ff2d00", //red
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": false
+    },
+    {
+      "tag": "?",
+      "color": "#FF69B4", //pink
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "#",
+      "color": "#00ffd2", //cyan
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": false
+    },
+    {
+      "tag": "*",
+      "color": "#ff8C00", //yellow
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": true,
+      "italic": false
+    }
+  ],
+
+  //!Error Lens
+  "errorLens.codeLensTemplate": "$severity $message$source",
+  "errorLens.enabledDiagnosticLevels": ["error" /*"warning", "hint", "info"*/],
+  "codeium.enableCodeLens": "hide_x", // Hides the CodeLens for Codeium extension.
+
+  //!VSCord (Catppuccin Mocha theme)
+  "vscord.status.image.large.debugging.key": "https://vscord.catppuccin.com/mocha/debugging.webp",
+  "vscord.status.image.large.editing.key": "https://vscord.catppuccin.com/mocha/{lang}.webp",
+  "vscord.status.image.large.idle.key": "https://vscord.catppuccin.com/mocha/idle-{app_id}.webp",
+  "vscord.status.image.large.notInFile.key": "https://vscord.catppuccin.com/mocha/idle-{app_id}.webp",
+  "vscord.status.image.large.viewing.key": "https://vscord.catppuccin.com/mocha/{lang}.webp",
+  "vscord.status.image.small.debugging.key": "https://vscord.catppuccin.com/mocha/debugging.webp",
+  "vscord.status.image.small.editing.key": "https://vscord.catppuccin.com/mocha/{app_id}.webp",
+  "vscord.status.image.small.idle.key": "https://vscord.catppuccin.com/mocha/idle.webp",
+  "vscord.status.image.small.notInFile.key": "https://vscord.catppuccin.com/mocha/idle.webp",
+  "vscord.status.image.small.viewing.key": "https://vscord.catppuccin.com/mocha/{app_id}.webp",
+
+  //!Dictionary
+  "cSpell.userWords": ["EECS"],
+
+  //!Sync between profiles
+  "workbench.settings.applyToAllProfiles": [
+    "workbench.colorTheme",
+    "workbench.iconTheme",
+    "workbench.productIconTheme",
+    "editor.fontFamily",
+    "editor.fontSize",
+    "editor.fontLigatures",
+    "editor.cursorSmoothCaretAnimation",
+    "window.titleBarStyle",
+    "editor.rulers",
+    "editor.wordWrapColumn",
+    "editor.minimap.autohide",
+    "editor.minimap.renderCharacters",
+    "workbench.tree.renderIndentGuides",
+    "workbench.tree.enableStickyScroll"
+  ],
+  //!Miscellanies
+  "extensions.experimental.affinity": {
+    //performance improvement (?)
+    "asvetliakov.vscode-neovim": 1
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.tokenColorCustomizations": {
+    //to disable italics
+    "textMateRules": [
+      {
+        "scope": [
+          "comment",
+          "comment.block",
+          "comment.block.documentation",
+          "comment.line",
+          "constant",
+          "constant.character",
+          "constant.character.escape",
+          "constant.numeric",
+          "constant.numeric.integer",
+          "constant.numeric.float",
+          "constant.numeric.hex",
+          "constant.numeric.octal",
+          "constant.other",
+          "constant.regexp",
+          "constant.rgb-value",
+          "emphasis",
+          "entity",
+          "entity.name",
+          "entity.name.class",
+          "entity.name.function",
+          "entity.name.method",
+          "entity.name.section",
+          "entity.name.selector",
+          "entity.name.tag",
+          "entity.name.type",
+          "entity.other",
+          "entity.other.attribute-name",
+          "entity.other.inherited-class",
+          "invalid",
+          "invalid.deprecated",
+          "invalid.illegal",
+          "keyword",
+          "keyword.control",
+          "keyword.operator",
+          "keyword.operator.new",
+          "keyword.operator.assignment",
+          "keyword.operator.arithmetic",
+          "keyword.operator.logical",
+          "keyword.other",
+          "markup",
+          "markup.bold",
+          "markup.changed",
+          "markup.deleted",
+          "markup.heading",
+          "markup.inline.raw",
+          "markup.inserted",
+          "markup.italic",
+          "markup.list",
+          "markup.list.numbered",
+          "markup.list.unnumbered",
+          "markup.other",
+          "markup.quote",
+          "markup.raw",
+          "markup.underline",
+          "markup.underline.link",
+          "meta",
+          "meta.block",
+          "meta.cast",
+          "meta.class",
+          "meta.function",
+          "meta.function-call",
+          "meta.preprocessor",
+          "meta.return-type",
+          "meta.selector",
+          "meta.tag",
+          "meta.type.annotation",
+          "meta.type",
+          "punctuation.definition.string.begin",
+          "punctuation.definition.string.end",
+          "punctuation.separator",
+          "punctuation.separator.continuation",
+          "punctuation.terminator",
+          "storage",
+          "storage.modifier",
+          "storage.type",
+          "string",
+          "string.interpolated",
+          "string.other",
+          "string.quoted",
+          "string.quoted.double",
+          "string.quoted.other",
+          "string.quoted.single",
+          "string.quoted.triple",
+          "string.regexp",
+          "string.unquoted",
+          "strong",
+          "support",
+          "support.class",
+          "support.constant",
+          "support.function",
+          "support.other",
+          "support.type",
+          "support.type.property-name",
+          "support.variable",
+          "variable",
+          "variable.language",
+          "variable.name",
+          "variable.other",
+          "variable.other.readwrite",
+          "variable.parameter"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+},
+"window.systemColorTheme": "dark",
+"window.autoDetectColorScheme": false,
+"editor.renderWhitespace": "all",
+}

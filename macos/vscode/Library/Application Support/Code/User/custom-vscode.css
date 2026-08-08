@@ -1,0 +1,238 @@
+/*! Code comment style */
+    .mtk3 {
+        font-family: 'Monaspace Radon', monospace !important;
+        font-style: italic;
+        color: #747495 !important;
+    }
+    .line-numbers {
+        position: relative !important;
+        width: 8px !important;
+        font-size: 14px !important;
+        font-family: 'Monaspace Neon' !important;
+        opacity: .3;
+    }
+
+/*! Code elements */
+    /* String */
+    .mtk4 {
+        color: #94d6cb !important;
+    }
+    
+/*! Shadows */
+    /* Code canvas top */
+    .monaco-editor .scroll-decoration {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, .75) !important;
+        top: -6px !important;
+    }
+    
+    /* Side bar */
+    .part.sidebar {
+        box-shadow: 0px 0px 50px rgba(0, 0, 0, .25);
+    }
+    
+    /* Sidebar top shadow */
+    .monaco-scrollable-element>.shadow.top {
+        box-shadow: 0px 0px 10px rgba(0,0,0,.75) !important;
+        top: -3px !important;
+    }
+    
+    /* Toolbars when tabs are enabled. */
+    .monaco-workbench .part.editor>.content .editor-group-container>.title .editor-actions {
+        display: none !important;
+    }
+    
+/*! File explorer */
+    /* File Explorer Selected Item */
+    .monaco-list.list_id_1 .monaco-list-row.selected {
+        background-color: #0000003d !important;
+        opacity: 1 !important;
+        border-top: 1px #5a4f7100 solid;
+        border-bottom: 1px #5a4f7100 solid;
+    }
+    
+    /* List item label name */
+    .monaco-list.list_id_1 .monaco-list-row.selected .label-name {
+        color: #fff !important;
+        opacity: 1 !important;
+    }
+    
+    /* File explorer action buttons /
+    .monaco-workbench .part.sidebar .title-actions .actions-container {
+        display: none;
+    }*/
+    
+    /* File Explorer Item Label */
+    .monaco-tree .monaco-tree-row .label-name,
+    .monaco-list .monaco-list-row
+    .monaco-icon-label .label-name {
+        font-family: 'Monaspace Neon', monospace !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        color: #bdc6e5 !important;
+    }
+    
+/*! Sidebar title */
+    .composite.title {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-items: center !important;
+    }
+    .composite.title h2 {
+        font-family: "Monaspace Radon";
+        font-weight: bold !important;
+        font-size: 12px !important;
+        text-transform: uppercase;
+        color: #aeacb9 !important;
+    }
+    .scroll-decoration {            /* disable top shadow */
+        display: none !important;
+    }
+
+/*! Scroll Bar */
+.slider {
+    position: absolute !important;
+    right: 1px !important;
+    width: 3px !important;
+    background: #aeacb9 !important;
+    left: auto !important;
+}
+
+.codicon-toolbar-more, .codicon-word-wrap {
+    display: block !important;
+}
+
+/*! Tooltip box style */
+.monaco-editor-hover,
+.monaco-hover {
+    width: auto !important;
+    height: auto !important;
+    padding: 10px !important;
+    box-shadow: 0px 8px 32px rgba(0,0,0,.45) !important;
+    background-image: linear-gradient(#252529 0%, #1a1a1d 100%) !important;
+    backdrop-filter: blur(3px) !important;
+    border-radius: 20px !important;
+    border: none !important;
+    border-color: #1e1e2e00 !important;
+}
+
+/*! Project Title Top bar */
+    /* Project title's style at the top. */
+    .monaco-workbench .part.titlebar>.titlebar-container>.titlebar-center>.window-title>.command-center .action-item.command-center-center {
+        border: none !important;
+        background: transparent !important;
+    }
+    
+    /* Project Title */
+    .titlebar-center {
+        font-family: 'Monaspace Radon' !important;
+        font-size: 10 !important;
+        font-weight: 900 !important;
+        color: #909090;
+    }
+    
+    /* Search Label */
+    .search-label {
+        font-family: 'Monaspace Neon' !important;
+        font-size: 14px !important;
+        color: #fff;
+        display: block;
+    }
+    
+    /* Search icon */
+    .search-icon {
+        display: none !important;
+    }
+    .codicon-search::before {
+        display: none !important;
+    }
+    .codicon-arrow-right, .codicon-arrow-left {
+        display: none !important;
+    }
+    .titlebar-right > * {
+        display: none !important;
+    }
+
+/*! Command Palette */
+    .quick-input-widget {
+        transform: translateY(-50%) !important;
+        top: 50% !important;
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, .45) !important;
+        padding: 10px 10px 18px 10px !important;
+        background-image: linear-gradient(#252529 0%, #1a1a1d 100%) !important;
+        backdrop-filter: blur(3px) !important;
+        border-radius: 20px !important;
+    }
+    
+    /* Remove background for lists */
+    .monaco-list-rows {
+        background: transparent !important;
+    }
+    
+    /* List hover */
+    .monaco-list-row:hover {
+        background: rgba(0, 0, 0, .2) !important;
+    }
+    
+    .notifications-toasts .monaco-list-row:hover {
+        background: none !important;
+    }
+    
+    .monaco-list-row.focused {
+        background-color: rgba(191, 181, 228, 0.25) !important;
+    }
+    
+    .synthetic-focus {
+        outline-color: rgba(50, 50, 50, 1) !important;
+    }
+    
+    .quick-input-widget .monaco-label {
+        font-size: 11px !important;
+    }
+    
+    /* Command palette text input */
+    .quick-input-filter .monaco-inputbox {
+        border-radius: 12px !important;
+        padding: 8px !important;
+        border: none !important;
+        background-color: rgba(15, 15, 16, 0.4) !important;
+        font-family: "Monaspace Radon" !important;
+        font-size: 14px !important;
+        margin-bottom: 16px !important;
+    }
+    
+    #command-blur {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .15);
+        top: 0;
+        left: 0;
+        backdrop-filter: blur(8px);
+    }
+    
+    /* Command palette's input box placeholder. */
+    .monaco-inputbox input::placeholder {
+        color: rgba(255, 255, 255, .3) !important;
+    }
+    
+    .monaco-workbench label {
+        color: #fff !important;
+        font-size: 14px !important;
+    }
+    
+/*! Container that holds the VS Code home icon. */
+.editor-group-watermark {
+    max-width: none !important;
+}
+.command-center-center {
+    width:  auto !important;}
+    
+/*! welcome screen graphics */
+.letterpress {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' fill='%231c1c1c' data-darkreader-inline-fill='' style='--darkreader-inline-fill: %230a0d0e; --darkreader-inline-stroke: %23dfdbd5;' stroke='%231c1c1c' data-darkreader-inline-stroke=''%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Ctitle%3Ecode_fill%3C/title%3E%3Cg id='页面-1' stroke-width='0.00024000000000000003' fill='none' fill-rule='evenodd' style=''%3E%3Cg id='Development' transform='translate(0.000000, -48.000000)' fill-rule='nonzero'%3E%3Cg id='code_fill' transform='translate(0.000000, 48.000000)'%3E%3Cpath d='M24,0 L24,24 L0,24 L0,0 L24,0 Z M12.5934901,23.257841 L12.5819402,23.2595131 L12.5108777,23.2950439 L12.4918791,23.2987469 L12.4918791,23.2987469 L12.4767152,23.2950439 L12.4056548,23.2595131 C12.3958229,23.2563662 12.3870493,23.2590235 12.3821421,23.2649074 L12.3780323,23.275831 L12.360941,23.7031097 L12.3658947,23.7234994 L12.3769048,23.7357139 L12.4804777,23.8096931 L12.4953491,23.8136134 L12.4953491,23.8136134 L12.5071152,23.8096931 L12.6106902,23.7357139 L12.6232938,23.7196733 L12.6232938,23.7196733 L12.6266527,23.7031097 L12.609561,23.275831 C12.6075724,23.2657013 12.6010112,23.2592993 12.5934901,23.257841 L12.5934901,23.257841 Z M12.8583906,23.1452862 L12.8445485,23.1473072 L12.6598443,23.2396597 L12.6498822,23.2499052 L12.6498822,23.2499052 L12.6471943,23.2611114 L12.6650943,23.6906389 L12.6699349,23.7034178 L12.6699349,23.7034178 L12.678386,23.7104931 L12.8793402,23.8032389 C12.8914285,23.8068999 12.9022333,23.8029875 12.9078286,23.7952264 L12.9118235,23.7811639 L12.8776777,23.1665331 C12.8752882,23.1545897 12.8674102,23.1470016 12.8583906,23.1452862 L12.8583906,23.1452862 Z M12.1430473,23.1473072 C12.1332178,23.1423925 12.1221763,23.1452606 12.1156365,23.1525954 L12.1099173,23.1665331 L12.0757714,23.7811639 C12.0751323,23.7926639 12.0828099,23.8018602 12.0926481,23.8045676 L12.108256,23.8032389 L12.3092106,23.7104931 L12.3186497,23.7024347 L12.3186497,23.7024347 L12.3225043,23.6906389 L12.340401,23.2611114 L12.337245,23.2485176 L12.337245,23.2485176 L12.3277531,23.2396597 L12.1430473,23.1473072 Z' id='MingCute' fill-rule='nonzero'%3E%3C/path%3E%3Cpath d='M13.476,3.629 C14.2918,3.77285 14.8365,4.55084 14.6927,5.36668 L12.2616,19.154 C12.1178,19.9698 11.3398,20.5146 10.5239,20.3707 C9.7081,20.2269 9.16334,19.4489 9.3072,18.633 L11.7383,4.84574 C11.8821,4.02989 12.6601,3.48514 13.476,3.629 Z M7.56063,6.69652 C8.14641,7.2823 8.14641,8.23205 7.56063,8.81784 L4.37864,11.9998 L7.56063,15.1818 C8.14641,15.7676 8.14641,16.7173 7.56063,17.3031 C6.97484,17.8889 6.02509,17.8889 5.4393,17.3031 L1.19666,13.0605 C0.915359,12.7792 0.757324,12.3976 0.757324,11.9998 C0.757324,11.602 0.915359,11.2205 1.19666,10.9392 L5.4393,6.69652 C6.02509,6.11073 6.97484,6.11073 7.56063,6.69652 Z M18.5606,6.69652 L22.8033,10.9392 C23.0846,11.2205 23.2426,11.602 23.2426,11.9998 C23.2426,12.3976 23.0846,12.7792 22.8033,13.0605 L18.5606,17.3031 C17.9748,17.8889 17.0251,17.8889 16.4393,17.3031 C15.8535,16.7173 15.8535,15.7676 16.4393,15.1818 L19.6213,11.9998 L16.4393,8.81784 C15.8535,8.23205 15.8535,7.2823 16.4393,6.69652 C17.0251,6.11073 17.9748,6.11073 18.5606,6.69652 Z' id='形状' fill='%2311111B' style='--darkreader-inline-fill: %2303030b;' data-darkreader-inline-fill=''%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat no-repeat !important;
+    background-position: center center !important;
+    background-size: contain !important;
+    width: 40% !important;
+}

@@ -19,23 +19,24 @@ fi
 plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
-    # zsh-history-substring-search
-    macos
     git
     vscode
     eza
     zoxide
-    brew
     colored-man-pages
     colorize
     thefuck
     themes
 )
 
+# OS-conditional plugins
+if [[ "$(uname -s)" == "Darwin" ]]; then
+    plugins+=(macos brew)
+fi
+
 #!----------------------PLUGIN CONFIGURATIONS-----------------------!#
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#3e3e3e,bold"
 ZSH_AUTOSUGGEST_STRATEGY=(completion match_prev_cmd)
-
 
 #!----------------------LOAD ZSH WITH OPTIONS-----------------------!#
 # CASE_SENSITIVE="true"                 # case-sensitive completion
@@ -48,25 +49,32 @@ ZSH_AUTOSUGGEST_STRATEGY=(completion match_prev_cmd)
 # DISABLE_LS_COLORS="true"              # disable colors in ls
 DISABLE_AUTO_TITLE="true"               # disable auto-setting terminal title
 # ENABLE_CORRECTION="true"              # enable command auto-correction
-#COMPLETION_WAITING_DOTS="%F{red}waiting...%f"   # display red dots whilst waiting for completion
+# COMPLETION_WAITING_DOTS="%F{red}waiting...%f"   # display red dots whilst waiting for completion
 # DISABLE_UNTRACKED_FILES_DIRTY="true"  # disable marking untracked files under VCS as dirty
 # HIST_STAMPS="mm/dd/yyyy"              # change time stamp format in the history command output
 # ZSH_CUSTOM=/path/to/new-custom-folder # if using custom folder than $ZSH/custom
 
 # Load Oh My Zsh
-source $ZSH/oh-my-zsh.sh
-
+if [[ -f "$ZSH/oh-my-zsh.sh" ]]; then
+    source "$ZSH/oh-my-zsh.sh"
+fi
 
 ##!-------------------------LOAD ZSH THEME--------------------------!#
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-    # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/mytheme.omp.json --trace)"
-    # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/nightowl.omp.json --trace)"
-    # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/atomic.omp.json --trace)"
-    eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/bubbles.omp.json --trace)"
-    # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/chips.omp.json --trace)"
-    # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/catppuccin.omp.json --trace)"
+    if command -v oh-my-posh &>/dev/null; then
+        OMP_THEME=""
+        if [[ -f "$HOME/.config/oh-my-posh/bubbles.omp.json" ]]; then
+            OMP_THEME="$HOME/.config/oh-my-posh/bubbles.omp.json"
+        elif [[ -f "$HOME/.dotfiles/common/oh-my-posh/.config/oh-my-posh/bubbles.omp.json" ]]; then
+            OMP_THEME="$HOME/.dotfiles/common/oh-my-posh/.config/oh-my-posh/bubbles.omp.json"
+        fi
+
+        if [[ -n "$OMP_THEME" ]]; then
+            eval "$(oh-my-posh init zsh --config "$OMP_THEME")"
+        fi
+    fi
 fi
 
 #!------------------------------KEYBINDS------------------------------!#
@@ -75,13 +83,32 @@ bindkey '^I' autosuggest-accept
 # bindkey '^[[B' history-substring-search-down 
 
 #!-------------------------------ALIASES------------------------------!#
-alias ls='eza --width 70 --no-quotes --icons=always --color=always -a'
-alias lss='eza -l --icons=always --total-size --git --no-user --no-permissions --no-time'
-alias tree='eza -T --total-size --no-quotes --icons=always --color=always'
-alias tre='eza -T --total-size --no-quotes --icons=always --color=always -L 2'
-alias cat='bat'
-alias cd='z'
-alias find='fd'
+if command -v eza &>/dev/null; then
+    alias ls='eza --width 70 --no-quotes --icons=always --color=always -a'
+    alias lss='eza -l --icons=always --total-size --git --no-user --no-permissions --no-time'
+    alias tree='eza -T --total-size --no-quotes --icons=always --color=always'
+    alias tre='eza -T --total-size --no-quotes --icons=always --color=always -L 2'
+else
+    alias ls='ls --color=auto -a'
+    alias lss='ls -lah'
+fi
+
+if command -v bat &>/dev/null; then
+    alias cat='bat'
+elif command -v batcat &>/dev/null; then
+    alias cat='batcat'
+fi
+
+if command -v zoxide &>/dev/null; then
+    alias cd='z'
+fi
+
+if command -v fd &>/dev/null; then
+    alias find='fd'
+elif command -v fdfind &>/dev/null; then
+    alias find='fdfind'
+fi
+
 alias e='yazi'
 alias t='btop'
 alias ff='fastfetch'
@@ -100,85 +127,91 @@ alias vim='NVIM_APPNAME="nvim-lazyvim" nvim'
 alias chvim='NVIM_APPNAME="nvim-nvchad" nvim'
 alias kvim='NVIM_APPNAME="nvim-kickstart" nvim'
 
-
 #!-----------------------------FUNCTIONS----------------------------!#
 function title() {          # Customize tab titles
     echo -en "\e]2;$@\a"
 }
 
 function carbonyl_url() {
-  carbonyl "https://$1"
+    if command -v carbonyl &>/dev/null; then
+        carbonyl "https://$1"
+    else
+        echo "carbonyl not installed"
+    fi
 }
 
 function google() {
-  carbonyl "https://www.google.com/search?q=$1"
+    if command -v carbonyl &>/dev/null; then
+        carbonyl "https://www.google.com/search?q=$1"
+    else
+        echo "carbonyl not installed"
+    fi
 }
 
 function cls() {            # Similar clear logic to cd
     clear
     if git rev-parse --is-inside-work-tree &>/dev/null; then
         echo ""
-        onefetch --http-url --disabled-fields=churn
+        command -v onefetch &>/dev/null && onefetch --http-url --disabled-fields=churn
         echo ""
     else
-        fastfetch
+        command -v fastfetch &>/dev/null && fastfetch
     fi
 }
 
-# export EDITOR="vim"
-# function y() {              # Yazi Setup
-# 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-# 	yazi "$@" --cwd-file="$tmp"
-# 	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-# 		builtin cd -- "$cwd"
-# 	fi
-# 	rm -f -- "$tmp"
-# }
+# Atuin shell history
+if command -v atuin &>/dev/null; then
+    eval "$(atuin init zsh)"
+fi
 
-
-eval "$(atuin init zsh)"
-
-#!----------------------SETUO AUTO FETCHING-------------------------!#
+#!----------------------SETUP AUTO FETCHING-------------------------!#
 last_repository="" # Variable to track the last repo we were in
 
 checkGitDir() {
-  current_repository=$(git rev-parse --show-toplevel 2> /dev/null)
+    current_repository=$(git rev-parse --show-toplevel 2> /dev/null)
 
-  if [[ -n "$current_repository" ]]; then
-    # If in a repo, and it's different from the last one we saw...
-    if [[ "$current_repository" != "$last_repository" ]]; then
-      echo ""
-      onefetch --http-url --disabled-fields=churn
-      echo ""
-      last_repository="$current_repository"
+    if [[ -n "$current_repository" ]]; then
+        # If in a repo, and it's different from the last one we saw...
+        if [[ "$current_repository" != "$last_repository" ]]; then
+            echo ""
+            command -v onefetch &>/dev/null && onefetch --http-url --disabled-fields=churn
+            echo ""
+            last_repository="$current_repository"
+        fi
+    else
+        # If not in a repo, reset the tracker so onefetch runs if we re-enter later
+        last_repository=""
     fi
-  else
-    # If not in a repo, reset the tracker so onefetch runs if we re-enter later
-    last_repository=""
-  fi
 }
 
-autoload -U add-zsh-hook # Hook the to change-directory event
+autoload -U add-zsh-hook # Hook the change-directory event
 add-zsh-hook chpwd checkGitDir
 
-
-#!----------------------------DOCKER-------------------------------!#
-fpath=(/Users/sarraf/.docker/completions $fpath)
+#!----------------------------COMPLETIONS---------------------------!#
+if [[ -d "$HOME/.docker/completions" ]]; then
+    fpath=("$HOME/.docker/completions" $fpath)
+fi
 autoload -Uz compinit
-compinit
-
+compinit -u
 
 #!--------------------------STARTUP COMMANDS-------------------------!#
 if git rev-parse --is-inside-work-tree &>/dev/null; then # If we started inside a git repo
     echo ""
-    onefetch --http-url --disabled-fields=churn
+    command -v onefetch &>/dev/null && onefetch --http-url --disabled-fields=churn
     echo ""
     last_repository=$(git rev-parse --show-toplevel 2> /dev/null)
 else
-    fastfetch # If not in a git repo
+    command -v fastfetch &>/dev/null && fastfetch # If not in a git repo
 fi
 
-
-# Oh My Posh configuration wizard generated entry
-# eval "$(oh-my-posh init zsh --config '/Users/sarraf/.config/oh-my-posh/omp-wizard.json')"
 export PATH="$HOME/.local/bin:$PATH"
+
+#!----------------------OS-SPECIFIC OVERRIDES------------------------!#
+case "$(uname -s)" in
+    Darwin)
+        [[ -f "$HOME/.zshrc.macos" ]] && source "$HOME/.zshrc.macos"
+        ;;
+    Linux)
+        [[ -f "$HOME/.zshrc.linux" ]] && source "$HOME/.zshrc.linux"
+        ;;
+esac

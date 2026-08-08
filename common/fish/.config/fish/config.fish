@@ -1,6 +1,12 @@
 if status is-interactive
-    # OMP Promp Engine
-    oh-my-posh init fish --config ~/.dotfiles/OMP-themes/bubbles.omp.json | source
+    # OMP Prompt Engine
+    if command -v oh-my-posh > /dev/null
+        if test -f ~/.config/oh-my-posh/bubbles.omp.json
+            oh-my-posh init fish --config ~/.config/oh-my-posh/bubbles.omp.json | source
+        else if test -f ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/bubbles.omp.json
+            oh-my-posh init fish --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/bubbles.omp.json | source
+        end
+    end
 
     # Fish prompt
     # function fish_prompt
