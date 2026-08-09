@@ -1,25 +1,178 @@
-[General]
-ColorScheme=BreezeDark
-TerminalApplication=ghostty
-TerminalService=com.mitchellh.ghostty.desktop
-font=Inter,10,-1,5,50,0,0,0,0,0
-fixed=MonaspiceAr Nerd Font Mono,10,-1,5,50,0,0,0,0,0
-menuFont=Inter,10,-1,5,50,0,0,0,0,0
-toolBarFont=Inter,10,-1,5,50,0,0,0,0,0
-smallestReadableFont=Inter,8,-1,5,50,0,0,0,0,0
+[ColorEffects:Disabled]
+ChangeSelectionColor=
+Color=#131b1c
+ColorAmount=0.5
+ColorEffect=3
+ContrastAmount=0
+ContrastEffect=0
+Enable=
+IntensityAmount=0
+IntensityEffect=0
 
-[KDE]
-ShowDeleteCommand=true
-SingleClick=false
-contrast=4
+[ColorEffects:Inactive]
+ChangeSelectionColor=true
+Color=#000000
+ColorAmount=0.025
+ColorEffect=0
+ContrastAmount=0.1
+ContrastEffect=0
+Enable=true
+IntensityAmount=0
+IntensityEffect=0
+
+[Colors:Button]
+BackgroundAlternate=#1c2527
+BackgroundNormal=#192123
+DecorationFocus=#9dcfd9
+DecorationHover=#9dcfd9
+ForegroundActive=#dde7ea
+ForegroundInactive=#6d7779
+ForegroundLink=#45A8D2
+ForegroundNegative=#FF6A9D
+ForegroundNeutral=#FA9A24
+ForegroundNormal=#dde7ea
+ForegroundPositive=#31C193
+ForegroundVisited=#B489F3
+
+[Colors:Complementary]
+BackgroundAlternate=#0a0f10
+BackgroundNormal=#131b1c
+DecorationFocus=#9dcfd9
+DecorationHover=#9dcfd9
+ForegroundActive=#f6fafb
+ForegroundInactive=#6d7779
+ForegroundLink=#45A8D2
+ForegroundNegative=#FF6A9D
+ForegroundNeutral=#FA9A24
+ForegroundNormal=#a2adaf
+ForegroundPositive=#31C193
+ForegroundVisited=#B489F3
+
+[Colors:Header]
+BackgroundAlternate=#131b1c
+BackgroundNormal=#131b1c
+DecorationFocus=#9dcfd9
+DecorationHover=#9dcfd9
+ForegroundActive=#f6fafb
+ForegroundInactive=#6d7779
+ForegroundLink=#45A8D2
+ForegroundNegative=#FF6A9D
+ForegroundNeutral=#FA9A24
+ForegroundNormal=#a2adaf
+ForegroundPositive=#31C193
+ForegroundVisited=#B489F3
+
+[Colors:Header][Inactive]
+BackgroundAlternate=#1c2527
+BackgroundNormal=#131b1c
+DecorationFocus=#9dcfd9
+DecorationHover=#9dcfd9
+ForegroundActive=#45A8D2
+ForegroundInactive=#6d7779
+ForegroundLink=#45A8D2
+ForegroundNegative=#FF6A9D
+ForegroundNeutral=#FA9A24
+ForegroundNormal=#a2adaf
+ForegroundPositive=#31C193
+ForegroundVisited=#B489F3
+
+[Colors:Selection]
+BackgroundAlternate=#9dcfd9
+BackgroundNormal=#9dcfd9
+DecorationFocus=#9dcfd9
+DecorationHover=#aec8cd
+ForegroundActive=#0e474f
+ForegroundInactive=#0e474f
+ForegroundLink=#1189B1
+ForegroundNegative=#96034A
+ForegroundNeutral=#EA8D12
+ForegroundNormal=#0e474f
+ForegroundPositive=#16B386
+ForegroundVisited=#592F93
+
+[Colors:Tooltip]
+BackgroundAlternate=#1c2527
+BackgroundNormal=#131b1c
+DecorationFocus=#9dcfd9
+DecorationHover=#9dcfd9
+ForegroundActive=#dde7ea
+ForegroundInactive=#6d7779
+ForegroundLink=#45A8D2
+ForegroundNegative=#FF6A9D
+ForegroundNeutral=#FA9A24
+ForegroundNormal=#dde7ea
+ForegroundPositive=#31C193
+ForegroundVisited=#B489F3
+
+[Colors:View]
+BackgroundAlternate=#131b1c
+BackgroundNormal=#0a0f10
+DecorationFocus=#9dcfd9
+DecorationHover=#34666f
+ForegroundActive=#f6fafb
+ForegroundInactive=#6d7779
+ForegroundLink=#45A8D2
+ForegroundNegative=#FF6A9D
+ForegroundNeutral=#FA9A24
+ForegroundNormal=#dde7ea
+ForegroundPositive=#31C193
+ForegroundVisited=#B489F3
+
+[Colors:Window]
+BackgroundAlternate=#1c2527
+BackgroundNormal=#131b1c
+DecorationFocus=#9dcfd9
+DecorationHover=#9dcfd9
+ForegroundActive=#45A8D2
+ForegroundInactive=#6d7779
+ForegroundLink=#45A8D2
+ForegroundNegative=#FF6A9D
+ForegroundNeutral=#FA9A24
+ForegroundNormal=#a2adaf
+ForegroundPositive=#31C193
+ForegroundVisited=#B489F3
+
+[General]
+ColorScheme=MaterialYouDark
+ColorSchemeHash=7abca257a0e7e0a8c42cb6755cfee03317579c81
 
 [Icons]
-Theme=breeze-dark
+Theme=Papirus-Dark
+
+[KDE]
+LookAndFeelPackage=com.github.vinceliuice.ChromeOS-dark
+contrast=4
+frameContrast=0.2
+widgetStyle=Klassy
+
+[KFileDialog Settings]
+Allow Expansion=false
+Automatically select filename extension=true
+Breadcrumb Navigation=true
+Decoration position=2
+Show Full Path=false
+Show Inline Previews=true
+Show Preview=false
+Show Speedbar=true
+Show hidden files=true
+Sort by=Name
+Sort directories first=true
+Sort hidden files last=false
+Sort reversed=false
+Speedbar Width=140
+View Style=DetailTree
+
+[Shortcuts]
+Copy=Meta+C; Ctrl+C; Ctrl+Ins
+Paste=Shift+Ins; Ctrl+V; Meta+V
+
+[Sounds]
+Theme=freedesktop
 
 [WM]
-activeBackground=36,39,58
-activeBlend=23,139,255
-activeForeground=202,211,245
-inactiveBackground=30,30,46
-inactiveBlend=49,50,68
-inactiveForeground=165,173,203
+activeBackground=28,37,39
+activeBlend=252,252,252
+activeForeground=221,231,234
+inactiveBackground=37,61,66
+inactiveBlend=161,169,177
+inactiveForeground=170,196,201

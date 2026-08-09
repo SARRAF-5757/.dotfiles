@@ -1,0 +1,19 @@
+[62201967-f6e4-48df-b0b2-894a76517c88]
+Description=Transparent Windows
+opacityactive=85
+opacityactiverule=2
+opacityinactive=65
+opacityinactiverule=2
+
+[General]
+count=2
+rules=62201967-f6e4-48df-b0b2-894a76517c88,b5a63ec0-f8e8-420b-b97f-371608768060
+
+[b5a63ec0-f8e8-420b-b97f-371608768060]
+Description=Hide weird blank window on startup
+minimize=true
+minimizerule=2
+skiptaskbar=true
+skiptaskbarrule=2
+wmclass=xwaylandvideobridge
+wmclassmatch=1

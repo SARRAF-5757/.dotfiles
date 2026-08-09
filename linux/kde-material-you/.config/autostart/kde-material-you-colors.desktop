@@ -1,0 +1,8 @@
+[Desktop Entry]
+Exec=/home/sarraf/.local/share/pipx/venvs/kde-material-you-colors/bin/kde-material-you-colors
+Icon=color-management
+Name=KDE Material You Colors
+Comment=Starts/Restarts background process
+Type=Application
+X-KDE-AutostartScript=true
+

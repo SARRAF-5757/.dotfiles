@@ -1,0 +1,6 @@
+[Greeter]
+WallpaperPlugin=org.kde.image
+
+[Greeter][Wallpaper][org.kde.image][General]
+Image=file:///home/sarraf/Wallpapers/Unsplash/q2dUSl9S4Xg-full.jpg
+PreviewImage=file:///home/sarraf/Wallpapers/Unsplash/q2dUSl9S4Xg-full.jpg

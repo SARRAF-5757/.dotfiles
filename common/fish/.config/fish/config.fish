@@ -32,3 +32,8 @@ if status is-interactive
     abbr --add chvim='NVIM_APPNAME="nvim-nvchad" nvim'
     abbr --add kvim='NVIM_APPNAME="nvim-kickstart" nvim'
 end
+
+
+# User local bin path
+fish_add_path -g $HOME/.local/bin
+

@@ -170,9 +170,18 @@ fi
 
 # Ensure base target directories exist to prevent Stow tree folding
 if ! ${DRY_RUN}; then
-    mkdir -p "${TARGET_DIR}/.config"
+    mkdir -p "${TARGET_DIR}/.config/autostart"
+    mkdir -p "${TARGET_DIR}/.config/environment.d"
+    mkdir -p "${TARGET_DIR}/.config/gtk-3.0"
+    mkdir -p "${TARGET_DIR}/.config/gtk-4.0"
+    mkdir -p "${TARGET_DIR}/.config/klassy"
+    mkdir -p "${TARGET_DIR}/.config/Kvantum"
+    mkdir -p "${TARGET_DIR}/.config/kde-material-you-colors"
+    mkdir -p "${TARGET_DIR}/.config/xsettingsd"
     mkdir -p "${TARGET_DIR}/.local/bin"
-    mkdir -p "${TARGET_DIR}/.local/share"
+    mkdir -p "${TARGET_DIR}/.local/share/applications"
+    mkdir -p "${TARGET_DIR}/.local/share/kwin/scripts"
+    mkdir -p "${TARGET_DIR}/.local/share/plasma/plasmoids"
     mkdir -p "${TARGET_DIR}/.local/state"
     if [[ "${OS_NAME}" == "macOS" ]]; then
         mkdir -p "${TARGET_DIR}/Library/Application Support"

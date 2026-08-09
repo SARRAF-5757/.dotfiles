@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=Zen Browser
+Comment=Experience tranquility while browsing the web
+Exec=/home/sarraf/.local/bin/zen %u
+Icon=/home/sarraf/.local/share/zen/browser/chrome/icons/default/default128.png
+Terminal=false
+Type=Application
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;application/xml;x-scheme-handler/http;x-scheme-handler/https;
+StartupWMClass=zen-alpha

@@ -30,6 +30,12 @@ if command -v npm &>/dev/null; then
     echo ""
 fi
 
+if command -v pipx &>/dev/null; then
+    echo -e "${CYAN}󰌠 Updating pipx packages...${NC}"
+    pipx upgrade-all || true
+    echo ""
+fi
+
 if [[ -d "$HOME/.oh-my-zsh" ]]; then
     echo -e "${PURPLE}󱆃 Updating Oh My Zsh...${NC}"
     "$HOME/.oh-my-zsh/tools/upgrade.sh" || true

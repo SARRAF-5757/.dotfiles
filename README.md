@@ -39,8 +39,14 @@
 │   └── zsh/                    # macOS shell additions (~/.zshrc.macos)
 │
 ├── linux/                      # Fedora Asahi / KDE Plasma configurations
+│   ├── applications/           # Desktop entries & MIME associations (~/.local/share/applications, ~/.config/mimeapps.list)
 │   ├── environment/            # Wayland systemd environment (~/.config/environment.d)
-│   ├── kde/                    # KDE Plasma & KWin settings (~/.config/kdeglobals, etc.)
+│   ├── gtk/                    # GTK 3/4 & XSettings uniformity (~/.config/gtk-3.0, ~/.config/gtk-4.0, ~/.config/xsettingsd)
+│   ├── kde/                    # KDE Plasma 6, KWin, Dolphin, Shortcuts, Input (~/.config/kdeglobals, kwinrc, etc.)
+│   ├── kde-material-you/       # Dynamic Material You color engine & widget (~/.config/kde-material-you-colors, Plasmoid)
+│   ├── klassy/                 # Klassy window decoration settings (~/.config/klassy)
+│   ├── kvantum/                # Kvantum SVG theme engine (~/.config/Kvantum)
+│   ├── kwin-scripts/           # KWin tiling scripts (~/.local/share/kwin/scripts/krohnkite)
 │   ├── scripts/                # Linux system updater (~/.local/bin/fedora-update)
 │   ├── vscode/                 # VS Code Linux configs (~/.config/Code)
 │   └── zsh/                    # Linux & Wayland shell additions (~/.zshrc.linux)
