@@ -29,7 +29,7 @@ plugins=(
     themes
 )
 
-# OS-conditional plugins
+# only on mac
 if [[ "$(uname -s)" == "Darwin" ]]; then
     plugins+=(macos brew)
 fi
@@ -64,16 +64,12 @@ fi
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
     if command -v oh-my-posh &>/dev/null; then
-        OMP_THEME=""
-        if [[ -f "$HOME/.config/oh-my-posh/bubbles.omp.json" ]]; then
-            OMP_THEME="$HOME/.config/oh-my-posh/bubbles.omp.json"
-        elif [[ -f "$HOME/.dotfiles/common/oh-my-posh/.config/oh-my-posh/bubbles.omp.json" ]]; then
-            OMP_THEME="$HOME/.dotfiles/common/oh-my-posh/.config/oh-my-posh/bubbles.omp.json"
-        fi
-
-        if [[ -n "$OMP_THEME" ]]; then
-            eval "$(oh-my-posh init zsh --config "$OMP_THEME")"
-        fi
+        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/mytheme.omp.json --trace)"
+        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/nightowl.omp.json --trace)"
+        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/atomic.omp.json --trace)"
+        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/bubbles.omp.json --trace)"
+        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/chips.omp.json --trace)"
+        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/catppuccin.omp.json --trace)"
     fi
 fi
 
@@ -215,3 +211,6 @@ case "$(uname -s)" in
         [[ -f "$HOME/.zshrc.linux" ]] && source "$HOME/.zshrc.linux"
         ;;
 esac
+
+# Oh My Posh configuration wizard generated entry
+eval "$(oh-my-posh init zsh --config '/Users/sarraf/.config/oh-my-posh/omp-wizard.json')"
