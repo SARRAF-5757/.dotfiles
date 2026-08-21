@@ -1,8 +1,6 @@
 * operator + motion = applies the action to the entirity of the movement
 
 MOVEMENT
-w - movement; goes to the beginning of next word
-b - movement; goes to the beginning of previous word
 e - movement; goes to the end of next word
 0 - movement; start of the line
 $ - movement; end of the line
@@ -25,7 +23,7 @@ d2w - shortcut; delete 2 words
 a - shortcut; insert character before cursor
 yap - shortcut; yank the whole paragraph
 
-LAZYVIM SPEFICS
+LAZYVIM SPEFICS (leader + _)
 cr - rename variable across file
 cd - see erors in a floating window
 sr - search and replace

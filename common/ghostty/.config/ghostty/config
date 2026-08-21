@@ -13,6 +13,7 @@ shell-integration-features = no-cursor
 cursor-style-blink = false
 cursor-text = red
 scrollbar = never
+adjust-cell-height = 5%
 
 #-------------- THEME --------------#
 # To see available themes- 'ghostty +list-themes'
@@ -88,13 +89,18 @@ keybind = split/s=new_split:auto
 keybind = split/escape=deactivate_key_table
 keybind = split/catch_all=deactivate_key_table
 
+keybind = split/k=goto_split:up
+keybind = split/j=goto_split:down
+keybind = split/h=goto_split:left
+keybind = split/l=goto_split:right
+
 keybind = alt+s=activate_key_table:split
 
 # Resize Split Table
-keybind = resize/arrow_up=resize_split:up,10
-keybind = resize/arrow_down=resize_split:down,10
-keybind = resize/arrow_left=resize_split:left,10
-keybind = resize/arrow_right=resize_split:right,10
+keybind = resize/k=resize_split:up,10
+keybind = resize/j=resize_split:down,10
+keybind = resize/h=resize_split:left,10
+keybind = resize/l=resize_split:right,10
 keybind = resize/escape=deactivate_key_table
 keybind = resize/catch_all=deactivate_key_table
 
