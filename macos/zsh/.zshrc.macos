@@ -9,6 +9,9 @@ elif [[ -x "/usr/local/bin/brew" ]]; then
     eval "$(/usr/local/bin/brew shellenv)"
 fi
 
+# Initialize zoxide
+eval "$(zoxide init zsh)"
+
 # macOS-specific environment variables
 export BROWSER="open"
 
@@ -22,6 +25,7 @@ alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resourc
 # macOS clipboard aliases
 alias pbcopy="pbcopy"
 alias pbpaste="pbpaste"
+alias update="./macos/scripts/Scripts/update.sh"
 
 # Quick access to macOS Application scripts
 if [[ -d "$HOME/.dotfiles/macos/scripts/Scripts" ]]; then

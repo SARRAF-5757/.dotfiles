@@ -152,7 +152,7 @@ echo -e "${BOLD}${BLUE}╚══════════════════
 info "Detected OS: ${BOLD}${OS_NAME}${NC}${DISTRO_NAME:+ (${DISTRO_NAME})}"
 info "Repository:  ${SCRIPT_DIR}"
 info "Target Dir:  ${TARGET_DIR}"
-info "Action:      ${ACTION^^}"
+info "Action:      $(echo "${ACTION}" | tr '[:lower:]' '[:upper:]')"
 if ${DRY_RUN}; then
     warn "DRY-RUN MODE ENABLED: No files will be modified"
 fi
@@ -293,7 +293,7 @@ stow_category() {
         return 0
     fi
 
-    header "Stowing ${cat_name^^} Configurations"
+    header "Stowing $(echo "${cat_name}" | tr '[:lower:]' '[:upper:]') Configurations"
 
     for pkg_dir in "${cat_path}"/*; do
         if [[ -d "${pkg_dir}" ]]; then

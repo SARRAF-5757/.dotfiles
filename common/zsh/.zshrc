@@ -64,12 +64,12 @@ fi
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
     if command -v oh-my-posh &>/dev/null; then
-        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/mytheme.omp.json --trace)"
-        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/nightowl.omp.json --trace)"
-        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/atomic.omp.json --trace)"
-        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/bubbles.omp.json --trace)"
-        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/chips.omp.json --trace)"
-        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/OMP-themes/catppuccin.omp.json --trace)"
+        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/mytheme.omp.json --trace)"
+        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/nightowl.omp.json --trace)"
+        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/atomic.omp.json --trace)"
+        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/bubbles.omp.json --trace)"
+        eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/chips.omp.json --trace)"
+        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/catppuccin.omp.json --trace)"
     fi
 fi
 
@@ -212,5 +212,3 @@ case "$(uname -s)" in
         ;;
 esac
 
-# Oh My Posh configuration wizard generated entry
-eval "$(oh-my-posh init zsh --config '/Users/sarraf/.config/oh-my-posh/omp-wizard.json')"
