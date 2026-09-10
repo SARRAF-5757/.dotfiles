@@ -142,7 +142,7 @@ mode = "enabled"
 play_notification_sound = true
 
 [privacy]
-telemetry_enabled = true
+telemetry_enabled = false
 crash_reporting_enabled = true
 custom_secret_regex_list = [
   { name = "IPv4 Address", pattern = '\b((25[0-5]|(2[0-4]|1\d|[1-9]|)\d)\.?\b){4}\b' },
