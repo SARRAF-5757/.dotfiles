@@ -108,8 +108,8 @@ if command -v oh-my-posh &>/dev/null; then
 fi
 
 if command -v nvim &>/dev/null; then
-  print "${CYAN}\uf36f Updating Neovim Plugins...${NC}"
-  nvim "+Lazy! sync" +qa
+  print "${CYAN}\uf36f Updating Neovim (LazyVim)...${NC}"
+  NVIM_APPNAME="nvim-lazyvim" nvim --headless "+Lazy! sync" +qa
   print " "
   print " "
 fi
@@ -121,5 +121,4 @@ print " "
 print "${RED}\ueac9 Updating Raycast...${NC}"
 open -g raycast://extensions/raycast/raycast/check-for-updates
 print " "
-print " "
-print "Update Finished" | figlet | lolcrab
+cfonts "UPDATE|FINISHED" -f block -c yellowBright,cyan -a center -l 2

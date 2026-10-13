@@ -1,6 +1,5 @@
 tap "homebrew/cask"
 tap "homebrew/core"
-tap "hyperb1iss/tap"
 tap "jandedobbeleer/oh-my-posh", trusted: true
 tap "smudge/smudge", trusted: true
 # Apple Intelligence from the command-line, with OpenAi-compatible API server
@@ -29,8 +28,8 @@ brew "btop"
 brew "bun"
 # Cargo subcommand for checking and applying updates to installed executables
 brew "cargo-update"
-# Console Bonsai is a bonsai tree generator, written in C using ncurses
-brew "cbonsai"
+# Sexy ANSI fonts for the console
+brew "cfonts"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 # Cross-platform make
@@ -51,8 +50,6 @@ brew "fd"
 brew "sdl2-compat"
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
-# Banner-like program prints strings as ASCII art
-brew "figlet"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
 # Command-line fuzzy finder written in Go
@@ -93,14 +90,10 @@ brew "media-control"
 brew "mole"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Space Invaders in the terminal
-brew "ninvaders"
 # Modern shell for the GitHub era
 brew "nushell"
 # Command-line Git information tool
 brew "onefetch"
-# Animated pipes terminal screensaver
-brew "pipes-sh"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # Interpreted, interactive, object-oriented programming language
@@ -115,8 +108,6 @@ brew "scrcpy"
 brew "screen"
 # 7-Zip is a file archiver with a high compression ratio
 brew "sevenzip"
-# Prints a steam locomotive if you type sl instead of ls
-brew "sl"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Official tldr client written in Rust
@@ -215,14 +206,10 @@ cask "imageoptim"
 cask "intellidock"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
-# Menu bar manager
-cask "jordanbaird-ice"
 # Keyboard customiser
 cask "karabiner-elements"
 # File archiver
 cask "keka"
-# Application launcher
-cask "leader-key"
 # Free cross-platform office suite, fresh version
 cask "libreoffice"
 # Customise mouse behavior
@@ -231,6 +218,8 @@ cask "linearmouse"
 cask "logi-options+"
 # Adaptive brightness for external displays
 cask "lunar"
+# Menu bar performance monitor with recorded history and analytics
+cask "mac-performance-monitor"
 # Archive manager
 cask "macpacker"
 # UI replacement for volume, brightness and now playing controls
@@ -249,10 +238,12 @@ cask "notunes"
 cask "okta-verify"
 # Virtual machine client
 cask "omnissa-horizon-client"
+# Android file transfer
+cask "openmtp"
 # SQL powered operating system instrumentation and analytics
 cask "osquery"
-# Utility to uninstall apps and remove leftover files from old/uninstalled apps
-cask "pearcleaner"
+# PDF editor
+cask "pdfcraft"
 # Customise and maintain app icons
 cask "pictogram"
 # Control your tools with a few keystrokes
@@ -372,4 +363,5 @@ vscode "zephyrj.forest-cottage"
 vscode "zhuangtongfa.material-theme"
 go "golang.org/x/tools/gopls"
 cargo "lolcrab"
+cargo "rusty-rain"
 uv "graphifyy"
