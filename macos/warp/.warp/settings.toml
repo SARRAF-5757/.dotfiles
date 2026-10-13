@@ -39,6 +39,38 @@ warp_drive_context_enabled = false
 [agents.voice]
 voice_input_enabled = false
 
+[agents.execution_profiles]
+
+[agents.execution_profiles.default]
+apply_code_diffs = "agent_decides"
+ask_user_question = "always_ask"
+autosync_plans_to_warp_drive = true
+base_model = "gemini-3.1-pro"
+command_allowlist = []
+command_denylist = [
+  'bash(\s.*)?',
+  'fish(\s.*)?',
+  'pwsh(\s.*)?',
+  'sh(\s.*)?',
+  'zsh(\s.*)?',
+  'curl(\s.*)?',
+  'eval(\s.*)?',
+  'source(\s.*)?',
+  'rm(\s.*)?',
+  'wget(\s.*)?',
+]
+computer_use = "never"
+directory_allowlist = []
+execute_commands = "agent_decides"
+mcp_allowlist = []
+mcp_denylist = []
+mcp_permissions = "agent_decides"
+name = "Untitled"
+read_files = "agent_decides"
+run_agents = "always_ask"
+web_search_enabled = true
+write_to_pty = "always_ask"
+
 [code]
 
 [code.editor]
@@ -99,6 +131,7 @@ app_icon = "mono"
 enabled = false
 display_granularity = "panes"
 view_mode = "expanded"
+show_panel_in_restored_windows = false
 
 [general]
 link_tooltip = false

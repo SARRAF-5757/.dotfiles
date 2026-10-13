@@ -1,4 +1,5 @@
 #-------------- UI --------------#
+auto-update-channel = tip
 macos-icon = custom
 macos-titlebar-style = tabs
 # window-height = 37

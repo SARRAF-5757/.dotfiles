@@ -1,16 +1,8 @@
-tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae"
-tap "grishka/grishka"
 tap "homebrew/cask"
 tap "homebrew/core"
-tap "jandedobbeleer/oh-my-posh"
-tap "krishkrosh/apps"
-tap "mhaeuser/mhaeuser"
-tap "nikitabobko/tap"
-tap "pear-devs/pear"
-tap "sinelaw/fresh"
-tap "smudge/smudge"
-tap "teamookla/speedtest"
-tap "zackelia/formulae"
+tap "hyperb1iss/tap"
+tap "jandedobbeleer/oh-my-posh", trusted: true
+tap "smudge/smudge", trusted: true
 # Apple Intelligence from the command-line, with OpenAi-compatible API server
 brew "apfel"
 # Spell checker with better logic than ispell
@@ -25,8 +17,6 @@ brew "ncurses"
 brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Control and limit battery charging on Apple Silicon MacBooks
-brew "batt"
 # Command-line interface for SQLite
 brew "sqlite"
 # Open-source, cross-platform JavaScript runtime environment
@@ -35,24 +25,22 @@ brew "node"
 brew "bitwarden-cli"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# Incredibly fast JavaScript runtime, bundler, test runner, and package manager
+brew "bun"
+# Cargo subcommand for checking and applying updates to installed executables
+brew "cargo-update"
 # Console Bonsai is a bonsai tree generator, written in C using ncurses
 brew "cbonsai"
 # Formatting tools for C, C++, Obj-C, Java, JavaScript, TypeScript
 brew "clang-format"
 # Cross-platform make
 brew "cmake"
-# Console Matrix
-brew "cmatrix"
-# Dependency manager for Cocoa projects
-brew "cocoapods"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
-# Apjanke's fork of the classic cowsay project
-brew "cowsay"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
-# Terminal visual disk space navigator
-brew "diskonaut"
+# View disk space usage and delete unwanted data, fast
+brew "dua-cli"
 # Modern, maintained replacement for ls
 brew "eza"
 # Like neofetch, but much faster because written mostly in C
@@ -69,14 +57,20 @@ brew "figlet"
 brew "fish"
 # Command-line fuzzy finder written in Go
 brew "fzf"
-# Interact with Google Gemini AI models from the command-line
-brew "gemini-cli"
+# OCR (Optical Character Recognition) engine
+brew "tesseract"
+# Interpreter for PostScript and PDF
+brew "ghostscript"
 # Distributed revision control system
 brew "git"
 # Syntax-highlighting pager for git and diff output
 brew "git-delta"
 # Git extension for versioning large files
 brew "git-lfs"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Language server for the Go language
+brew "gopls"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Tools and libraries to manipulate images in select formats
@@ -89,14 +83,14 @@ brew "john"
 brew "lazygit"
 # Next-gen compiler infrastructure
 brew "llvm"
-# Rainbows and unicorns in your console!
-brew "lolcat"
 # Package manager for the Lua programming language
 brew "luarocks"
 # Mac App Store command-line interface
 brew "mas"
 # Control and observe media playback from the command-line
 brew "media-control"
+# Deep clean and optimize your Mac
+brew "mole"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Space Invaders in the terminal
@@ -109,6 +103,8 @@ brew "onefetch"
 brew "pipes-sh"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.13"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Safe, concurrent, practical language
@@ -123,14 +119,16 @@ brew "sevenzip"
 brew "sl"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
-# Programmatically correct mistyped console commands
-brew "thefuck"
 # Official tldr client written in Rust
 brew "tlrc"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Watch files and take action when they change
 brew "watchman"
 # Internet file retriever
 brew "wget"
+# Tools for the WireGuard secure network tunnel
+brew "wireguard-tools"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
 # Feature-rich command-line audio/video downloader
@@ -141,32 +139,58 @@ brew "zig"
 brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
-# Enable Windows-like alt-tab
-cask "alt-tab"
+# Prompt theme engine for any shell
+brew "jandedobbeleer/oh-my-posh/oh-my-posh", link: false
+# A CLI for configuring 'Night Shift' on macOS 🌕🌖🌗🌘🌑
+brew "smudge/smudge/nightlight"
+# View, print, and comment on PDF documents
+cask "adobe-acrobat-reader"
+# Image editing and design software
+cask "affinity"
+# Continuity tools for use with Android devices
+cask "airsync"
+# Command-line interface for Android app development with AI agents
+cask "android-cli"
 # Android SDK component
 cask "android-platform-tools"
 # Tools for building Android applications
 cask "android-studio"
+# Agent orchestration platform
+cask "antigravity"
 # Terminal interface for Antigravity agents
 cask "antigravity-cli"
+# Chromium based browser
+cask "arc"
 # Electronics prototyping platform
 cask "arduino-ide"
+# Multi-track audio editor and recorder
+cask "audacity"
 # 3D model slicing software for 3D printers, maintained by Bambu Lab
 cask "bambu-studio"
+# Universal chat app powered by Matrix
+cask "beeper"
 # 3D creation suite
 cask "blender"
 # Send any size file between devices
 cask "blip"
+# Block websites, games and applications
+cask "cold-turkey-blocker"
+# OpenJDK distribution from Amazon
+cask "corretto"
 # Run Stable Diffusion locally
 cask "diffusionbee"
 # Voice and text chat software
 cask "discord"
-# Window peeking utility app
-cask "dockdoor"
-# Advanced Dock preferences
-cask "dockey"
+# Rounds your display corners
+cask "displaperture"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
+# Developer platform
+cask "dotnet-sdk"
 # Web browser
 cask "firefox"
+# Offline voice-to-text dictation app with AI enhancement
+cask "fluidvoice"
 cask "font-iosevka-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-meslo-for-powerlevel10k"
@@ -181,6 +205,8 @@ cask "github"
 cask "grandperspective"
 # Open-source video transcoder
 cask "handbrake-app"
+# Grammar checker for developers
+cask "harper-desktop"
 # Free and open-source media player
 cask "iina"
 # Tool to optimise images to a smaller size
@@ -205,48 +231,73 @@ cask "linearmouse"
 cask "logi-options+"
 # Adaptive brightness for external displays
 cask "lunar"
+# Archive manager
+cask "macpacker"
 # UI replacement for volume, brightness and now playing controls
 cask "mediamate"
+# Word processor
+cask "microsoft-word"
+# Open source implementation of Microsoft's .NET Framework
+cask "mono-mdk"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
 # App to write, plan, collaborate, and get organised
 cask "notion"
 # Simple application that will prevent iTunes or Apple Music from launching
 cask "notunes"
+# Identity verification provider
+cask "okta-verify"
+# Virtual machine client
+cask "omnissa-horizon-client"
+# SQL powered operating system instrumentation and analytics
+cask "osquery"
 # Utility to uninstall apps and remove leftover files from old/uninstalled apps
 cask "pearcleaner"
 # Customise and maintain app icons
 cask "pictogram"
 # Control your tools with a few keystrokes
 cask "raycast"
+# Email client
+cask "readdle-spark"
 # Block your own access to distracting websites
 cask "selfcontrol"
 # Team communication and collaboration software
 cask "slack"
+# Video game digital distribution service
+cask "steam"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
-cask "trackweight"
+# JDK from the Eclipse Foundation (Adoptium)
+cask "temurin"
+# Management tool for Unity
+cask "unity-hub"
+# Virtual machines UI using QEMU
+cask "utm"
 # Open-source code editor
 cask "visual-studio-code"
+# Menu bar toolkit with keep-awake, system monitor and volume mixer
+cask "vorssaint"
 # Live wallpaper app
 cask "wallspace"
 # Rust-based terminal
 cask "warp"
+# USB serial driver
+cask "wch-ch34x-usb-serial-driver"
 # GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
 # Native desktop client for WhatsApp
 cask "whatsapp"
+# Word processor
+cask "wordcraft"
 # Gecko based web browser
 cask "zen"
 # Video communication and virtual meeting platform
 cask "zoom"
-mas "Command X", id: 6448461551
-mas "darker", id: 1637413102
 mas "Displaperture", id: 1543920362
-mas "Memory Diag", id: 748212890
+mas "iMovie", id: 408981434
 mas "Okta Verify", id: 490179405
 mas "PhotoScape X", id: 929507092
-mas "QuickShade", id: 931571202
+mas "Spark Desktop", id: 6445813049
 mas "Xcode", id: 497799835
 vscode "aaron-bond.better-comments"
 vscode "akamud.vscode-theme-onedark"
@@ -267,6 +318,7 @@ vscode "dtoplak.vscode-glsllint"
 vscode "eamodio.gitlens"
 vscode "equimper.react-native-react-redux"
 vscode "esbenp.prettier-vscode"
+vscode "golang.go"
 vscode "illixion.vscode-vibrancy-continued"
 vscode "jeff-hykin.better-cpp-syntax"
 vscode "llvm-vs-code-extensions.vscode-clangd"
@@ -318,8 +370,6 @@ vscode "xshrim.txt-syntax"
 vscode "yinfei.luahelper"
 vscode "zephyrj.forest-cottage"
 vscode "zhuangtongfa.material-theme"
-npm "@ghgrab/ghgrab"
-npm "carbonyl"
-npm "cli-fireplace"
-npm "eas-cli"
-npm "fast-cli"
+go "golang.org/x/tools/gopls"
+cargo "lolcrab"
+uv "graphifyy"

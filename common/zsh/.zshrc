@@ -25,7 +25,6 @@ plugins=(
     zoxide
     colored-man-pages
     colorize
-    thefuck
     themes
 )
 
@@ -67,8 +66,8 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
         # eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/mytheme.omp.json --trace)"
         # eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/nightowl.omp.json --trace)"
         # eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/atomic.omp.json --trace)"
-        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/bubbles.omp.json --trace)"
-        eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/chips.omp.json --trace)"
+        eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/bubbles.omp.json --trace)"
+        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/chips.omp.json --trace)"
         # eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/catppuccin.omp.json --trace)"
     fi
 fi
@@ -113,9 +112,15 @@ alias disk='diskonaut'
 alias gits='git status'
 alias gitd='git diff'
 alias gitr='git remote show origin'
-alias gl=carbonyl_url
-alias google=google
-alias gemini=agy
+alias google='bunx carbonyl'
+alias gl='bunx carbonyl_url'
+alias size='dua i'
+
+# Force Bun usage
+# alias npm='echo "⚠️  npm is disabled. Use bun instead!" && false'
+# alias npx='echo "⚠️  npx is disabled. Use bunx instead!" && false'
+# alias pnpm='echo "⚠️  pnpm is disabled. Use bun instead!" && false'
+# alias yarn='echo "⚠️  yarn is disabled. Use bun instead!" && false'
 
 # Multi-distro neovim setup
 alias avim='NVIM_APPNAME="nvim-astronvim" nvim'
@@ -212,3 +217,6 @@ case "$(uname -s)" in
         ;;
 esac
 
+
+# bun completions
+[ -s "/Users/sarraf/.bun/_bun" ] && source "/Users/sarraf/.bun/_bun"
