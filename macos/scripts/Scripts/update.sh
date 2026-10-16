@@ -53,27 +53,17 @@ if command -v uv &>/dev/null; then
   print " "
 fi
 
-if command -v rustup &>/dev/null; then
-  print "${RED}\ue7a8 Updating Rustup Toolchains...${NC}"
+if command -v rustup &>/dev/null && command -v cargo-install-update &>/dev/null; then
+  print "${RED}\ue7a8 Updating Rust Toolchains...${NC}"
   rustup update
-  print " "
-  print " "
-fi
-
-if command -v cargo-install-update &>/dev/null; then
-  print "${RED}\ue7a8 Updating Cargo Crates...${NC}"
   cargo install-update -a
-  print " "
-  print " "
-elif command -v cargo &>/dev/null; then
-  print "${RED}\ue7a8 Cargo installed (run 'brew install cargo-update' to enable crate auto-updates)${NC}"
   print " "
   print " "
 fi
 
 if command -v go &>/dev/null; then
-  print "${CYAN}\ue627 Updating Go Tools...${NC}"
-  go install golang.org/x/tools/gopls@latest 2>/dev/null || true
+  print "${BLUE}\ue627 Updating Go Tools...${NC}"
+  go install $(go list -m -f '{{.Path}}' all)@latest 2>/dev/null || true
   print " "
   print " "
 fi
@@ -108,7 +98,7 @@ if command -v oh-my-posh &>/dev/null; then
 fi
 
 if command -v nvim &>/dev/null; then
-  print "${CYAN}\uf36f Updating Neovim (LazyVim)...${NC}"
+  print "${GREEN}\uf36f Updating Neovim Plugins...${NC}"
   NVIM_APPNAME="nvim-lazyvim" nvim --headless "+Lazy! sync" +qa
   print " "
   print " "
@@ -121,4 +111,4 @@ print " "
 print "${RED}\ueac9 Updating Raycast...${NC}"
 open -g raycast://extensions/raycast/raycast/check-for-updates
 print " "
-cfonts "UPDATE|FINISHED" -f block -c yellowBright,cyan -a center -l 2
+cfonts "UPDATE|COMPLETE" -f block -c yellowBright,cyan -a center -l 2
