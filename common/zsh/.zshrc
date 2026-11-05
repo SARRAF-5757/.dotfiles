@@ -63,10 +63,10 @@ fi
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
     if command -v oh-my-posh &>/dev/null; then
-        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/mytheme.omp.json --trace)"
+        eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/mytheme.omp.json --trace)"
         # eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/nightowl.omp.json --trace)"
         # eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/atomic.omp.json --trace)"
-        eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/bubbles.omp.json --trace)"
+        # eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/bubbles.omp.json --trace)"
         # eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/chips.omp.json --trace)"
         # eval "$(oh-my-posh init zsh --config ~/.dotfiles/common/oh-my-posh/.config/oh-my-posh/catppuccin.omp.json --trace)"
     fi
@@ -117,12 +117,7 @@ alias gl='bunx carbonyl_url'
 alias size='dua i'
 alias matrix='rusty-rain -C 0,139,139 -g jap'
 alias brewdump='brew bundle dump --force --file=~/.dotfiles/macos/brew/Brewfile'
-
-# Force Bun usage
-# alias npm='echo "⚠️  npm is disabled. Use bun instead!" && false'
-# alias npx='echo "⚠️  npx is disabled. Use bunx instead!" && false'
-# alias pnpm='echo "⚠️  pnpm is disabled. Use bun instead!" && false'
-# alias yarn='echo "⚠️  yarn is disabled. Use bun instead!" && false'
+alias ssh='ghostty +ssh --'
 
 # Multi-distro neovim setup
 alias avim='NVIM_APPNAME="nvim-astronvim" nvim'

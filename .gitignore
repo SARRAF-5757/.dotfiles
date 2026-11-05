@@ -4,4 +4,5 @@
 **/karabiner/assets/
 *.ab
 *.db
+*.mdb
 /macos/misc/Miscellaneous/Restore Firefox

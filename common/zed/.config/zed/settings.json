@@ -1,0 +1,79 @@
+{
+  //*--------------------NATIVE SETTINGS--------------------*//
+
+  //!Editor Settings
+  "debugger": {
+    "dock": "bottom"
+  },
+  "diff_view_style": "split",
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_size": 14.0,
+  "buffer_font_weight": 400.0,
+  "cursor_animation": {
+    "enabled": true
+  },
+  "current_line_highlight": "line",
+  "indent_guides": {
+    "coloring": "indent_aware",
+    "line_width": 2,
+    "active_line_width": 3
+  },
+  "sticky_scroll": {
+    "enabled": true
+  },
+  "use_smartcase_search": true,
+
+  //!Workbench / UI Settings
+  "theme": "Transparent Prism",
+  "icon_theme": "Colored Zed Icons Theme Dark",
+  "ui_font_family": "Ubuntu Sans",
+  "ui_font_size": 16.0,
+  "ui_font_weight": 600.0,
+  "markdown_preview": {
+    "code_font_family": "JetBrainsMono Nerd Font Mono"
+  },
+
+  //!Terminal Settings
+  "terminal": {
+    "dock": "bottom",
+    "font_family": "MesloLGS NF",
+    "font_size": 13.0,
+    "font_weight": 700.0
+  },
+  "cli_default_open_behavior": "new_window",
+
+  //!File Handling
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 100
+    }
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+
+  //!Vim Mode
+  "vim_mode": true,
+
+  //*--------------------AI & ASSISTANT SETTINGS--------------------*//
+
+  //!Agent Settings
+  "agent": {
+    "dock": "right",
+    "threads_sidebar": {
+      "position": "right"
+    },
+    "favorite_models": [],
+    "model_parameters": []
+  },
+
+  //!Agent Servers
+  "agent_servers": {
+    "cursor": {
+      "type": "registry",
+    },
+    "antigravity-acp": {
+      "type": "registry"
+    }
+  }
+}

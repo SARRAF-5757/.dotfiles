@@ -178,6 +178,7 @@ if ! ${DRY_RUN}; then
     mkdir -p "${TARGET_DIR}/.config/Kvantum"
     mkdir -p "${TARGET_DIR}/.config/kde-material-you-colors"
     mkdir -p "${TARGET_DIR}/.config/xsettingsd"
+    mkdir -p "${TARGET_DIR}/.config/zed"
     mkdir -p "${TARGET_DIR}/.local/bin"
     mkdir -p "${TARGET_DIR}/.local/share/applications"
     mkdir -p "${TARGET_DIR}/.local/share/kwin/scripts"

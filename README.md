@@ -24,6 +24,7 @@
 │   ├── scripts/                # CLI scripts (~/.local/bin)
 │   ├── wezterm/                # WezTerm config (~/.wezterm.lua)
 │   ├── yazi/                   # Yazi file manager (~/.config/yazi)
+│   ├── zed/                    # Zed editor config (~/.config/zed)
 │   └── zsh/                    # Common Zsh config & p10k (~/.zshrc, ~/.p10k.zsh)
 │
 ├── macos/                      # macOS-specific configurations

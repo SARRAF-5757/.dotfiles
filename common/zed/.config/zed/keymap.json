@@ -1,0 +1,19 @@
+[
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j j": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-alt-cmd-shift-space": "command_palette::Toggle"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-e": "project_panel::Toggle"
+    }
+  }
+]

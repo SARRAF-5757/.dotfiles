@@ -1,6 +1,6 @@
 #-------------- UI --------------#
-auto-update-channel = tip
-macos-icon = custom
+auto-update-channel = stable
+macos-icon = xray
 macos-titlebar-style = tabs
 # window-height = 37
 # window-width = 122
@@ -21,11 +21,11 @@ adjust-cell-height = 5%
 #theme = *MyTheme
 theme = Catppuccin Mocha
 font-size = 15
-font-family = MonaspiceAr Nerd Font Mono
+font-family = JetBrainsMono Nerd Font Mono
 font-style = Medium
 
 background = black
-background-opacity = 0.65
+background-opacity = 0.77
 background-blur-radius = 60
 
 #background-image = ~/.config/ghostty/themes/swirl.png
