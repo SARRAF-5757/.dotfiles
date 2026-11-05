@@ -129,13 +129,6 @@ Usage:
   ./install.sh [OPTIONS]
 
 Options:
-  -n, --dry-run        See what would happen if you ran it, without actually running it
-  -t, --target DIR     Specify custom target directory (default is $HOME)
-  -R, --restow         Restow packages (prune broken links and relink) [on by default]
-  -D, --delete         Unstow / remove symlinks
-  -a, --adopt          Adopt existing target files into the package repository
-  -c, --common-only    Only stow common configurations
-  -o, --os-only        Only stow OS-specific configurations (macos/ or linux/)
-  -p, --package PKG    Only stow a specific package/app from .config/ (e.g. ghostty, zed)
-  -h, --help           Show this help
+  -n, --dry-run        Simulate installation without modifying files
+  -v, --verbose        Show detailed Stow linking and unlinking output
 ```
