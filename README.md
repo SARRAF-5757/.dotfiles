@@ -6,53 +6,76 @@
 
 ```text
 .dotfiles/
-├── common/                     # Things available on both systems (same location)
-│   ├── atuin/                  # Shell history (~/.config/atuin)
-│   ├── clang-format/           # C/C++ formatting (~/.clang-format)
-│   ├── fastfetch/              # Cool Terminal graphics (~/.config/fastfetch)
-│   ├── fish/                   # Fish shell config (~/.config/fish)
-│   ├── ghostty/                # Ghostty terminal (~/.config/ghostty)
-│   ├── git/                    # Git & Delta config (~/.gitconfig)
-│   ├── notes/                  # Notes for myself + pub keys
-│   ├── nushell/                # Nushell config (~/.config/nushell)
-│   ├── nvim/                   # Multi-distro Neovim configuration
-│   │   ├── nvim-astronvim/
-│   │   ├── nvim-kickstart/
-│   │   ├── nvim-lazyvim/       # (Daily driver)
-│   │   └── nvim-nvchad/
-│   ├── oh-my-posh/             # Prompt engine (~/.config/oh-my-posh)
-│   ├── scripts/                # CLI scripts (~/.local/bin)
-│   ├── wezterm/                # WezTerm config (~/.wezterm.lua)
-│   ├── yazi/                   # Yazi file manager (~/.config/yazi)
-│   ├── zed/                    # Zed editor config (~/.config/zed)
-│   └── zsh/                    # Common Zsh config & p10k (~/.zshrc, ~/.p10k.zsh)
+├── common/                         # Configurations shared across all operating systems
+│   ├── .clang-format               # C/C++ formatting (~/.clang-format)
+│   ├── .gitconfig                  # Git & Delta config (~/.gitconfig)
+│   ├── .p10k.zsh                   # Powerlevel10k config (~/.p10k.zsh)
+│   ├── .wezterm.lua                # WezTerm terminal config (~/.wezterm.lua)
+│   ├── .zshrc                      # Common Zsh configuration (~/.zshrc)
+│   │
+│   ├── .config/                    # XDG Base Directory config (~/.config)
+│   │   ├── atuin/                  # Shell history (~/.config/atuin)
+│   │   ├── fastfetch/              # Fastfetch system info (~/.config/fastfetch)
+│   │   ├── fish/                   # Fish shell config (~/.config/fish)
+│   │   ├── ghostty/                # Ghostty terminal config (~/.config/ghostty)
+│   │   ├── nushell/                # Nushell config (~/.config/nushell)
+│   │   ├── nvim-astronvim/         # AstroNvim distro (~/.config/nvim-astronvim)
+│   │   ├── nvim-kickstart/         # Kickstart distro (~/.config/nvim-kickstart)
+│   │   ├── nvim-lazyvim/           # LazyVim distro (~/.config/nvim-lazyvim, daily driver)
+│   │   ├── nvim-nvchad/            # NvChad distro (~/.config/nvim-nvchad)
+│   │   ├── oh-my-posh/             # Oh My Posh themes (~/.config/oh-my-posh)
+│   │   ├── yazi/                   # Yazi file manager (~/.config/yazi)
+│   │   └── zed/                    # Zed editor config (~/.config/zed)
 │
-├── macos/                      # macOS-specific configurations
-│   ├── applications/           # Custom automator apps (~/Applications)
-│   ├── brew/                   # Master Homebrew bundle (Brewfile)
-│   ├── karabiner/              # Karabiner Elements keybindings (~/.config/karabiner)
-│   ├── leaderkey/              # Leader Key app config (~/Leader Key)
-│   ├── misc/                   # Random things not to be stowed
-│   ├── mousecape/              # Custom cursors (~/Library/Application Support/Mousecape)
-│   ├── scripts/                # Scripts I use on the daily (not stowed)
-│   ├── vscode/                 # VS Code macOS configs (~/Library/Application Support/Code)
-│   ├── warp/                   # Warp terminal themes & keys (~/.warp)
-│   └── zsh/                    # macOS shell additions (~/.zshrc.macos)
+├── macos/                          # macOS-specific configurations
+│   ├── .zshrc.macos                # macOS shell additions (~/.zshrc.macos)
+│   ├── Brewfile                    # Homebrew bundle (at root of macos, not stowed)
+│   ├── ssh_keys.txt.pub            # SSH public key (~/ssh_keys.txt.pub)
+│   │
+│   ├── .config/
+│   │   └── karabiner/              # Karabiner-Elements keybindings (~/.config/karabiner)
+│   │
+│   ├── .mac-os-debloat/            # macOS launchd debloat presets (~/.mac-os-debloat)
+│   ├── .warp/                      # Warp terminal themes & keys (~/.warp)
+│   │
+│   ├── Applications/
+│   │   └── TermVim.app             # Custom automator apps (~/Applications)
+│   │
+│   ├── Library/
+│   │   └── Application Support/
+│   │       ├── Code/User/          # VS Code macOS configs (~/Library/Application Support/Code/User)
+│   │       └── Mousecape/          # Custom cursors (~/Library/Application Support/Mousecape)
+│   │
+│   └── scripts/                    # CLI & Raycast scripts: git-summarizer, update, debloat-sync, etc. (in PATH)
 │
-├── linux/                      # Fedora Asahi / KDE Plasma configurations
-│   ├── applications/           # Desktop entries & MIME associations (~/.local/share/applications, ~/.config/mimeapps.list)
-│   ├── environment/            # Wayland systemd environment (~/.config/environment.d)
-│   ├── gtk/                    # GTK 3/4 & XSettings uniformity (~/.config/gtk-3.0, ~/.config/gtk-4.0, ~/.config/xsettingsd)
-│   ├── kde/                    # KDE Plasma 6, KWin, Dolphin, Shortcuts, Input (~/.config/kdeglobals, kwinrc, etc.)
-│   ├── kde-material-you/       # Dynamic Material You color engine & widget (~/.config/kde-material-you-colors, Plasmoid)
-│   ├── klassy/                 # Klassy window decoration settings (~/.config/klassy)
-│   ├── kvantum/                # Kvantum SVG theme engine (~/.config/Kvantum)
-│   ├── kwin-scripts/           # KWin tiling scripts (~/.local/share/kwin/scripts/krohnkite)
-│   ├── scripts/                # Linux system updater (~/.local/bin/fedora-update)
-│   ├── vscode/                 # VS Code Linux configs (~/.config/Code)
-│   └── zsh/                    # Linux & Wayland shell additions (~/.zshrc.linux)
+├── linux/                          # Fedora Asahi / KDE Plasma configurations
+│   ├── .gtkrc-2.0                  # GTK 2 legacy theme config (~/.gtkrc-2.0)
+│   ├── .zshrc.linux                # Linux & Wayland shell additions (~/.zshrc.linux)
+│   │
+│   ├── .config/                    # Linux ~/.config directory
+│   │   ├── autostart/              # Autostart entries (kde-material-you-colors)
+│   │   ├── Code/User/              # VS Code Linux configs (~/.config/Code/User)
+│   │   ├── environment.d/          # Wayland systemd environment (~/.config/environment.d)
+│   │   ├── gtk-3.0/                # GTK 3 settings (~/.config/gtk-3.0)
+│   │   ├── gtk-4.0/                # GTK 4 settings (~/.config/gtk-4.0)
+│   │   ├── kde-material-you-colors/# Material You color engine (~/.config/kde-material-you-colors)
+│   │   ├── klassy/                 # Klassy window decoration settings (~/.config/klassy)
+│   │   ├── Kvantum/                # Kvantum SVG theme engine (~/.config/Kvantum)
+│   │   ├── xsettingsd/             # XSettings uniformity (~/.config/xsettingsd)
+│   │   └── dolphinrc, kwinrc, ...  # KDE Plasma 6 configs & shortcuts
+│   │
+│   └── .local/
+│       ├── bin/                    # Linux system updater (~/.local/bin/fedora-update)
+│       └── share/                  # Desktop entries, KWin scripts, Plasmoids (~/.local/share)
 │
-└── install.sh                  # Smart idempotent bootstrap installer (GNU Stow)
+├── misc/                           # Notes, keyboard layouts, phone backups, Raycast configs (not stowed)
+│   ├── notes/                      # Personal notes (always-forget, nvim-forget)
+│   ├── Neo60_trimode.JSON
+│   ├── neo60.layout.json
+│   ├── Raycast.rayconfig
+│   └── Phone/
+│
+└── install.sh                      # Smart idempotent bootstrap installer (GNU Stow)
 ```
 
 ---
@@ -99,7 +122,7 @@ source ~/.zshrc
 
 ## More on the Installer
 
-`install.sh` automatically detects the operating system and links `common/` + either `macos/` or `linux/`
+`install.sh` automatically detects the operating system and links `common/` + either `macos/` or `linux/`:
 
 ```text
 Usage:
@@ -111,8 +134,8 @@ Options:
   -R, --restow         Restow packages (prune broken links and relink) [on by default]
   -D, --delete         Unstow / remove symlinks
   -a, --adopt          Adopt existing target files into the package repository
-  -c, --common-only    Only stow packages in common/
-  -o, --os-only        Only stow packages for current OS (macos/ or linux/)
-  -p, --package PKG    Only stow a specific package
-  -h, --help           Show this
+  -c, --common-only    Only stow common configurations
+  -o, --os-only        Only stow OS-specific configurations (macos/ or linux/)
+  -p, --package PKG    Only stow a specific package/app from .config/ (e.g. ghostty, zed)
+  -h, --help           Show this help
 ```

@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-# Dotfiles Installation & Management Script with GNU Stow for-
-# macOS
-# Fedora Asahi Linux (KDE)
+# Dotfiles Installation & Management Script with GNU Stow
+# Supports:
+#   - macOS
+#   - Fedora Asahi Linux (KDE)
 
 set -euo pipefail
 
@@ -34,14 +35,6 @@ ADOPT=false
 SCOPE="all" # all, common, os
 SPECIFIC_PKG=""
 
-# Packages not stowed by default as documented in README.md
-EXCLUDED_PACKAGES=(
-    "common/notes"
-    "macos/brew"
-    "macos/misc"
-    "macos/scripts"
-)
-
 # -----------------------------------------------------------------------------
 # Help Message
 # -----------------------------------------------------------------------------
@@ -57,10 +50,10 @@ ${BOLD}Options:${NC}
   -R, --restow         Restow packages (prune broken links and relink) [on by default]
   -D, --delete         Unstow / remove symlinks
   -a, --adopt          Adopt existing target files into the package repository
-  -c, --common-only    Only stow packages in common/
-  -o, --os-only        Only stow packages for current OS (macos/ or linux/)
-  -p, --package PKG    Only stow a specific package
-  -h, --help           Show this"
+  -c, --common-only    Only stow common configurations
+  -o, --os-only        Only stow OS-specific configurations (macos/ or linux/)
+  -p, --package PKG    Only stow a specific package/app (e.g. ghostty, karabiner, zed)
+  -h, --help           Show this help"
 }
 
 # -----------------------------------------------------------------------------
@@ -128,7 +121,6 @@ Linux)
     OS_NAME="Linux"
     OS_DIR="linux"
     if [[ -f /etc/os-release ]]; then
-        # Source OS info
         # shellcheck disable=SC1091
         source /etc/os-release
         DISTRO_NAME="${NAME:-Linux}"
@@ -170,62 +162,43 @@ fi
 
 # Ensure base target directories exist to prevent Stow tree folding
 if ! ${DRY_RUN}; then
-    mkdir -p "${TARGET_DIR}/.config/autostart"
-    mkdir -p "${TARGET_DIR}/.config/environment.d"
-    mkdir -p "${TARGET_DIR}/.config/gtk-3.0"
-    mkdir -p "${TARGET_DIR}/.config/gtk-4.0"
-    mkdir -p "${TARGET_DIR}/.config/klassy"
-    mkdir -p "${TARGET_DIR}/.config/Kvantum"
-    mkdir -p "${TARGET_DIR}/.config/kde-material-you-colors"
-    mkdir -p "${TARGET_DIR}/.config/xsettingsd"
-    mkdir -p "${TARGET_DIR}/.config/zed"
+    mkdir -p "${TARGET_DIR}/.config"
     mkdir -p "${TARGET_DIR}/.local/bin"
-    mkdir -p "${TARGET_DIR}/.local/share/applications"
-    mkdir -p "${TARGET_DIR}/.local/share/kwin/scripts"
-    mkdir -p "${TARGET_DIR}/.local/share/plasma/plasmoids"
-    mkdir -p "${TARGET_DIR}/.local/state"
     if [[ "${OS_NAME}" == "macOS" ]]; then
-        mkdir -p "${TARGET_DIR}/Library/Application Support"
+        mkdir -p "${TARGET_DIR}/Applications"
+        mkdir -p "${TARGET_DIR}/Library/Application Support/Code/User"
+        mkdir -p "${TARGET_DIR}/Library/Application Support/Mousecape"
+    else
+        mkdir -p "${TARGET_DIR}/.config/autostart"
+        mkdir -p "${TARGET_DIR}/.config/environment.d"
+        mkdir -p "${TARGET_DIR}/.config/gtk-3.0"
+        mkdir -p "${TARGET_DIR}/.config/gtk-4.0"
+        mkdir -p "${TARGET_DIR}/.config/klassy"
+        mkdir -p "${TARGET_DIR}/.config/Kvantum"
+        mkdir -p "${TARGET_DIR}/.config/kde-material-you-colors"
+        mkdir -p "${TARGET_DIR}/.config/xsettingsd"
+        mkdir -p "${TARGET_DIR}/.local/share/applications"
+        mkdir -p "${TARGET_DIR}/.local/share/kwin/scripts"
+        mkdir -p "${TARGET_DIR}/.local/share/plasma/plasmoids"
     fi
 fi
-
-# -----------------------------------------------------------------------------
-# Helper: Check If Package Is Excluded
-# -----------------------------------------------------------------------------
-is_excluded() {
-    local cat_name="$1"
-    local pkg_name="$2"
-    local rel_path="${cat_name}/${pkg_name}"
-
-    for excluded in "${EXCLUDED_PACKAGES[@]}"; do
-        if [[ "${rel_path}" == "${excluded}" ]]; then
-            return 0
-        fi
-    done
-    return 1
-}
 
 # -----------------------------------------------------------------------------
 # Clean Stale & Broken Dotfiles Symlinks in Target
 # -----------------------------------------------------------------------------
 clean_stale_target_links() {
-    local category_dir="$1"
-    local pkg_name="$2"
-    local pkg_path="${category_dir}/${pkg_name}"
+    local cat_name="$1"
+    local cat_path="${SCRIPT_DIR}/${cat_name}"
 
-    if [[ ! -d "${pkg_path}" ]]; then
-        return 0
-    fi
+    [[ ! -d "${cat_path}" ]] && return 0
 
-    # Find all relative files/dirs in the package
     while IFS= read -r rel_item; do
         [[ -z "${rel_item}" ]] && continue
         local target_item="${TARGET_DIR}/${rel_item}"
 
         if [[ -L "${target_item}" ]]; then
             local current_link_target
-            current_link_target="$(readlink "${target_item}")"
-            # If the link points to .dotfiles or is broken, prepare to replace it
+            current_link_target="$(readlink "${target_item}" 2>/dev/null || true)"
             if [[ "${current_link_target}" == *".dotfiles"* ]] || [[ ! -e "${target_item}" ]]; then
                 if ${DRY_RUN}; then
                     info "  [dry-run] Would replace stale link: ${target_item} -> ${current_link_target}"
@@ -233,28 +206,52 @@ clean_stale_target_links() {
                     rm -f "${target_item}"
                 fi
             fi
-        elif [[ -f "${target_item}" && "${target_item}" == *".DS_Store"* ]]; then
-            if ! ${DRY_RUN}; then
-                rm -f "${target_item}"
-            fi
         fi
-    done < <(cd "${pkg_path}" && find . -mindepth 1 -not -name ".DS_Store" | sed 's|^\./||')
+    done < <(cd "${cat_path}" && find . -mindepth 1 -not -name ".DS_Store" | sed 's|^\./||')
+
+    # Also clean any broken symlinks in standard targets pointing to .dotfiles
+    for search_dir in "${TARGET_DIR}/.local/bin" "${TARGET_DIR}/.config"; do
+        [[ ! -d "${search_dir}" ]] && continue
+        for link in "${search_dir}"/*; do
+            if [[ -L "${link}" && ! -e "${link}" ]]; then
+                local link_target
+                link_target="$(readlink "${link}" 2>/dev/null || true)"
+                if [[ "${link_target}" == *".dotfiles"* ]]; then
+                    if ${DRY_RUN}; then
+                        info "  [dry-run] Would remove broken dotfiles link: ${link}"
+                    else
+                        rm -f "${link}"
+                    fi
+                fi
+            fi
+        done
+    done
 }
 
 # -----------------------------------------------------------------------------
-# Stow Helper Function
+# Stow Category Function
 # -----------------------------------------------------------------------------
-stow_package() {
-    local category_dir="$1"
-    local pkg_name="$2"
+stow_category() {
+    local cat_name="$1"
+    local ignore_pattern="$2"
+    local cat_path="${SCRIPT_DIR}/${cat_name}"
 
-    if [[ ! -d "${category_dir}/${pkg_name}" ]]; then
+    if [[ ! -d "${cat_path}" ]]; then
         return 0
     fi
 
-    clean_stale_target_links "${category_dir}" "${pkg_name}"
+    header "Stowing $(echo "${cat_name}" | tr '[:lower:]' '[:upper:]') Configurations"
 
-    local stow_flags=("-v" "-t" "${TARGET_DIR}" "--dir=${category_dir}" "--ignore=\\.DS_Store")
+    local stow_flags=(
+        "-v"
+        "-t" "${TARGET_DIR}"
+        "--dir=${SCRIPT_DIR}"
+        "--ignore=\\.DS_Store"
+    )
+
+    if [[ -n "${ignore_pattern}" ]]; then
+        stow_flags+=("--ignore=${ignore_pattern}")
+    fi
 
     if ${DRY_RUN}; then
         stow_flags+=("-n")
@@ -266,67 +263,60 @@ stow_package() {
 
     case "${ACTION}" in
     restow)
-        stow_flags+=("-R" "${pkg_name}")
+        stow_flags+=("-R" "${cat_name}")
         ;;
     delete)
-        stow_flags+=("-D" "${pkg_name}")
+        stow_flags+=("-D" "${cat_name}")
         ;;
     esac
 
-    info "Processing [${category_dir##*/}/${pkg_name}]..."
+    info "Processing category [${cat_name}]..."
     if stow "${stow_flags[@]}"; then
-        success "Package [${pkg_name}] ${ACTION}ed successfully."
+        success "Category [${cat_name}] ${ACTION}ed successfully."
     else
         if ${DRY_RUN}; then
-            warn "Package [${pkg_name}] encountered conflicts during simulation."
+            warn "Category [${cat_name}] encountered conflicts during simulation."
         else
-            error "Failed to ${ACTION} package [${pkg_name}]."
+            error "Failed to ${ACTION} category [${cat_name}]."
             return 1
         fi
     fi
 }
 
-stow_category() {
-    local cat_name="$1"
-    local cat_path="${SCRIPT_DIR}/${cat_name}"
-
-    if [[ ! -d "${cat_path}" ]]; then
-        return 0
-    fi
-
-    header "Stowing $(echo "${cat_name}" | tr '[:lower:]' '[:upper:]') Configurations"
-
-    for pkg_dir in "${cat_path}"/*; do
-        if [[ -d "${pkg_dir}" ]]; then
-            local pkg
-            pkg="$(basename "${pkg_dir}")"
-
-            # Check if specifically requested
-            if [[ -n "${SPECIFIC_PKG}" ]]; then
-                if [[ "${pkg}" != "${SPECIFIC_PKG}" ]]; then
-                    continue
-                fi
-            else
-                # Skip excluded packages unless specifically requested
-                if is_excluded "${cat_name}" "${pkg}"; then
-                    continue
-                fi
-            fi
-
-            stow_package "${cat_path}" "${pkg}"
-        fi
-    done
-}
-
 # -----------------------------------------------------------------------------
 # Main Execution
 # -----------------------------------------------------------------------------
-if [[ "${SCOPE}" == "all" || "${SCOPE}" == "common" ]]; then
-    stow_category "common"
-fi
+if [[ -n "${SPECIFIC_PKG}" ]]; then
+    info "Targeting specific configuration: ${SPECIFIC_PKG}"
+    # If specific package requested, check common and OS dir
+    found=false
+    for c in "common" "${OS_DIR}"; do
+        if [[ -d "${SCRIPT_DIR}/${c}/.config/${SPECIFIC_PKG}" ]]; then
+            info "Stowing ${SPECIFIC_PKG} from ${c}/.config..."
+            mkdir -p "${TARGET_DIR}/.config"
+            clean_stale_target_links "${c}"
+            stow -v -t "${TARGET_DIR}/.config" --dir="${SCRIPT_DIR}/${c}/.config" -R "${SPECIFIC_PKG}"
+            found=true
+            break
+        fi
+    done
+    if ! ${found}; then
+        warn "Could not find specific package '${SPECIFIC_PKG}' in .config/ of common or ${OS_DIR}."
+    fi
+else
+    if [[ "${SCOPE}" == "all" || "${SCOPE}" == "common" ]]; then
+        clean_stale_target_links "common"
+        stow_category "common" ""
+    fi
 
-if [[ "${SCOPE}" == "all" || "${SCOPE}" == "os" ]]; then
-    stow_category "${OS_DIR}"
+    if [[ "${SCOPE}" == "all" || "${SCOPE}" == "os" ]]; then
+        clean_stale_target_links "${OS_DIR}"
+        if [[ "${OS_DIR}" == "macos" ]]; then
+            stow_category "macos" "^(Brewfile|scripts)$"
+        else
+            stow_category "linux" ""
+        fi
+    fi
 fi
 
 # -----------------------------------------------------------------------------
