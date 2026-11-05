@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>534</string>
+	<string>540</string>
 	<key>AMApplicationVersion</key>
 	<string>2.10</string>
 	<key>AMDocumentVersion</key>
@@ -68,6 +68,8 @@ end tell
 
 tell application "System Events"
     tell process "Ghostty"
+        keystroke "t" using command down
+        delay 0.3
         keystroke "vim \"$file\""
         key code 36
     end tell
@@ -183,12 +185,10 @@ EOF
 						<string>4</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>536.000000:455.000000</string>
+				<string>536.000000:425.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>

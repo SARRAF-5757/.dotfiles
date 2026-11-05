@@ -6,60 +6,59 @@
 	<dict>
 		<key>Resources/ApplicationStub.icns</key>
 		<data>
-		KRABYRjqniV+RHksKm/Cwp/rBjc=
+		SxjaQNH/DVTRMks2ORkeG7dMqWw=
 		</data>
 		<key>Resources/Assets.car</key>
 		<data>
-		dyjBMVjNa7EuNDG1MLieiJPy1Cc=
+		b0VqSCc564jUjJZ1maLmhsidjn4=
 		</data>
 		<key>Resources/InfoPlist.loctable</key>
 		<data>
-		KEQC0DFC9lrETWe0E5eVGGsPylc=
+		ad87IC0BGq7/fDjodqk0bVCalG8=
+		</data>
+		<key>Resources/Localizable.loctable</key>
+		<data>
+		O8aSi9J/EMJdHKvuBjYWVQ2osL8=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>Resources/ApplicationStub.icns</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			KRABYRjqniV+RHksKm/Cwp/rBjc=
-			</data>
 			<key>hash2</key>
 			<data>
-			XZazMZ2bZ2qWGxbxoiDRlmRjg5X5TsklYcRHMnNHifU=
+			MIYWydjk6W8xp8HbN9Erk+xJBfyiPU9k+3geXwGK2ck=
 			</data>
 		</dict>
 		<key>Resources/Assets.car</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			dyjBMVjNa7EuNDG1MLieiJPy1Cc=
-			</data>
 			<key>hash2</key>
 			<data>
-			t5BR4div8Bip0TO1nFtZl3qH3LE8LkP2GX0KsvJZfDQ=
+			HRbIhS2xMlpKMjUvn8zyWhqbwbBGJhJlmF81wQr833I=
 			</data>
 		</dict>
 		<key>Resources/InfoPlist.loctable</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			KEQC0DFC9lrETWe0E5eVGGsPylc=
-			</data>
 			<key>hash2</key>
 			<data>
-			3cSIcj64rHY2k+pLrnrgd1Li6hmbquwgX94QcefajJ8=
+			LjnfkkfAHhQ66t4bgYsAAKpaa2EM7t+rI/GziXdup9Q=
+			</data>
+		</dict>
+		<key>Resources/Localizable.loctable</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6UVqTUfMPz5ddAd3P41oQaooyzo+p/2hsyy/4itJZwk=
 			</data>
 		</dict>
 		<key>document.wflow</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			PYD+uxy7T5KZ3BaebJ4BMJLSAw8=
+			G92AOEBYvlVXZvsXjGNtPE74ddY=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"3d80febb1cbb4f9299dc169e6c9e013092d2030f"</string>
+			<string>cdhash H"1bdd80384058be555766fb178c636d3c4ef875d6"</string>
 		</dict>
 	</dict>
 	<key>rules</key>

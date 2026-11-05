@@ -54,7 +54,7 @@
 	<key>CFBundleURLTypes</key>
 	<array/>
 	<key>CFBundleVersion</key>
-	<string>534</string>
+	<string>540</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -62,15 +62,15 @@
 	<key>DTPlatformName</key>
 	<string>macosx</string>
 	<key>DTPlatformVersion</key>
-	<string>26.3</string>
+	<string>27.0</string>
 	<key>DTSDKBuild</key>
-	<string>25D110</string>
+	<string>26A411</string>
 	<key>DTSDKName</key>
-	<string>macosx26.3.internal</string>
+	<string>macosx27.0.internal</string>
 	<key>DTXcode</key>
-	<string>2600</string>
+	<string>2700</string>
 	<key>DTXcodeBuild</key>
-	<string>17A6264l</string>
+	<string>27A200c</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>10.9</string>
 	<key>LSUIElement</key>
