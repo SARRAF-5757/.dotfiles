@@ -33,10 +33,13 @@
   "editor.hover.delay": 900, //stops tooltips from poppubg up without intention while coding
   "editor.detectIndentation": false, //disables auto-detection of indentation based on file contents
   "editor.inlayHints.enabled": "off", //disables rendering hints in the text editor
+  "editor.renderWhitespace": "all",
 
   //!Workbench Settings
   "window.titleBarStyle": "custom",
-  "workbench.colorTheme": "Transparent Color Theme",
+  "window.systemColorTheme": "dark",
+  "window.autoDetectColorScheme": false,
+  "workbench.colorTheme": "One Dark Pro Night Flat",
   "workbench.productIconTheme": "fluent-icons", //Put sidebar on the right
   "window.commandCenter": false, //hide the top bar
   "workbench.layoutControl.enabled": false, //hide the other top bar
@@ -50,39 +53,8 @@
   "scm.diffDecorations": "none", //disable git's added/deleted/modified colorsw
   "workbench.tree.indent": 20, //file explorer indentation
   "workbench.sideBar.location": "right", //sidebar at the right
-  "workbench.iconTheme": "material-icon-theme", //file icons
-  "workbench.colorCustomizations": {
-    "terminal.background": "#00000000",
-    "editorPane.background": "#00000000",
-    "editorGroupHeader.tabsBackground": "#00000000",
-    "editorGroupHeader.noTabsBackground": "#00000000",
-    "breadcrumb.background": "#00000000",
-    "editorGutter.background": "#00000000",
-    "panel.background": "#00000000",
-    "panelStickyScroll.background": "#000000bf",
-    "tab.activeBackground": "#00000000",
-    "tab.unfocusedActiveBackground": "#00000000",
-    "sideBar.background": "#0000004d",
-    "sideBarTitle.background": "#0000004d",
-    "sideBarStickyScroll.background": "#000000bf",
-    "activityBar.background": "#0000004d",
-    "editor.background": "#0000004d",
-    "editorStickyScroll.background": "#000000bf",
-    "editorStickyScrollGutter.background": "#000000bf",
-    "tab.inactiveBackground": "#0000004d",
-    "tab.unfocusedInactiveBackground": "#0000004d",
-    "inlineChat.background": "#000000e6",
-    "editorWidget.background": "#000000e6",
-    "editorHoverWidget.background": "#000000e6",
-    "editorSuggestWidget.background": "#000000e6",
-    "notifications.background": "#000000e6",
-    "notificationCenterHeader.background": "#000000e6",
-    "menu.background": "#000000e6",
-    "quickInput.background": "#000000e6",
-    "terminalStickyScroll.background": "#000000bf",
-    "minimap.background": "#000000bf",
-    "editor.lineHighlightBorder": "#00000000"
-},
+  "workbench.iconTheme": "vscode-modern-icons", //file icons
+  "workbench.colorCustomizations": {},
   "chat.commandCenter.enabled": false, //hide copilot elements from IDE
   "animations.Enabled": false,
   "window.confirmBeforeClose": "keyboardOnly",
@@ -91,7 +63,7 @@
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.fontWeight": "bold",
   "terminal.integrated.fontSize": 13,
-  "terminal.external.osxExec": "Warp.app",
+  "terminal.external.osxExec": "Ghostty.app",
   "terminal.integrated.gpuAcceleration": "off",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
 
@@ -107,7 +79,7 @@
     //"/Users/sarraf/Coding/EECS280",
     //"/Users/sarraf/Coding/EECS281",
     "/Users/sarraf/Coding/EECS370",
-    "/Users/sarraf/Coding/EECS485"
+    "/Users/sarraf/Coding/EECS485",
   ],
   "projectManager.groupList": true,
   "projectManager.showParentFolderInfoOnDuplicates": true,
@@ -127,7 +99,7 @@
     //"editor.formatOnSave": true,
     "editor.autoIndent": "full",
     "editor.insertSpaces": false,
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
   },
   "C_Cpp.formatting": "clangFormat",
   "clang-format.fallbackStyle": "LLVM",
@@ -140,33 +112,33 @@
     "editor.autoIndent": "advanced",
     "editor.formatOnSave": true,
     "files.trimFinalNewlines": true,
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
   },
 
   //!Verilog settings [EECS270]
   "[verilog]": {
-    "editor.defaultFormatter": "mshr-h.veriloghdl"
+    "editor.defaultFormatter": "mshr-h.veriloghdl",
   },
 
   //!Python Settings
   "[python]": {
-    "editor.rulers": [79]
+    "editor.rulers": [79],
   },
   "python.analysis.typeCheckingMode": "standard",
 
   //!JavaScript/TypeScript Settings
   "[typescriptreact]": {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
   },
   "[javascriptreact]": {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
   },
-  
+
   "[typescript]": {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
   },
   "[javascript]": {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -182,7 +154,7 @@
     "*": false,
     "plaintext": false,
     "markdown": false,
-    "scminput": false
+    "scminput": false,
   },
 
   //!Custom CSS for VS Code
@@ -190,7 +162,7 @@
     "file:///Users/sarraf/Library/Application Support/Code/User/custom-vscode.css",
     "file:///Users/sarraf/Library/Application Support/Code/User/vscode-blur-script.js",
     "file:///Users/sarraf/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.7/dist/updateHandler.js"
-  ],
+],
 
   //!GitLens
   "gitlens.currentLine.fontSize": 10,
@@ -213,7 +185,7 @@
     "plaintext",
     "markdown",
     "python",
-    "json"
+    "json",
   ],
 
   //!File icon theme tweaks
@@ -234,7 +206,7 @@
       "underline": false,
       "backgroundColor": "transparent",
       "bold": false,
-      "italic": false
+      "italic": false,
     },
     {
       "tag": "todo",
@@ -243,7 +215,7 @@
       "underline": false,
       "backgroundColor": "#ff8C004d", //yellow highlight
       "bold": false,
-      "italic": false
+      "italic": false,
     },
     {
       "tag": "!",
@@ -252,7 +224,7 @@
       "underline": false,
       "backgroundColor": "transparent",
       "bold": true,
-      "italic": false
+      "italic": false,
     },
     {
       "tag": "?",
@@ -261,7 +233,7 @@
       "underline": false,
       "backgroundColor": "transparent",
       "bold": false,
-      "italic": false
+      "italic": false,
     },
     {
       "tag": "#",
@@ -270,7 +242,7 @@
       "underline": false,
       "backgroundColor": "transparent",
       "bold": true,
-      "italic": false
+      "italic": false,
     },
     {
       "tag": "*",
@@ -279,8 +251,8 @@
       "underline": false,
       "backgroundColor": "transparent",
       "bold": true,
-      "italic": false
-    }
+      "italic": false,
+    },
   ],
 
   //!Error Lens
@@ -304,26 +276,11 @@
   "cSpell.userWords": ["EECS"],
 
   //!Sync between profiles
-  "workbench.settings.applyToAllProfiles": [
-    "workbench.colorTheme",
-    "workbench.iconTheme",
-    "workbench.productIconTheme",
-    "editor.fontFamily",
-    "editor.fontSize",
-    "editor.fontLigatures",
-    "editor.cursorSmoothCaretAnimation",
-    "window.titleBarStyle",
-    "editor.rulers",
-    "editor.wordWrapColumn",
-    "editor.minimap.autohide",
-    "editor.minimap.renderCharacters",
-    "workbench.tree.renderIndentGuides",
-    "workbench.tree.enableStickyScroll"
-  ],
+  "workbench.settings.applyToAllProfiles": ["workbench.colorTheme", "workbench.iconTheme", "workbench.productIconTheme", "editor.fontFamily", "editor.fontSize", "editor.fontLigatures", "editor.cursorSmoothCaretAnimation", "window.titleBarStyle", "editor.rulers", "editor.wordWrapColumn", "editor.minimap.autohide", "editor.minimap.renderCharacters", "workbench.tree.renderIndentGuides", "workbench.tree.enableStickyScroll"],
   //!Miscellanies
   "extensions.experimental.affinity": {
     //performance improvement (?)
-    "asvetliakov.vscode-neovim": 1
+    "asvetliakov.vscode-neovim": 1,
   },
   "security.workspace.trust.untrustedFiles": "open",
   "editor.tokenColorCustomizations": {
@@ -430,15 +387,12 @@
           "variable.name",
           "variable.other",
           "variable.other.readwrite",
-          "variable.parameter"
+          "variable.parameter",
         ],
         "settings": {
-          "fontStyle": ""
-        }
-      }
-    ]
-},
-"window.systemColorTheme": "dark",
-"window.autoDetectColorScheme": false,
-"editor.renderWhitespace": "all",
+          "fontStyle": "",
+        },
+      },
+    ],
+  },
 }
