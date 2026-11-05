@@ -152,8 +152,6 @@ cask "android-studio"
 cask "antigravity-cli"
 # Inspect application bundles
 cask "apparency"
-# Chromium based browser
-cask "arc"
 # Electronics prototyping platform
 cask "arduino-ide"
 # Multi-track audio editor and recorder
@@ -252,6 +250,8 @@ cask "swiftcord"
 cask "telegram-desktop"
 # JDK from the Eclipse Foundation (Adoptium)
 cask "temurin"
+# Web browser
+cask "thebrowsercompany-dia"
 # Management tool for Unity
 cask "unity-hub"
 # Virtual machines UI using QEMU
@@ -279,6 +279,7 @@ cask "zen"
 # Video communication and virtual meeting platform
 cask "zoom"
 mas "Bitwarden", id: 1352778147
+mas "Canary Mail", id: 1236045954
 mas "Displaperture", id: 1543920362
 mas "iMovie", id: 408981434
 mas "InputConfig", id: 6777759147
