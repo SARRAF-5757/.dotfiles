@@ -61,13 +61,6 @@ if command -v rustup &>/dev/null && command -v cargo-install-update &>/dev/null;
   print " "
 fi
 
-if command -v go &>/dev/null; then
-  print "${BLUE}\ue627 Updating Go Tools...${NC}"
-  go install $(go list -m -f '{{.Path}}' all)@latest 2>/dev/null || true
-  print " "
-  print " "
-fi
-
 if command -v gem &>/dev/null; then
   print "${RED}\ue739 Updating RubyGems...${NC}"
   gem update --system 2>/dev/null || true

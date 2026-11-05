@@ -1,0 +1,307 @@
+# ==============================================================================
+# Personal macOS Debloat Preset
+# Updated: 2026-11-04 21:09:33
+# Disabled services: 196
+# ==============================================================================
+
+# === Spotlight / app launcher ===
+com.apple.campo                               # Cmd-Space + four-finger Apps pinch (Spotlight UI). Leave on to launch apps the usual way.
+
+# === Siri / voice assistant ===
+com.apple.siriappintentsd                     # Siri App Intents orchestrator
+com.apple.assistant_service                   # Siri execution / flow XPC
+com.apple.assistantd [sip-off]                # Siri core
+com.apple.Siri.agent                          # Siri agent
+com.apple.SiriTTSTrainingAgent                # Siri voice training
+com.apple.sirittsd [sip-off]                  # Siri TTS daemon
+com.apple.siriinferenced [sip-off]            # on-device Siri inference
+com.apple.siriknowledged [sip-off]            # Siri knowledge graph
+com.apple.assistant_cdmd [sip-off]            # Siri continuous dialog manager
+com.apple.parsecd [sip-off]                   # Siri/Spotlight suggestions backend
+com.apple.parsec-fbf [sip-off]                # Siri Suggestions feedback
+com.apple.intelligencecontextd                # Apple Intelligence context runtime
+com.apple.intelligenceplatformd [sip-off]     # Apple Intelligence platform
+com.apple.knowledge-agent [sip-off]           # knowledge graph extraction
+
+# === Apple Intelligence (Tahoe) ===
+com.apple.mlruntimed                          # runtime for Apple's distributed (federated) ML model evaluation
+com.apple.generativeexperiencesd [sip-off]    # Writing Tools / generative AI
+com.apple.privatecloudcomputed [sip-off]      # Private Cloud Compute (AI cloud offload)
+com.apple.modelcatalogd [sip-off]             # AI model catalog daemon
+com.apple.ModelCatalogAgent [sip-off]         # AI model catalog agent
+com.apple.modelmanagerd [sip-off]             # AI model manager / downloads
+com.apple.naturallanguaged                    # NaturalLanguage framework daemon
+com.apple.textunderstandingd                  # text understanding AI
+com.apple.triald [sip-off]                    # Trial: Apple's A/B experiments and feature / asset rollouts (all apps, not only Siri)
+com.apple.triald.system [sip-off]             # Trial, system side: experiments and asset rollouts for system daemons
+com.apple.visualintelligenced                 # Visual Intelligence (screenshot / camera AI)
+com.apple.GenerativeFunctions.agentstored     # Apple Intelligence agent session store
+com.apple.contextstored [sip-off]             # context store (KNOWN >30GB MEMORY LEAK in Tahoe)
+
+# === Telemetry / analytics ===
+com.apple.analyticsd [sip-off]                # Apple diagnostics submission
+com.apple.tipsd [sip-off]                     # Tips app notifications
+com.apple.cloudtelemetryd [sip-off]           # macOS 27: CloudTelemetry framework daemon
+com.apple.libsqlite3.dbtelemetryd             # macOS 27: SQLite database telemetry (background task only)
+com.apple.sharereportingd                     # macOS 27: ShareReporting framework daemon
+
+# === Diagnostics / crash reports ===
+com.apple.ReportCrash                         # auto crash report generator
+com.apple.spindump [sip-off]                  # hang detection / spin reports
+
+# === Apple ads ===
+com.apple.ap.adprivacyd [sip-off]             # ad privacy
+com.apple.ap.promotedcontentd [sip-off]       # promoted apps
+
+# === Proactive / predictive ===
+com.apple.coreduetd [sip-off]                 # activity tracker for proactive features
+com.apple.duetexpertd [sip-off]               # prediction engine
+com.apple.suggestd [sip-off]                  # Spotlight smart suggestions backend
+com.apple.biomesyncd [sip-off]                # biome event sync
+com.apple.navd                                # time-to-leave / commute predictions
+com.apple.ospredictiond [sip-off]             # OS behavior predictions
+com.apple.milod [sip-off]                     # MicroLocation: learns places and rooms of interest for location-based suggestions
+
+# === Game Center / AirPlay receiver ===
+com.apple.gamed                               # Game Center
+
+# === Photos analysis ===
+com.apple.photoanalysisd [sip-off]            # face/scene/object scan in Photos
+com.apple.mediaanalysisd [sip-off]            # media library indexing
+
+# === News / Stocks / Weather ===
+com.apple.weatherd [sip-off]                  # weather data daemon (menu bar / widgets)
+com.apple.newsd                               # News app daemon
+
+# === Apple ID nags / Family ===
+com.apple.familycircled [sip-off]             # Family Sharing
+
+# === Misc ===
+com.apple.helpd [sip-off]                     # Help viewer indexer
+com.apple.ndoagent                            # AppleCare / new-device outreach nags
+
+# === iMessage / FaceTime / phone relay (no iPhone) ===
+com.apple.callhistoryd                        # iPhone call history sync
+com.apple.CallHistoryPluginHelper             # call history plugin
+com.apple.CallHistorySyncHelper               # call history iCloud sync
+com.apple.businessservicesd                   # Apple Business Chat
+
+# === HomeKit ===
+com.apple.homed [sip-off]                     # HomeKit daemon
+com.apple.homeeventsd [sip-off]               # HomeKit events
+com.apple.threadradiod                        # Thread radio (Matter/HomeKit)
+com.apple.ThreadCommissionerService [sip-off] # Matter device commissioning
+
+# === Apple Mail/Calendar/Contacts/Reminders (use Gmail/web instead) ===
+com.apple.email.maild [sip-off]               # Mail daemon
+
+# === Speech / dictation ===
+com.apple.speech.speechsynthesisd.arm64       # text-to-speech (native Apple Silicon)
+com.apple.speech.speechsynthesisd.x86_64      # text-to-speech (Intel / Rosetta)
+com.apple.speech.speechdatainstallerd         # voice data installer
+com.apple.speechmaintenanced                  # on-device speech model maintenance
+
+# === App Store + update nags (keeps softwareupdated for security) ===
+com.apple.amsengagementd [sip-off]            # Apple Media Services engagement
+
+# === Misc dead weight ===
+com.apple.linkd [sip-off]                     # App Intents runtime: app actions for Shortcuts, Siri and Spotlight — Shortcuts' app actions stop
+com.apple.liveactivitiesd [sip-off]           # Live Activities widgets
+com.apple.remotespatialpreviewd               # macOS 27: remote spatial preview service (SpatialPreviewServices)
+
+# === iCloud (no iCloud use) ===
+com.apple.cloudphotod [sip-off]               # iCloud Photos sync
+
+# === Location/prediction extras (Find My still intact) ===
+com.apple.routined [sip-off]                  # significant locations / location-aware reminders
+com.apple.homeenergyd [sip-off]               # Home Energy widget
+
+# === Time Machine ===
+com.apple.backupd [sip-off]                   # Time Machine core backup daemon
+com.apple.TMHelperAgent                       # Time Machine menu / reminders
+com.apple.backupd-helper [sip-off]            # Time Machine scheduling helper
+
+# === Apple Media Services / iPhone telephony / contacts ===
+com.apple.contacts.postersyncd                # Contacts profile picture sync
+
+# === More AI/ML stragglers ===
+com.apple.mlhostd [sip-off]                   # on-device ML training host (Lighthouse)
+
+# === Cosmetic / app daemons ===
+com.apple.shazamd [sip-off]                   # Shazam music recognition (Control Center)
+
+# === More AI / Apple Intelligence ===
+com.apple.siriactionsd [sip-off]              # Siri Shortcuts/Voice Shortcuts agent
+com.apple.ContextStoreAgent [sip-off]         # CoreDuet ContextStoreAgent
+com.apple.corespeechd [sip-off]               # Core Speech backbone (Siri/dictation)
+com.apple.speech.synthesisserver              # speech synthesis server
+com.apple.spotlightknowledged                 # CoreSpotlight semantic search
+com.apple.spotlightknowledged.importer        # CoreSpotlight importer
+com.apple.spotlightknowledged.updater [sip-off] # CoreSpotlight updater
+com.apple.callintelligenced                   # AI call analysis (call summaries)
+com.apple.intelligenceflowd [sip-off]         # AI flow daemon
+com.apple.intelligencetasksd                  # AI tasks daemon
+com.apple.synapse.contentlinkingd             # Notes / Safari content links (backlinks)
+com.apple.LinkedNotesUIService                # Notes backlink indicator UI (~26 MB)
+com.apple.hybridsearchd [sip-off]             # macOS 27: generative search indexing and queries (HybridSearch, ~56 MB)
+com.apple.imageplaygroundd [sip-off]          # macOS 27: Image Playground on-demand image service
+
+# === Spotlight KeepAlive daemons (mdutil -d leaves these resident) ===
+com.apple.msrpc.mdssvc                        # Spotlight SMB/network metadata
+com.apple.managedcorespotlightd               # managed CoreSpotlight
+
+# === Apple Music / iTunes / Media streaming ===
+com.apple.itunescloudd [sip-off]              # Apple Music / iTunes Match cloud
+com.apple.musicd                              # Apple Music local daemon
+com.apple.amp.mediasharingd                   # Apple Music sharing
+com.apple.mediastream.mstreamd                # iCloud media stream
+com.apple.mediacontinuityd                    # media Continuity (no iPhone)
+com.apple.shazameventsd                       # macOS 27: Shazam events daemon (ShazamEvents)
+
+# === iCloud user-facing notifications ===
+com.apple.icloudmailagent                     # iCloud Mail (no Apple Mail)
+
+# === Apple Books (no Books use) ===
+com.apple.bookassetd                          # Apple Books asset downloads
+com.apple.bookdatastored                      # Apple Books data store
+
+# === Telemetry extras ===
+com.apple.geoanalyticsd [sip-off]             # Geo telemetry
+com.apple.SubmitDiagInfo [sip-off]            # diagnostic submitter to Apple
+com.apple.BiomeAgent [sip-off]                # biome event hub agent
+com.apple.biomed [sip-off]                    # biome event hub daemon
+
+# === Contacts/Photos extras ===
+com.apple.contacts.donation-agent [sip-off]   # Contacts → Siri Suggestions feed
+com.apple.photolibraryd [sip-off]             # Photos library daemon
+
+# === Filesystem / cosmetic ===
+com.apple.chronod [sip-off]                   # widget host (widgets gone, demand-loaded by NC)
+
+# === Contacts / AddressBook (no Mac Contacts use) ===
+com.apple.AddressBook.AssistantService        # Contacts assistant
+
+# === Audio route suggestions ===
+com.apple.intelligentroutingd                 # suggests audio / AirPlay output routes (one-tap route picker) — not Maps
+
+# === Maps (Google Maps user) ===
+com.apple.Maps.mapssyncd [sip-off]            # Apple Maps sync
+com.apple.maps.destinationd                   # Apple Maps destinations
+
+# === Beta program enrollment (not on macOS beta) ===
+com.apple.appleseed.fbahelperd                # AppleSeed feedback assistant helper
+com.apple.appleseed.seedusaged                # AppleSeed usage telemetry
+com.apple.appleseed.seedusaged.postinstall    # AppleSeed postinstall
+com.apple.betaenrollmentagent                 # beta enrollment agent
+com.apple.betaenrollmentd                     # beta enrollment daemon
+com.apple.feedbackd [sip-off]                 # Feedback Assistant daemon
+
+# === Continuity Capture (no iPhone webcam) ===
+com.apple.cmio.ContinuityCaptureAgent [sip-off] # iPhone as webcam agent
+com.apple.companiond                          # Apple Watch / iPhone companion
+
+# === Avatar / Memoji / Stickers (no iMessage) ===
+com.apple.avatarsd                            # Memoji / avatars
+com.apple.stickersd                           # iMessage stickers
+
+# === Safari extras (no Safari + no iCloud Keychain) ===
+com.apple.Safari.PasswordBreachAgent          # password leak checker (needs iCloud Keychain)
+
+# === Family / Parental controls (no family setup) ===
+com.apple.familycontrols                      # family controls daemon
+com.apple.familycontrols.useragent            # family controls user agent
+com.apple.FamilyControlsAgent                 # family controls agent
+com.apple.familynotificationd                 # family notifications
+com.apple.parentalcontrols.check              # parental controls checker
+com.apple.askpermissiond                      # family purchase approval (Ask to Buy)
+com.apple.assessmentagent [sip-off]           # education assessment mode
+com.apple.progressd                           # ClassKit education progress
+
+# === Proactive / Siri-adjacent (no Siri) ===
+com.apple.proactived                          # proactive engine
+com.apple.proactiveeventtrackerd              # proactive event tracker
+com.apple.knowledgeconstructiond              # knowledge graph construction
+com.apple.reversetemplated                    # reverse template AI
+
+# === Sports / News extras ===
+com.apple.sportsd                             # Apple Sports data
+
+# === Diagnostics extras (all telemetry to Apple) ===
+com.apple.diagnosticd                         # diagnostics
+com.apple.diagnosticextensionsd [sip-off]     # diagnostic extensions
+com.apple.diagnostics_agent [sip-off]         # diagnostics agent
+com.apple.diagnosticservicesd                 # diagnostic services
+com.apple.diagnosticspushd                    # diagnostic push
+com.apple.metrickitd                          # MetricKit (app metrics to Apple)
+com.apple.osanalytics.osanalyticshelper [sip-off] # OS analytics helper
+com.apple.spindump_agent                      # spindump agent (process hangs)
+com.apple.metadata.mds.spindump               # Spotlight spindump diagnostic
+com.apple.diagnosticextensions.osx.spotlight.helper # Spotlight diagnostic extension
+com.apple.audioanalyticsd [sip-off]           # audio analytics
+com.apple.inputanalyticsd [sip-off]           # input analytics (typing/touch)
+com.apple.ecosystemanalyticsd                 # ecosystem analytics
+com.apple.analyticsagent [sip-off]            # analytics agent
+com.apple.CrashReporterSupportHelper [sip-off] # crash reporter support
+com.apple.DiagnosticsReporter                 # diagnostics reporter
+com.apple.InstallerDiagnostics.installerdiagd # installer diagnostics
+com.apple.InstallerDiagnostics.installerdiagwatcher # installer diag watcher
+com.apple.loginwindow.LWWeeklyMessageTracer   # weekly login telemetry
+com.apple.symptomsd-diag [sip-off]            # symptoms diag (keep core symptomsd)
+com.apple.symptomsd.distributed-agent         # symptoms distributed agent
+com.apple.rtcreportingd [sip-off]             # FaceTime/WebRTC call quality reports
+com.apple.securityuploadd                     # security telemetry upload
+com.apple.usbctelemetryd                      # USB-C port telemetry
+com.apple.systemstats.analysis [sip-off]      # system stats analysis
+com.apple.systemstats.daily                   # daily system stats
+com.apple.systemstats.microstackshot_periodic # periodic microstackshots
+com.apple.signpost.signpost_reporter          # signpost perf telemetry
+com.apple.enhancedloggingd                    # MDM enhanced logging
+
+# === Misc Apple legacy / unused ===
+com.apple.AOSPushRelay                        # legacy iCloud push relay
+com.apple.nfcd [sip-off]                      # NFC daemon (no Apple Pay)
+com.apple.facetimemessagestored               # FaceTime message store
+com.apple.calendar.CalendarAgentBookmarkMigrationService # one-shot Cal bookmark migration
+
+# === Apple Translate / Notes / VoiceOver / accessibility extras ===
+com.apple.notes.exchangenotesd                # Apple Notes Exchange sync
+com.apple.VoiceOver                           # screen reader (no accessibility use)
+com.apple.accessibility.LiveTranscriptionAgent # live transcription/captions
+com.apple.accessibility.axassetsd [sip-off]   # TTS voice + VoiceOver/Magnifier model asset downloads
+com.apple.DictationIM                         # dictation input method
+com.apple.voicebankingd [sip-off]             # custom voice creation (Live Speech)
+com.apple.voicememod                          # Voice Memos app
+
+# === iCloud settings / language assets ===
+com.apple.languageassetd                      # Apple language model assets (Siri/dictation/translate)
+
+# === Apple TV watchlist / social / WiFi telemetry ===
+com.apple.watchlistd                          # Apple TV+ watchlist
+com.apple.sociallayerd [sip-off]              # Game Center social layer
+com.apple.wifianalyticsd [sip-off]            # WiFi telemetry
+
+# === Apple Music Player (AMP) suite — no Apple Music ===
+com.apple.AMPArtworkAgent                     # album artwork
+com.apple.AMPDeviceDiscoveryAgent [sip-off]   # Apple Music device discovery (not AirPods BT)
+com.apple.AMPDevicesAgent                     # Apple Music devices agent
+com.apple.AMPLibraryAgent                     # Apple Music library
+com.apple.AMPSystemPlayerAgent                # system music player agent
+
+# === Apple TV+ / video subscriptions ===
+com.apple.videosubscriptionsd                 # Apple TV+ subscriptions
+com.apple.tvremoted                           # macOS 27: Apple TV remote control (TVRemoteCore, MediaRemote)
+
+# === Touch Bar (M4 has none) ===
+com.apple.touchbarserver                      # Touch Bar server
+com.apple.controlstrip                        # Touch Bar control strip
+com.apple.accessibility.dfrhud                # Touch Bar accessibility HUD
+
+# === iCloud Drive / Keychain Circle / SyncedDefaults / CloudDocs ===
+com.apple.security.keychain-circle-notification # iCloud Keychain notification
+
+# === MDM / Managed apps (no MDM enrollment) ===
+com.apple.managedappdistributionagent [sip-off] # managed app distribution agent
+com.apple.managedappdistributiond [sip-off]   # managed app distribution daemon
+
+# === Paired-device sync (Replicator) ===
+com.apple.replicatord [sip-off]               # syncs data with your paired devices (used by the widget host) — not Time Machine

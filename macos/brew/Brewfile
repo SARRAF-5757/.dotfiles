@@ -1,6 +1,8 @@
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "jandedobbeleer/oh-my-posh", trusted: true
+tap "oleksandrkrupko/debloat", "https://github.com/OleksandrKrupko/homebrew-debloat"
+tap "shirkeharsh/tap"
 tap "smudge/smudge", trusted: true
 # Apple Intelligence from the command-line, with OpenAi-compatible API server
 brew "apfel"
@@ -131,11 +133,11 @@ brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Prompt theme engine for any shell
-brew "jandedobbeleer/oh-my-posh/oh-my-posh", link: false
+brew "jandedobbeleer/oh-my-posh/oh-my-posh"
+# Console util to toggle macOS launchd services and the Spotlight index (frees RAM)
+brew "oleksandrkrupko/debloat/debloat", trusted: true
 # A CLI for configuring 'Night Shift' on macOS 🌕🌖🌗🌘🌑
 brew "smudge/smudge/nightlight"
-# View, print, and comment on PDF documents
-cask "adobe-acrobat-reader"
 # Image editing and design software
 cask "affinity"
 # Continuity tools for use with Android devices
@@ -146,10 +148,10 @@ cask "android-cli"
 cask "android-platform-tools"
 # Tools for building Android applications
 cask "android-studio"
-# Agent orchestration platform
-cask "antigravity"
 # Terminal interface for Antigravity agents
 cask "antigravity-cli"
+# Inspect application bundles
+cask "apparency"
 # Chromium based browser
 cask "arc"
 # Electronics prototyping platform
@@ -168,18 +170,16 @@ cask "blip"
 cask "cold-turkey-blocker"
 # OpenJDK distribution from Amazon
 cask "corretto"
+# Command-line agent for Cursor
+cask "cursor-cli"
 # Run Stable Diffusion locally
 cask "diffusionbee"
-# Voice and text chat software
-cask "discord"
 # Rounds your display corners
 cask "displaperture"
 # App to build and share containerised applications and microservices
 cask "docker-desktop"
 # Developer platform
 cask "dotnet-sdk"
-# Web browser
-cask "firefox"
 # Offline voice-to-text dictation app with AI enhancement
 cask "fluidvoice"
 cask "font-iosevka-nerd-font"
@@ -188,6 +188,10 @@ cask "font-meslo-for-powerlevel10k"
 cask "font-monaspice-nerd-font"
 cask "font-opendyslexic-nerd-font"
 cask "font-symbols-only-nerd-font"
+cask "font-ubuntu-sans"
+cask "font-ubuntu-sans-mono"
+# GIT client
+cask "fork"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Desktop client for GitHub repositories
@@ -196,28 +200,18 @@ cask "github"
 cask "grandperspective"
 # Open-source video transcoder
 cask "handbrake-app"
-# Grammar checker for developers
-cask "harper-desktop"
 # Free and open-source media player
 cask "iina"
 # Tool to optimise images to a smaller size
 cask "imageoptim"
-# Hides the Dock when it is overlapped by a window
-cask "intellidock"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Keyboard customiser
 cask "karabiner-elements"
-# File archiver
-cask "keka"
 # Free cross-platform office suite, fresh version
 cask "libreoffice"
-# Customise mouse behavior
-cask "linearmouse"
 # Software for Logitech devices
 cask "logi-options+"
-# Adaptive brightness for external displays
-cask "lunar"
 # Menu bar performance monitor with recorded history and analytics
 cask "mac-performance-monitor"
 # Archive manager
@@ -228,18 +222,18 @@ cask "mediamate"
 cask "microsoft-word"
 # Open source implementation of Microsoft's .NET Framework
 cask "mono-mdk"
+# Menu bar music player for YouTube Music and local audio
+cask "shirkeharsh/tap/mooziac", trusted: true
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
-# App to write, plan, collaborate, and get organised
-cask "notion"
-# Simple application that will prevent iTunes or Apple Music from launching
-cask "notunes"
 # Identity verification provider
 cask "okta-verify"
 # Virtual machine client
 cask "omnissa-horizon-client"
 # Android file transfer
 cask "openmtp"
+# WebKit based web browser
+cask "orion"
 # SQL powered operating system instrumentation and analytics
 cask "osquery"
 # PDF editor
@@ -248,14 +242,12 @@ cask "pdfcraft"
 cask "pictogram"
 # Control your tools with a few keystrokes
 cask "raycast"
-# Email client
-cask "readdle-spark"
 # Block your own access to distracting websites
 cask "selfcontrol"
-# Team communication and collaboration software
-cask "slack"
 # Video game digital distribution service
 cask "steam"
+# Native Discord client
+cask "swiftcord"
 # Desktop client for Telegram messenger
 cask "telegram-desktop"
 # JDK from the Eclipse Foundation (Adoptium)
@@ -280,15 +272,18 @@ cask "wezterm"
 cask "whatsapp"
 # Word processor
 cask "wordcraft"
+# Multiplayer code editor
+cask "zed"
 # Gecko based web browser
 cask "zen"
 # Video communication and virtual meeting platform
 cask "zoom"
+mas "Bitwarden", id: 1352778147
 mas "Displaperture", id: 1543920362
 mas "iMovie", id: 408981434
-mas "Okta Verify", id: 490179405
+mas "InputConfig", id: 6777759147
 mas "PhotoScape X", id: 929507092
-mas "Spark Desktop", id: 6445813049
+mas "uBlock Origin Lite", id: 6745342698
 mas "Xcode", id: 497799835
 vscode "aaron-bond.better-comments"
 vscode "akamud.vscode-theme-onedark"
@@ -364,4 +359,3 @@ vscode "zhuangtongfa.material-theme"
 go "golang.org/x/tools/gopls"
 cargo "lolcrab"
 cargo "rusty-rain"
-uv "graphifyy"
