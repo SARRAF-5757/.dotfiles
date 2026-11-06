@@ -1,0 +1,24 @@
+packageName,versionCode,versionName
+com.beemdevelopment.aegis,82,3.4.3
+com.donnnno.arcticons,1570,15.3.2
+in.hridayan.ashell,62,v7.4.0
+io.github.samolego.canta,227,4.1.0
+xyz.zedler.patrick.doodle,42,6.0.0
+org.fdroid.fdroid,2000011,2.0-alpha11
+com.caydey.ffshare,23,2.0.0
+com.google.android.apps.photos,52617560,7.99.0.1007655401
+de.mm20.launcher2.release,2026091500,1.41.0-fdroid
+com.absinthe.libchecker,2671,2.5.4.5696014
+com.metrolist.music,153,13.7.0
+com.android.vending,85381140,53.8.11-34 [0] [PR] 1005778592
+com.google.android.gms,264431035,26.44.31 (260400-1013311556)
+com.google.android.gsf,37,17
+com.adilhanney.no_more_background,2080202,2.8.2
+dev.imranr.obtainium,23623,1.7.4
+com.acszo.redomi.repo,10403,1.4.3
+name.lmj001.savetodevice,8,0.8.2
+eu.darken.sdmse,20202000,2.2.2-rc0
+com.bernaferrari.sdkmonitor,18,2.1
+moe.shizuku.privileged.api,1086,13.6.0.r1086.2650830c
+com.arslan.shizuwall,53,4.6.8
+com.trianguloy.urlchecker,47,3.5
