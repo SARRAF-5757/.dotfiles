@@ -41,5 +41,8 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         for _, group in ipairs(groups) do
             vim.cmd("hi " .. group .. " guibg=NONE")
         end
+
+        -- Ensure comments are italicized and bolded
+        vim.cmd("hi Comment gui=italic")
     end,
 })

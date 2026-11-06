@@ -30,6 +30,7 @@ alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resourc
 alias pbcopy="pbcopy"
 alias pbpaste="pbpaste"
 alias update="$HOME/.dotfiles/macos/scripts/update.sh"
+alias brewdump='brew bundle dump --force --file=~/.dotfiles/macos/Brewfile'
 
 # Quick access to macOS Application scripts
 if [[ -d "$HOME/.dotfiles/macos/scripts" ]]; then

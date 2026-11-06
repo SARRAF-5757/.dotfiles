@@ -63,8 +63,8 @@ fi
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
     if command -v oh-my-posh &>/dev/null; then
-        eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/mytheme.omp.json --trace)"
-        # eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/nightowl.omp.json --trace)"
+        # eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/mytheme.omp.json --trace)"
+        eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/nightowl.omp.json --trace)"
         # eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/atomic.omp.json --trace)"
         # eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/bubbles.omp.json --trace)"
         # eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/chips.omp.json --trace)"
@@ -116,7 +116,6 @@ alias google='bunx carbonyl'
 alias gl='bunx carbonyl_url'
 alias size='dua i'
 alias matrix='rusty-rain -C 0,139,139 -g jap'
-alias brewdump='brew bundle dump --force --file=~/.dotfiles/macos/Brewfile'
 alias ssh='ghostty +ssh --'
 
 # Multi-distro neovim setup

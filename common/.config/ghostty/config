@@ -20,9 +20,11 @@ adjust-cell-height = 5%
 # To see available themes- 'ghostty +list-themes'
 #theme = *MyTheme
 theme = Catppuccin Mocha
+font-family = Maple Mono NF
 font-size = 15
-font-family = JetBrainsMono Nerd Font Mono
-font-style = Medium
+font-style = SemiBold
+font-feature = calt,cv01,cv03,cv07,cv40,cv61
+font-style-italic = ExtraBold Italic
 
 background = black
 background-opacity = 0.77
